@@ -1,0 +1,30 @@
+// Diagram for Clause
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Clause [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Clause</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasIdentifier: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/Bylaw__Clause.md" margin=0]
+	}
+	BylawOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BylawOntologyThing</TD></TR></TABLE>> URL="../_counters/Bylaw__BylawOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Law [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Law</TD></TR></TABLE>> URL="../_counters/Bylaw__Law.md" margin=0]
+	}
+	Clause -> BylawOntologyThing [arrowhead=onormal style=solid]
+	Clause -> Invis [style=invis]
+	Invis -> Law [style=invis]
+	Nebac0c39c638447dbffd45550c871bdd [label=Nebac0c39c638447dbffd45550c871bdd shape=plaintext]
+	Clause -> Nebac0c39c638447dbffd45550c871bdd [label=" clauseType 
+ «some»  " arrowhead=normal style=solid]
+	Clause [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Clause</TD></TR></TABLE>> URL="../_counters/Bylaw__Clause.md" margin=0]
+	Clause -> Clause [label=" hasClause 
+ «only»  " arrowhead=normal style=solid]
+	Ndb6c9ffa458d48f7bf3a3dac54371a42 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Ndb6c9ffa458d48f7bf3a3dac54371a42 -> Clause [label=member arrowhead=normal style=dotted]
+	Ndb6c9ffa458d48f7bf3a3dac54371a42 -> Law [label=member arrowhead=normal style=dotted]
+	Clause -> Ndb6c9ffa458d48f7bf3a3dac54371a42 [label=" partwhole::properPartOf 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,223 @@
+site_name: METR - Ontology
+site_description: A registry for documenting the ontology of METR terms
+repo_url: https://github.com/k-vaughn/ontology-metr
+nav:
+- Home: index.md
+- Building Ontology:
+  - Building (Building): classes/Building__Building.md
+  - Building Facility (Building): classes/Building__BuildingFacility.md
+  - Building Function (Building): classes/Building__BuildingFunction.md
+  - Building Ontology Thing (Building): classes/Building__BuildingOntologyThing.md
+  - Building Unit (Building): classes/Building__BuildingUnit.md
+  - Building Use (Building): classes/Building__BuildingUse.md
+  - Construction Status (Building): classes/Building__ConstructionStatus.md
+  - Facility (Building): classes/Building__Facility.md
+  - Schema Org Thing (Building): classes/Building__SchemaOrgThing.md
+- Bylaw Pattern:
+  - Amending Bylaw (Bylaw): classes/Bylaw__AmendingBylaw.md
+  - Bylaw (Bylaw): classes/Bylaw__Bylaw.md
+  - Bylaw Ontology Thing (Bylaw): classes/Bylaw__BylawOntologyThing.md
+  - Clause (Bylaw): classes/Bylaw__Clause.md
+  - Definition (Bylaw): classes/Bylaw__Definition.md
+  - Law (Bylaw): classes/Bylaw__Law.md
+  - Main Bylaw (Bylaw): classes/Bylaw__MainBylaw.md
+  - Revision Bylaw (Bylaw): classes/Bylaw__RevisionBylaw.md
+  - Schedule (Bylaw): classes/Bylaw__Schedule.md
+- City Organization Ontology:
+  - Business Establishment (Organization): classes/Organization__BusinessEstablishment.md
+  - Business Id (Organization): classes/Organization__BusinessId.md
+  - City Org Ontology Thing (Organization): classes/Organization__CityOrgOntologyThing.md
+  - Compensation (Organization): classes/Organization__Compensation.md
+  - Employment (Organization): classes/Organization__Employment.md
+  - Employment Status (Organization): classes/Organization__EmploymentStatus.md
+  - For Profit Organization (Organization): classes/Organization__ForProfitOrganization.md
+  - Goal (Organization): classes/Organization__Goal.md
+  - Government Organization (Organization): classes/Organization__GovernmentOrganization.md
+  - Industry Type (Organization): classes/Organization__IndustryType.md
+  - Non Profit Organization (Organization): classes/Organization__NonProfitOrganization.md
+  - Occupation (Organization): classes/Organization__Occupation.md
+  - Operation (Organization): classes/Organization__Operation.md
+  - Organization (Organization): classes/Organization__Organization.md
+  - Organization Agent (Organization): classes/Organization__OrganizationAgent.md
+  - Role (Organization): classes/Organization__Role.md
+  - Salary (Organization): classes/Organization__Salary.md
+  - Wage (Organization): classes/Organization__Wage.md
+- City Pattern:
+  - City (City): classes/City__City.md
+  - City Administrative Area (City): classes/City__CityAdministrativeArea.md
+  - City Ontology Thing (City): classes/City__CityOntologyThing.md
+  - Jurisdictional Area (City): classes/City__JurisdictionalArea.md
+- City Resident Pattern:
+  - City Resident (CityResident): classes/CityResident__CityResident.md
+  - City Resident Ontology Thing (CityResident): classes/CityResident__CityResidentOntologyThing.md
+  - Controlled Entity (CityResident): classes/CityResident__ControlledEntity.md
+  - Entity Operation (CityResident): classes/CityResident__EntityOperation.md
+  - Entity Ownership (CityResident): classes/CityResident__EntityOwnership.md
+  - Home Type (CityResident): classes/CityResident__HomeType.md
+  - Residence (CityResident): classes/CityResident__Residence.md
+  - Residential Relationship (CityResident): classes/CityResident__ResidentialRelationship.md
+- City Service Pattern:
+  - Catchment Area Type (CityService): classes/CityService__CatchmentAreaType.md
+  - City Service Ontology Thing (CityService): classes/CityService__CityServiceOntologyThing.md
+  - Impact Direction (CityService): classes/CityService__ImpactDirection.md
+  - Importance (CityService): classes/CityService__Importance.md
+  - Input (CityService): classes/CityService__Input.md
+  - Outcome (CityService): classes/CityService__Outcome.md
+  - Output (CityService): classes/CityService__Output.md
+  - Program (CityService): classes/CityService__Program.md
+  - Service (CityService): classes/CityService__Service.md
+  - Stakeholder (CityService): classes/CityService__Stakeholder.md
+- Code Pattern:
+  - Code (Code): classes/Code__Code.md
+  - Code Ontology Thing (Code): classes/Code__CodeOntologyThing.md
+- Contact Pattern:
+  - Address (Contact): classes/Contact__Address.md
+  - Address Type: classes/Contact__Address Type.md
+  - Contact Thing (Contact): classes/Contact__ContactThing.md
+  - Cottage Address: classes/Contact__Cottage Address.md
+  - Country (Contact): classes/Contact__Country.md
+  - Fax Telephone Number: classes/Contact__Fax Telephone Number.md
+  - Home Address: classes/Contact__Home Address.md
+  - Home Telephone Number: classes/Contact__Home Telephone Number.md
+  - Hours Of Operation (Contact): classes/Contact__HoursOfOperation.md
+  - Mobile Telephone Number: classes/Contact__Mobile Telephone Number.md
+  - Phone Number: classes/Contact__Phone Number.md
+  - Phone Type: classes/Contact__Phone Type.md
+  - Schema Org Thing (Contact): classes/Contact__SchemaOrgThing.md
+  - State (Contact): classes/Contact__State.md
+  - Street Direction: classes/Contact__Street Direction.md
+  - Street Type: classes/Contact__Street Type.md
+  - Toll  Free Telephone Number: classes/Contact__Toll  Free Telephone Number.md
+  - Work Address: classes/Contact__Work Address.md
+  - Work Telephone Number: classes/Contact__Work Telephone Number.md
+- Contract Pattern:
+  - Condition Precedent (Contract): classes/Contract__ConditionPrecedent.md
+  - Contract (Contract): classes/Contract__Contract.md
+  - Contract Ontology Thing (Contract): classes/Contract__ContractOntologyThing.md
+  - Contractual Commitment (Contract): classes/Contract__ContractualCommitment.md
+  - Contractual Definition (Contract): classes/Contract__ContractualDefinition.md
+  - Contractual Element (Contract): classes/Contract__ContractualElement.md
+  - Non Binding Term (Contract): classes/Contract__NonBindingTerm.md
+  - Representation (Contract): classes/Contract__Representation.md
+  - Warranty (Contract): classes/Contract__Warranty.md
+- Household Pattern:
+  - Household (Household): classes/Household__Household.md
+  - Household Ontology Thing (Household): classes/Household__HouseholdOntologyThing.md
+- Infrastructure Pattern:
+  - Infrastructure Element (Infrastructure): classes/Infrastructure__InfrastructureElement.md
+  - Infrastructure Ontology Thing (Infrastructure): classes/Infrastructure__InfrastructureOntologyThing.md
+- Land Use Ontology:
+  - Employed Population (LandUse): classes/LandUse__EmployedPopulation.md
+  - Land Area (LandUse): classes/LandUse__LandArea.md
+  - Land Use Classification (LandUse): classes/LandUse__LandUseClassification.md
+  - Land Use Ontology Thing (LandUse): classes/LandUse__LandUseOntologyThing.md
+  - Parcel (LandUse): classes/LandUse__Parcel.md
+  - Resident Population (LandUse): classes/LandUse__ResidentPopulation.md
+  - Traffic Zone (LandUse): classes/LandUse__TrafficZone.md
+- Person Ontology:
+  - Citizenship (Person): classes/Person__Citizenship.md
+  - Education (Person): classes/Person__Education.md
+  - Gender (Person): classes/Person__Gender.md
+  - ID Type (Person): classes/Person__IDType.md
+  - Person (Person): classes/Person__Person.md
+  - Person Id (Person): classes/Person__PersonId.md
+  - Person Name (Person): classes/Person__PersonName.md
+  - Person Ontology Thing (Person): classes/Person__PersonOntologyThing.md
+  - Qualification (Person): classes/Person__Qualification.md
+  - Schema Org Thing (Person): classes/Person__SchemaOrgThing.md
+  - Sex (Person): classes/Person__Sex.md
+  - Skill (Person): classes/Person__Skill.md
+- SSN Ontology:
+  - sensors Thing (Sensors): classes/Sensors__sensorsThing.md
+- Transportation Infrastructure Pattern:
+  - Bridge (TransportationInfrastructure): classes/TransportationInfrastructure__Bridge.md
+  - Bridge Segment (TransportationInfrastructure): classes/TransportationInfrastructure__BridgeSegment.md
+  - Rail Line (TransportationInfrastructure): classes/TransportationInfrastructure__RailLine.md
+  - Rail Line Segment (TransportationInfrastructure): classes/TransportationInfrastructure__RailLineSegment.md
+  - Rail Link (TransportationInfrastructure): classes/TransportationInfrastructure__RailLink.md
+  - Rail Segment (TransportationInfrastructure): classes/TransportationInfrastructure__RailSegment.md
+  - Road (TransportationInfrastructure): classes/TransportationInfrastructure__Road.md
+  - Road Link (TransportationInfrastructure): classes/TransportationInfrastructure__RoadLink.md
+  - Road Network Type (TransportationInfrastructure): classes/TransportationInfrastructure__RoadNetworkType.md
+  - Road Segment (TransportationInfrastructure): classes/TransportationInfrastructure__RoadSegment.md
+  - Transportation Infrastructure Ontology Thing (TransportationInfrastructure): classes/TransportationInfrastructure__TransportationInfrastructureOntologyThing.md
+  - Travelled Way (TransportationInfrastructure): classes/TransportationInfrastructure__TravelledWay.md
+  - Travelled Way Link (TransportationInfrastructure): classes/TransportationInfrastructure__TravelledWayLink.md
+  - Travelled Way Segment (TransportationInfrastructure): classes/TransportationInfrastructure__TravelledWaySegment.md
+  - Tunnel (TransportationInfrastructure): classes/TransportationInfrastructure__Tunnel.md
+  - Tunnel Segment (TransportationInfrastructure): classes/TransportationInfrastructure__TunnelSegment.md
+site_url: https://github.com/k-vaughn/ontology-metr
+copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+  <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+  rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+  alt=""></a></p>
+theme:
+  name: material
+  features:
+  - content.code.copy
+  - content.status
+  - content.tooltips
+  - icons
+  - navigation.path
+  - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      question: fontawesome/solid/comments
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+extra_css:
+- stylesheets/extra.css
+extra_javascript:
+- https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+- javascripts/tablesort.js
+plugins:
+- search
+- git-revision-date-localized:
+    type: date
+markdown_extensions:
+- abbr
+- admonition
+- attr_list
+- def_list
+- md_in_html
+- meta
+- footnotes
+- pymdownx.blocks.caption
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+    use_pygments: true
+- pymdownx.inlinehilite
+- pymdownx.snippets:
+    base_path: docs
+    check_paths: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: ''
+- pymdownx.tabbed:
+    alternate_style: true
+- toc:
+    permalink: true
+extra:
+  search:
+    highlight: true
+  hide:
+  - title
+  version:
+    provider: mike
+    alias: true
+    default: latest
