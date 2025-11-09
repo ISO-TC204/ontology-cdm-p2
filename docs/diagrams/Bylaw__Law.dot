@@ -42,8 +42,8 @@ digraph {
  «only»  " arrowhead=normal style=solid]
 	Law -> Clause [label=" hasTransitionClause 
  «only»  " arrowhead=normal style=solid]
-	Nd59d5477519c4bacb1c9f20e574589cf [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">«Enum»<BR/>Enum: InForce, NotInForce, PartiallyInForce</TD></TR><TR><TD ALIGN="LEFT">+ InForce<BR/>+ NotInForce<BR/>+ PartiallyInForce</TD></TR></TABLE>> margin=0]
-	Law -> Nd59d5477519c4bacb1c9f20e574589cf [label=" legislationLegalForce 
+	N2f6fcac160504d54b07b4ed85f3cae46 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">«Enum»<BR/>Enum: InForce, NotInForce, PartiallyInForce</TD></TR><TR><TD ALIGN="LEFT">+ InForce<BR/>+ NotInForce<BR/>+ PartiallyInForce</TD></TR></TABLE>> margin=0]
+	Law -> N2f6fcac160504d54b07b4ed85f3cae46 [label=" legislationLegalForce 
  «only»  " arrowhead=normal style=solid]
 	Law -> city__JurisdictionalArea [label=" legislationJurisdiction 
  «max 1»  " arrowhead=normal style=solid]

@@ -47,9 +47,9 @@
 </g>
 <!-- Invis -->
 <!-- Clause&#45;&gt;Invis -->
-<!-- N4cd260713b264a529580d3ed55e6a8bd -->
+<!-- N0e3db3945cf8476284a12a26eaf6dc92 -->
 <g id="node11" class="node">
-<title>N4cd260713b264a529580d3ed55e6a8bd</title>
+<title>N0e3db3945cf8476284a12a26eaf6dc92</title>
 <polygon fill="lightgray" stroke="none" points="135.25,-727 135.25,-757.5 460.5,-757.5 460.5,-727 135.25,-727"/>
 <text xml:space="preserve" text-anchor="start" x="275.38" y="-745.1" font-family="Arial" font-size="12.00">«Enum»</text>
 <text xml:space="preserve" text-anchor="start" x="136.25" y="-730.85" font-family="Arial" font-size="12.00">Enum: bylaw, penalty, repeal, schedule, severance, transition</text>
@@ -61,24 +61,24 @@
 <text xml:space="preserve" text-anchor="start" x="139.62" y="-643.35" font-family="Arial" font-size="12.00">+ transition</text>
 <polygon fill="none" stroke="black" points="134.25,-638.5 134.25,-758.5 461.5,-758.5 461.5,-638.5 134.25,-638.5"/>
 </g>
-<!-- Clause&#45;&gt;N4cd260713b264a529580d3ed55e6a8bd -->
+<!-- Clause&#45;&gt;N0e3db3945cf8476284a12a26eaf6dc92 -->
 <g id="edge10" class="edge">
-<title>Clause&#45;&gt;N4cd260713b264a529580d3ed55e6a8bd</title>
+<title>Clause&#45;&gt;N0e3db3945cf8476284a12a26eaf6dc92</title>
 <path fill="none" stroke="black" d="M354.23,-562.18C335.31,-566.33 311.16,-575.09 298.88,-593.5 292.16,-603.56 288.89,-615.48 287.72,-627.59"/>
 <polygon fill="black" stroke="black" points="284.25,-627.06 287.28,-637.21 291.24,-627.39 284.25,-627.06"/>
 <text xml:space="preserve" text-anchor="middle" x="328.88" y="-610.05" font-family="Arial" font-size="11.00"> clauseType </text>
 <text xml:space="preserve" text-anchor="middle" x="328.88" y="-596.55" font-family="Arial" font-size="11.00"> «some» &#160;</text>
 </g>
-<!-- N7dcd1f3e1478417d9af103b7301c7f66 -->
+<!-- N1aae571bf78f4941a4e4943a266616cb -->
 <g id="node12" class="node">
-<title>N7dcd1f3e1478417d9af103b7301c7f66</title>
+<title>N1aae571bf78f4941a4e4943a266616cb</title>
 <polygon fill="lightyellow" stroke="none" points="479.12,-689.38 479.12,-707.62 538.62,-707.62 538.62,-689.38 479.12,-689.38"/>
 <text xml:space="preserve" text-anchor="start" x="481.12" y="-694.23" font-family="Arial" font-size="12.00">«unionOf»</text>
 <polygon fill="none" stroke="black" points="479.12,-689.38 479.12,-707.62 538.62,-707.62 538.62,-689.38 479.12,-689.38"/>
 </g>
-<!-- Clause&#45;&gt;N7dcd1f3e1478417d9af103b7301c7f66 -->
+<!-- Clause&#45;&gt;N1aae571bf78f4941a4e4943a266616cb -->
 <g id="edge14" class="edge">
-<title>Clause&#45;&gt;N7dcd1f3e1478417d9af103b7301c7f66</title>
+<title>Clause&#45;&gt;N1aae571bf78f4941a4e4943a266616cb</title>
 <path fill="none" stroke="black" d="M401.9,-575.31C408.5,-580.88 415.67,-587.26 421.88,-593.5 432.94,-604.63 432.99,-609.97 444.62,-620.5 455.11,-630 461.02,-628.35 470.88,-638.5 480.14,-648.04 488.41,-660.16 494.85,-670.94"/>
 <polygon fill="black" stroke="black" points="491.69,-672.46 499.69,-679.41 497.77,-668.99 491.69,-672.46"/>
 <text xml:space="preserve" text-anchor="middle" x="505.75" y="-610.05" font-family="Arial" font-size="11.00"> partwhole::properPartOf </text>
@@ -143,16 +143,16 @@
 <polygon fill="none" stroke="black" points="607.5,-24.88 607.5,-43.12 660.25,-43.12 660.25,-24.88 607.5,-24.88"/>
 </g>
 <!-- severance&#45;&gt;transition -->
-<!-- N7dcd1f3e1478417d9af103b7301c7f66&#45;&gt;Clause -->
+<!-- N1aae571bf78f4941a4e4943a266616cb&#45;&gt;Clause -->
 <g id="edge12" class="edge">
-<title>N7dcd1f3e1478417d9af103b7301c7f66&#45;&gt;Clause</title>
+<title>N1aae571bf78f4941a4e4943a266616cb&#45;&gt;Clause</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M502.36,-680.56C496.28,-667.05 485.86,-648.74 470.88,-638.5 437.64,-615.8 407.91,-651.4 382.12,-620.5 374.42,-611.26 373.2,-598.28 374.28,-586.57"/>
 <polygon fill="black" stroke="black" points="377.69,-587.39 375.73,-576.98 370.77,-586.34 377.69,-587.39"/>
 <text xml:space="preserve" text-anchor="middle" x="402" y="-603.3" font-family="Arial" font-size="11.00">member</text>
 </g>
-<!-- N7dcd1f3e1478417d9af103b7301c7f66&#45;&gt;Law -->
+<!-- N1aae571bf78f4941a4e4943a266616cb&#45;&gt;Law -->
 <g id="edge13" class="edge">
-<title>N7dcd1f3e1478417d9af103b7301c7f66&#45;&gt;Law</title>
+<title>N1aae571bf78f4941a4e4943a266616cb&#45;&gt;Law</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M525.2,-680.61C538.47,-665.91 556.62,-643.42 566.88,-620.5 597.68,-551.64 571.98,-524.09 599.88,-454 603.7,-444.38 609.27,-434.59 614.79,-426.04"/>
 <polygon fill="black" stroke="black" points="617.59,-428.14 620.3,-417.9 611.79,-424.22 617.59,-428.14"/>
 <text xml:space="preserve" text-anchor="middle" x="606.01" y="-511.05" font-family="Arial" font-size="11.00">member</text>
