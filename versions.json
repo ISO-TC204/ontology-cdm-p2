@@ -2,13 +2,18 @@
   {
     "version": "2025-11-09_19-07-29",
     "title": "2025-11-09_19-07-29",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "2025-11-09_12-44-09",
     "title": "2025-11-09_12-44-09",
     "aliases": []
+  },
+  {
+    "version": "v1.0.2",
+    "title": "v1.0.2",
+    "aliases": [
+      "latest"
+    ]
   }
 ]
