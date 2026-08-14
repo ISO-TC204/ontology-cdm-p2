@@ -20,12 +20,13 @@
                                                                    "Mark Fox" ,
                                                                    "Megan Katsumi" ,
                                                                    "Tom Lusco" ;
-                                                   dcterms:modified "2026-02-13"^^xsd:date ;
+                                                   dcterms:modified "2026-08-14"^^xsd:date ;
                                                    dcterms:title "Information technology - City data model - Part 2: City-level concepts - Alert pattern" ;
                                                    vann:preferredNamespacePrefix "cdm2" ;
                                                    vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
-                                                   owl:versionIRI <https://w3id.org/citydata/part2/v1/AlertPattern/r0.0/> ;
-                                                   owl:versionInfo "1.0.0" ;
+                                                   owl:versionIRI <https://w3id.org/citydata/part2/v1/1.3.2-alpha.1> ;
+    owl:priorVersion               <https://w3id.org/citydata/part2/v1/1.3.1> ;
+                                                   owl:versionInfo "1.3.2-alpha.1" ;
                                                    skos:definition "This ontology specifies the city-level concepts for the alert pattern of the city data model." .
 
 #################################################################
