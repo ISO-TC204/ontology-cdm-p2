@@ -2,9 +2,25 @@
 
 Clauses that cover the period during which entities affected by the Law can do things to conform to the new conditions.
 
-**Domain**: [Law](../classes/Law.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasTransitionClause`
 
-**Range**: [Clause](../classes/Clause.md)
+## Domain
+
+| Class |
+|-------|
+| [Law](../classes/Law.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Clause](../classes/Clause.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Clauses that cover the period during which entities affected by the Law can do t
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasTransitionClause`

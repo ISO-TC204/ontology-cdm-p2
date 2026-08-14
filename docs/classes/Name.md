@@ -2,6 +2,8 @@
 
 A Name represents a formal name given to an entity and is a superclass for all more descriptive name types.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Name`
+
 
 ## Diagram
 
@@ -65,6 +67,7 @@ A Name represents a formal name given to an entity and is a superclass for all m
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | datatype xsd:string |
 | subClassOf | [CityThing](CityThing.md) |
 

@@ -2,6 +2,8 @@
 
 A Tunnel is a Infrastructure Element that enables travel through or underneath some obstacle or area. It may contain some Road or RailLine Segments.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Tunnel`
+
 
 ## Diagram
 
@@ -56,7 +58,7 @@ A Tunnel is a Infrastructure Element that enables travel through or underneath s
     </g>
     </g>
     <!-- Tunnel&#45;&gt;TravelledWaySegment -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>Tunnel&#45;&gt;TravelledWaySegment</title>
     <path fill="none" stroke="black" d="M103.56,-277.17C98.92,-245.22 88.8,-175.51 83.11,-136.28"/>
     <polygon fill="black" stroke="black" points="86.58,-135.82 81.68,-126.43 79.65,-136.83 86.58,-135.82"/>
@@ -74,7 +76,7 @@ A Tunnel is a Infrastructure Element that enables travel through or underneath s
     </g>
     </g>
     <!-- Tunnel&#45;&gt;TunnelSegment -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>Tunnel&#45;&gt;TunnelSegment</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M129.18,-277.38C138.08,-269.58 147.25,-259.48 152,-248 161.79,-224.37 175.08,-141.29 151,-89 145.61,-77.29 136.3,-67.11 126.51,-58.86"/>
     <polygon fill="black" stroke="black" points="128.72,-56.14 118.68,-52.75 124.41,-61.66 128.72,-56.14"/>
@@ -98,7 +100,9 @@ A Tunnel is a Infrastructure Element that enables travel through or underneath s
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TunnelSegment](TunnelSegment.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [TunnelSegment](https://w3id.org/citydata/part2/v1/TunnelSegment) |
+| [supports](../properties/supports.md) | only [TravelledWaySegment](TravelledWaySegment.md) |
 | [supports](../properties/supports.md) | only [TravelledWaySegment](https://w3id.org/citydata/part2/v1/TravelledWaySegment) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
 

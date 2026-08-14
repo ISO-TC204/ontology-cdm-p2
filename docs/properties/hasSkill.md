@@ -2,7 +2,19 @@
 
 Identifies the skills of a person.
 
-**Range**: [Skill](../classes/Skill.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasSkill`
+
+## Range
+
+| Class |
+|-------|
+| [Skill](../classes/Skill.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the skills of a person.
 |-------|
 | [Person](../classes/Person.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasSkill`

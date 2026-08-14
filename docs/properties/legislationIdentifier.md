@@ -2,9 +2,25 @@
 
 Identifies a unique identifier of the law.
 
-**Domain**: [Law](../classes/Law.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/legislationIdentifier`
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+## Domain
+
+| Class |
+|-------|
+| [Law](../classes/Law.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawDataProperty](BylawDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies a unique identifier of the law.
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/legislationIdentifier`

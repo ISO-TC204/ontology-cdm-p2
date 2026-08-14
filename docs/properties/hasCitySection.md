@@ -2,7 +2,19 @@
 
 Specifies the section of the city for the Address.
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasCitySection`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AddressDataProperty](AddressDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Specifies the section of the city for the Address.
 |-------|
 | [Address](../classes/Address.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasCitySection`

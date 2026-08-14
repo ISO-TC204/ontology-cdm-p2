@@ -2,7 +2,19 @@
 
 Identifies the gender identity of a person.
 
-**Range**: [Gender](../classes/Gender.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasGenderIdentity`
+
+## Range
+
+| Class |
+|-------|
+| [Gender](../classes/Gender.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the gender identity of a person.
 |-------|
 | [Person](../classes/Person.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasGenderIdentity`

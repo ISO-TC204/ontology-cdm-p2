@@ -2,7 +2,19 @@
 
 Clauses that specify all previous Laws that deal with subjects that are addressed in the new bylaw must either be repealed or amended.
 
-**Range**: [Clause](../classes/Clause.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasRepealClause`
+
+## Range
+
+| Class |
+|-------|
+| [Clause](../classes/Clause.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Clauses that specify all previous Laws that deal with subjects that are addresse
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasRepealClause`

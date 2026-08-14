@@ -2,9 +2,25 @@
 
 Identifies the name of any construction code(s) applicable during the construction of the Building. 
 
-**Domain**: [Building](../classes/Building.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/builtAccordingToConstructionCode`
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+## Domain
+
+| Class |
+|-------|
+| [Building](../classes/Building.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingDataProperty](BuildingDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the name of any construction code(s) applicable during the constructi
 |-------|
 | [Building](../classes/Building.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/builtAccordingToConstructionCode`

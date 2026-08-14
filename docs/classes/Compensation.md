@@ -2,6 +2,8 @@
 
 A compensation is a generalization of monetary compensation received for employment.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Compensation`
+
 
 ## Diagram
 

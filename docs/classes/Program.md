@@ -4,6 +4,8 @@ A program is a major city initiative to address the needs of constituents (citiz
 
 EXAMPLE: A "poverty reduction program” can be made up of a set of Services such as mobiles services that provides food and clothing to those that live on the street, and a training service that provides basic skills for those living on the street. A Program has a set of Stakeholders that may contribute or benefit.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Program`
+
 
 ## Diagram
 
@@ -76,7 +78,7 @@ EXAMPLE: A "poverty reduction program” can be made up of a set of Services suc
     </g>
     </g>
     <!-- Program&#45;&gt;Input -->
-    <g id="edge12" class="edge">
+    <g id="edge11" class="edge">
     <title>Program&#45;&gt;Input</title>
     <path fill="none" stroke="black" d="M160.51,-495.02C145.99,-487.24 131.35,-477.58 119.75,-466 93.77,-440.07 75.99,-401.13 66.16,-375.04"/>
     <polygon fill="black" stroke="black" points="69.52,-374.03 62.84,-365.81 62.94,-376.41 69.52,-374.03"/>
@@ -94,7 +96,7 @@ EXAMPLE: A "poverty reduction program” can be made up of a set of Services suc
     </g>
     </g>
     <!-- Program&#45;&gt;Outcome -->
-    <g id="edge9" class="edge">
+    <g id="edge12" class="edge">
     <title>Program&#45;&gt;Outcome</title>
     <path fill="none" stroke="black" d="M212.39,-495.03C203.93,-473.79 189.32,-443.14 169,-422 158.02,-410.59 149.26,-415.38 138.25,-404 128.82,-394.25 91.28,-321.63 70.69,-281.12"/>
     <polygon fill="black" stroke="black" points="73.81,-279.55 66.17,-272.22 67.57,-282.72 73.81,-279.55"/>
@@ -112,7 +114,7 @@ EXAMPLE: A "poverty reduction program” can be made up of a set of Services suc
     </g>
     </g>
     <!-- Program&#45;&gt;Output -->
-    <g id="edge14" class="edge">
+    <g id="edge13" class="edge">
     <title>Program&#45;&gt;Output</title>
     <path fill="none" stroke="black" d="M222.58,-495.13C223.52,-466.96 222.26,-419.62 207,-382.5 203.09,-373 198.77,-372.63 192.5,-364.5 149.83,-309.18 101.62,-242.97 75.77,-207.14"/>
     <polygon fill="black" stroke="black" points="78.67,-205.17 69.98,-199.1 72.99,-209.26 78.67,-205.17"/>
@@ -130,7 +132,7 @@ EXAMPLE: A "poverty reduction program” can be made up of a set of Services suc
     </g>
     </g>
     <!-- Program&#45;&gt;Service -->
-    <g id="edge11" class="edge">
+    <g id="edge14" class="edge">
     <title>Program&#45;&gt;Service</title>
     <path fill="none" stroke="black" d="M233.32,-495.1C250.59,-457.45 277.01,-383.57 250,-328.5 244.25,-316.77 236.17,-319.56 226.75,-310.5 166.27,-252.33 105.56,-173.9 75.82,-133.86"/>
     <polygon fill="black" stroke="black" points="78.76,-131.96 70.01,-125.99 73.13,-136.12 78.76,-131.96"/>
@@ -148,20 +150,20 @@ EXAMPLE: A "poverty reduction program” can be made up of a set of Services suc
     </g>
     </g>
     <!-- Program&#45;&gt;Stakeholder -->
-    <g id="edge10" class="edge">
+    <g id="edge9" class="edge">
     <title>Program&#45;&gt;Stakeholder</title>
     <path fill="none" stroke="black" d="M267.18,-495.06C285.37,-481.92 302,-463.7 302,-441 302,-441 302,-441 302,-106 302,-63.56 167.88,-45.25 95.33,-38.46"/>
     <polygon fill="black" stroke="black" points="96.03,-35.01 85.76,-37.6 95.4,-41.98 96.03,-35.01"/>
-    <polygon fill="white" stroke="none" points="302,-242.25 302,-263.75 443.5,-263.75 443.5,-242.25 302,-242.25"/>
-    <text xml:space="preserve" text-anchor="start" x="306" y="-249.25" font-family="Arial" font-size="11.00">hasContributingStakeholder</text>
+    <polygon fill="white" stroke="none" points="302,-242.25 302,-263.75 431.5,-263.75 431.5,-242.25 302,-242.25"/>
+    <text xml:space="preserve" text-anchor="start" x="306" y="-249.25" font-family="Arial" font-size="11.00">hasBeneficialStakeholder</text>
     </g>
     <!-- Program&#45;&gt;Stakeholder -->
-    <g id="edge13" class="edge">
+    <g id="edge10" class="edge">
     <title>Program&#45;&gt;Stakeholder</title>
-    <path fill="none" stroke="black" d="M323.36,-507.39C395.76,-495.96 480,-475.29 480,-441 480,-441 480,-441 480,-106 480,-67.35 206.13,-45.17 95.52,-37.79"/>
-    <polygon fill="black" stroke="black" points="95.82,-34.3 85.61,-37.14 95.36,-41.29 95.82,-34.3"/>
-    <polygon fill="white" stroke="none" points="480,-242.25 480,-263.75 609.5,-263.75 609.5,-242.25 480,-242.25"/>
-    <text xml:space="preserve" text-anchor="start" x="484" y="-249.25" font-family="Arial" font-size="11.00">hasBeneficialStakeholder</text>
+    <path fill="none" stroke="black" d="M323.25,-505.78C391.2,-493.78 468,-473.11 468,-441 468,-441 468,-441 468,-106 468,-68.54 203.65,-45.76 95.4,-38"/>
+    <polygon fill="black" stroke="black" points="95.94,-34.53 85.72,-37.32 95.45,-41.51 95.94,-34.53"/>
+    <polygon fill="white" stroke="none" points="468,-242.25 468,-263.75 609.5,-263.75 609.5,-242.25 468,-242.25"/>
+    <text xml:space="preserve" text-anchor="start" x="472" y="-249.25" font-family="Arial" font-size="11.00">hasContributingStakeholder</text>
     </g>
     <!-- Invis&#45;&gt;Input -->
     <!-- Input&#45;&gt;Outcome -->
@@ -186,12 +188,25 @@ EXAMPLE: A "poverty reduction program” can be made up of a set of Services suc
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | max 1 xsd:string |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
+| [hasBeneficialStakeholder](../properties/hasBeneficialStakeholder.md) | only [Stakeholder](Stakeholder.md) |
 | [hasBeneficialStakeholder](../properties/hasBeneficialStakeholder.md) | only [Stakeholder](https://w3id.org/citydata/part2/v1/Stakeholder) |
+| [hasContributingStakeholder](../properties/hasContributingStakeholder.md) | only [Stakeholder](Stakeholder.md) |
 | [hasContributingStakeholder](../properties/hasContributingStakeholder.md) | only [Stakeholder](https://w3id.org/citydata/part2/v1/Stakeholder) |
+| [hasInput](../properties/hasInput.md) | only [Input](Input.md) |
 | [hasInput](../properties/hasInput.md) | only [Input](https://w3id.org/citydata/part2/v1/Input) |
+| [hasOutcome](../properties/hasOutcome.md) | only [Outcome](Outcome.md) |
 | [hasOutcome](../properties/hasOutcome.md) | only [Outcome](https://w3id.org/citydata/part2/v1/Outcome) |
+| [hasOutput](../properties/hasOutput.md) | only [Output](Output.md) |
 | [hasOutput](../properties/hasOutput.md) | only [Output](https://w3id.org/citydata/part2/v1/Output) |
+| [hasService](../properties/hasService.md) | only [Service](Service.md) |
 | [hasService](../properties/hasService.md) | only [Service](https://w3id.org/citydata/part2/v1/Service) |
 | subClassOf | [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Government Organization](GovernmentOrganization.md) | [hasProgram](../properties/hasProgram.md) |
+| [Non Profit Organization](NonProfitOrganization.md) | [hasProgram](../properties/hasProgram.md) |
 

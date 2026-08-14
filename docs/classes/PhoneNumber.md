@@ -2,6 +2,8 @@
 
 A PhoneNumber defines the complete international phone number and type of number.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/PhoneNumber`
+
 
 ## Diagram
 
@@ -91,4 +93,11 @@ A PhoneNumber defines the complete international phone number and type of number
 | [hasPhoneType](../properties/hasPhoneType.md) | exactly 1 |
 | [hasPhoneType](../properties/hasPhoneType.md) | exactly 1 [PhoneType](https://w3id.org/citydata/part2/v1/PhoneType) |
 | subClassOf | [ContactThing](ContactThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Organization](Organization.md) | [hasTelephone](../properties/hasTelephone.md) |
+| [Person](Person.md) | [hasTelephone](../properties/hasTelephone.md) |
 

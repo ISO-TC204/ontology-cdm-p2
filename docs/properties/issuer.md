@@ -2,7 +2,19 @@
 
 Entity that issued the alert
 
-**Range**: [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent)
+**IRI**: `https://w3id.org/citydata/part2/v1/issuer`
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertDataProperty](AlertDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Entity that issued the alert
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/issuer`

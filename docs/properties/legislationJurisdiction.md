@@ -2,9 +2,25 @@
 
 Identifies the jurisdiction that enacted the Law.
 
-**Domain**: [Law](../classes/Law.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/legislationJurisdiction`
 
-**Range**: [JurisdictionalArea](../classes/JurisdictionalArea.md)
+## Domain
+
+| Class |
+|-------|
+| [Law](../classes/Law.md) |
+
+## Range
+
+| Class |
+|-------|
+| [JurisdictionalArea](../classes/JurisdictionalArea.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -13,4 +29,3 @@ Identifies the jurisdiction that enacted the Law.
 | [Bylaw](../classes/Bylaw.md) |
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/legislationJurisdiction`

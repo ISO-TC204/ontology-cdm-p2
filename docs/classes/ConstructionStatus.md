@@ -2,6 +2,8 @@
 
 Construction Status is a type of Code that describes the construction status of a Building or Infrastructure Element.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ConstructionStatus`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ Construction Status is a type of Code that describes the construction status of 
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [BuildingThing](BuildingThing.md) |
 

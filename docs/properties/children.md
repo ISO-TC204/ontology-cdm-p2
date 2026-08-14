@@ -2,7 +2,19 @@
 
 Identifies any children of a person.
 
-**Range**: [Person](../classes/Person.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/children`
+
+## Range
+
+| Class |
+|-------|
+| [Person](../classes/Person.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies any children of a person.
 |-------|
 | [Person](../classes/Person.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/children`

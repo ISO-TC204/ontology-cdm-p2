@@ -27,6 +27,7 @@ This pattern consists of the following classes:
 - [Role](Role.md)
 - [Salary](Salary.md)
 - [Wage](Wage.md)
+
 This module defines the following properties:
 
 - [annualPay](../properties/annualPay.md)

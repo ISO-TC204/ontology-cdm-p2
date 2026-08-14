@@ -2,7 +2,19 @@
 
 Words or phrases that are defined to have a specific meaning within the domain object.
 
-**Range**: [Definition](../classes/Definition.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasDefinition`
+
+## Range
+
+| Class |
+|-------|
+| [Definition](../classes/Definition.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Words or phrases that are defined to have a specific meaning within the domain o
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasDefinition`

@@ -2,9 +2,25 @@
 
 Specifies an Activity that is performed as part of the Role.
 
-**Domain**: [Role](../classes/Role.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasProcess`
 
-**Range**: [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity)
+## Domain
+
+| Class |
+|-------|
+| [Role](../classes/Role.md) |
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies an Activity that is performed as part of the Role.
 |-------|
 | [Role](../classes/Role.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasProcess`

@@ -2,6 +2,8 @@
 
 Part of the Contract that specifies some assertions that are taken to be true at the time of the contract and serve to influence a party's decision to enter into the Contract.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Representation`
+
 
 ## Diagram
 

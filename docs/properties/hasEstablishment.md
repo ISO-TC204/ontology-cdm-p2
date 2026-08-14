@@ -2,9 +2,25 @@
 
 Specifies a Business Establishment where the organization conducts business.
 
-**Domain**: [ForProfitOrganization](../classes/ForProfitOrganization.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasEstablishment`
 
-**Range**: [BusinessEstablishment](../classes/BusinessEstablishment.md)
+## Domain
+
+| Class |
+|-------|
+| [ForProfitOrganization](../classes/ForProfitOrganization.md) |
+
+## Range
+
+| Class |
+|-------|
+| [BusinessEstablishment](../classes/BusinessEstablishment.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies a Business Establishment where the organization conducts business.
 |-------|
 | [ForProfitOrganization](../classes/ForProfitOrganization.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasEstablishment`

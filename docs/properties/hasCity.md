@@ -2,7 +2,19 @@
 
 Specifies the name of the city for the address.
 
-**Range**: [City](../classes/City.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasCity`
+
+## Range
+
+| Class |
+|-------|
+| [City](../classes/City.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AddressProperty](AddressProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Specifies the name of the city for the address.
 |-------|
 | [Address](../classes/Address.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasCity`

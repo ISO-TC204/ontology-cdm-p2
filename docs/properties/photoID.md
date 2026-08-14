@@ -2,9 +2,25 @@
 
 Specifies whether the identifier contains a photo.
 
-**Domain**: [Person](../classes/Person.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/photoID`
 
-**Range**: [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean)
+## Domain
+
+| Class |
+|-------|
+| [Person](../classes/Person.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonDataProperty](PersonDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies whether the identifier contains a photo.
 |-------|
 | [PersonId](../classes/PersonId.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/photoID`

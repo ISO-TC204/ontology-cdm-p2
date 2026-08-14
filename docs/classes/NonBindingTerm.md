@@ -2,6 +2,8 @@
 
 A NonBindingTerm is a term in a contract that does not have legal force.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/NonBindingTerm`
+
 
 ## Diagram
 

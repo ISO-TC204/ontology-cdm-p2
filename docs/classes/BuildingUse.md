@@ -4,6 +4,8 @@ Building Use is a type of Code that describes the use or function of a Building
 
 EXAMPLE: residential, commercial, industrial
 
+**IRI**: `https://w3id.org/citydata/part2/v1/BuildingUse`
+
 
 ## Diagram
 
@@ -80,6 +82,13 @@ EXAMPLE: residential, commercial, industrial
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [BuildingThing](BuildingThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Building](Building.md) | [use](../properties/use.md) |
 

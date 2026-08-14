@@ -2,7 +2,19 @@
 
 specifies the type of address.
 
-**Range**: [AddressType](../classes/AddressType.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasAddressType`
+
+## Range
+
+| Class |
+|-------|
+| [AddressType](../classes/AddressType.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AddressProperty](AddressProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ specifies the type of address.
 |-------|
 | [Address](../classes/Address.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasAddressType`

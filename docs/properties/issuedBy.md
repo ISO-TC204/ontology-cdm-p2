@@ -2,7 +2,19 @@
 
 Identifies the Agent that issued the ID, document, or certificate.
 
-**Range**: [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent)
+**IRI**: `https://w3id.org/citydata/part2/v1/issuedBy`
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the Agent that issued the ID, document, or certificate.
 |-------|
 | [PersonId](../classes/PersonId.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/issuedBy`

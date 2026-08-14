@@ -2,6 +2,8 @@
 
 A contractual commitment is a legally binding part of a contract that consists of a promise made by a party in relation to the contract.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ContractualCommitment`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ A contractual commitment is a legally binding part of a contract that consists o
 
 | Property | Constraint |
 |----------|------------|
+| [specifiesAgreement](../properties/specifiesAgreement.md) | only [cdm1:Agreement](https://w3id.org/citydata/part1/v1/Agreement) |
 | [specifiesAgreement](../properties/specifiesAgreement.md) | only [cdm1:Agreement](https://w3id.org/citydata/part1/v1/Agreement) |
 | subClassOf | [ContractualElement](ContractualElement.md) |
 

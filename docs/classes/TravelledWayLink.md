@@ -2,6 +2,8 @@
 
 A Travelled Way Link represents a continuous length of a Travelled Way and is a type of Infrastructure Element that connects two or more Travelled Way Segments.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/TravelledWayLink`
+
 
 ## Diagram
 
@@ -85,6 +87,13 @@ A Travelled Way Link represents a continuous length of a Travelled Way and is a 
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | only [TravelledWay](TravelledWay.md) |
 | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | only [TravelledWay](https://w3id.org/citydata/part2/v1/TravelledWay) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travelled Way (cdm1)](TravelledWay.md) | [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) |
 

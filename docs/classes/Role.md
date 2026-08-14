@@ -2,6 +2,8 @@
 
 A Role has a single, possibly complex, Goal.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Role`
+
 
 ## Diagram
 
@@ -72,7 +74,7 @@ A Role has a single, possibly complex, Goal.
     </g>
     </g>
     <!-- Role&#45;&gt;cdm1_Activity -->
-    <g id="edge7" class="edge">
+    <g id="edge8" class="edge">
     <title>Role&#45;&gt;cdm1_Activity</title>
     <path fill="none" stroke="black" d="M139.45,-328.85C133.22,-320.28 125.76,-309.54 119.75,-299.5 101.59,-269.15 83.73,-232.6 72.33,-208.19"/>
     <polygon fill="black" stroke="black" points="75.58,-206.88 68.21,-199.27 69.23,-209.81 75.58,-206.88"/>
@@ -108,7 +110,7 @@ A Role has a single, possibly complex, Goal.
     </g>
     </g>
     <!-- Role&#45;&gt;Goal -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>Role&#45;&gt;Goal</title>
     <path fill="none" stroke="black" d="M178.91,-343.07C217.78,-337.93 285,-322.14 285,-274.5 285,-274.5 285,-274.5 285,-106 285,-69.01 169.23,-48.13 107.2,-39.59"/>
     <polygon fill="black" stroke="black" points="107.79,-36.14 97.42,-38.29 106.87,-43.08 107.79,-36.14"/>
@@ -132,9 +134,18 @@ A Role has a single, possibly complex, Goal.
 
 | Property | Constraint |
 |----------|------------|
+| [hasGoal](../properties/hasGoal.md) | only [Goal](Goal.md) |
 | [hasGoal](../properties/hasGoal.md) | only [Goal](https://w3id.org/citydata/part2/v1/Goal) |
 | [hasProcess](../properties/hasProcess.md) | only [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity) |
+| [hasProcess](../properties/hasProcess.md) | only [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity) |
+| [hasResource](../properties/hasResource.md) | only [cdm1:Resource](https://w3id.org/citydata/part1/v1/Resource) |
 | [hasResource](../properties/hasResource.md) | only [cdm1:Resource](https://w3id.org/citydata/part1/v1/Resource) |
 | subClassOf | [org:Role](https://w3id.org/citydata/imported/org/Role) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Organization Agent](OrganizationAgent.md) | [playsRole](../properties/playsRole.md) |
 

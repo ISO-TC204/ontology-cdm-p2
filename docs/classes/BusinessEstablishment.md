@@ -2,6 +2,8 @@
 
 Business Establishment: A Business establishment is a physical location where an Organization conducts business.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/BusinessEstablishment`
+
 
 ## Diagram
 
@@ -56,7 +58,7 @@ Business Establishment: A Business establishment is a physical location where an
     </g>
     </g>
     <!-- BusinessEstablishment&#45;&gt;Address -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>BusinessEstablishment&#45;&gt;Address</title>
     <path fill="none" stroke="black" d="M101.57,-277.17C93.13,-245.15 74.71,-175.21 64.38,-136.03"/>
     <polygon fill="black" stroke="black" points="67.78,-135.17 61.85,-126.39 61.01,-136.96 67.78,-135.17"/>
@@ -74,7 +76,7 @@ Business Establishment: A Business establishment is a physical location where an
     </g>
     </g>
     <!-- BusinessEstablishment&#45;&gt;cdm1_Location -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>BusinessEstablishment&#45;&gt;cdm1_Location</title>
     <path fill="none" stroke="black" d="M135.87,-277.12C146.12,-269.64 156.41,-259.83 162,-248 170.36,-230.32 167.22,-222.85 162,-204 146.31,-147.34 105.07,-91.32 79.19,-60.13"/>
     <polygon fill="black" stroke="black" points="82.12,-58.18 72.99,-52.8 76.78,-62.7 82.12,-58.18"/>
@@ -100,6 +102,13 @@ Business Establishment: A Business establishment is a physical location where an
 |----------|------------|
 | [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | max 1 |
 | [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | max 1 [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [hasAddress](../properties/hasAddress.md) | only [Address](Address.md) |
 | [hasAddress](../properties/hasAddress.md) | only [Address](https://w3id.org/citydata/part2/v1/Address) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [For Profit Organization](ForProfitOrganization.md) | [hasEstablishment](../properties/hasEstablishment.md) |
 

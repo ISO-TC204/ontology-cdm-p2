@@ -2,7 +2,19 @@
 
 Identifies the code for the domain object.
 
-**Range**: [Code](../classes/Code.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasCode`
+
+## Range
+
+| Class |
+|-------|
+| [Code](../classes/Code.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CodeObjectProperty](CodeObjectProperty.md) |
 
 ## Used in classes
 
@@ -32,4 +44,3 @@ Identifies the code for the domain object.
 | [ImpactDirection](../classes/ImpactDirection.md) |
 | [Importance](../classes/Importance.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasCode`

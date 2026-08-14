@@ -2,6 +2,8 @@
 
 Skill is a type of Code that describes a specific ability or competency of a person.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Skill`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Skill is a type of Code that describes a specific ability or competency of a per
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person](Person.md) | [hasSkill](../properties/hasSkill.md) |
 

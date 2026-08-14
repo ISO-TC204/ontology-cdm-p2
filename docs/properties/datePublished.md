@@ -2,7 +2,19 @@
 
 Date the domain object is officially published.
 
-**Range**: [xsd:dateTime](https://w3id.org/citydata/imported/xsd/dateTime)
+**IRI**: `https://w3id.org/citydata/part2/v1/datePublished`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:dateTime](https://w3id.org/citydata/imported/xsd/dateTime) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawDataProperty](BylawDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Date the domain object is officially published.
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/datePublished`

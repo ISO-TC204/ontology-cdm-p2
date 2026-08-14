@@ -2,7 +2,19 @@
 
 short textual caption
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+**IRI**: `https://w3id.org/citydata/part2/v1/headline`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertDataProperty](AlertDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ short textual caption
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/headline`

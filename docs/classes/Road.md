@@ -2,6 +2,8 @@
 
 A Road is a type of Travelled Way that describes a part of the physical transport infrastructure that has been improved to allow travel by motor vehicles, persons, bicycles, or similar methods of conveyance. road vehicles. No distinction is made between Road types at this level.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Road`
+
 
 ## Diagram
 
@@ -79,6 +81,13 @@ A Road is a type of Travelled Way that describes a part of the physical transpor
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) | only [RoadLink](RoadLink.md) |
 | [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) | only [RoadLink](https://w3id.org/citydata/part2/v1/RoadLink) |
 | subClassOf | [TravelledWay](TravelledWay.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Road Link (cdm1)](RoadLink.md) | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) |
 

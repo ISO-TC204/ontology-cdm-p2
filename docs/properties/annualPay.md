@@ -2,7 +2,19 @@
 
 Identifies the compensation to be paid for a year.
 
-**Range**: [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue)
+**IRI**: `https://w3id.org/citydata/part2/v1/annualPay`
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [hasPay](hasPay.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the compensation to be paid for a year.
 |-------|
 | [Salary](../classes/Salary.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/annualPay`

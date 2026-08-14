@@ -2,9 +2,25 @@
 
 Specifies the total number of building units in a building.
 
-**Domain**: [Building](../classes/Building.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/numBuildingUnits`
 
-**Range**: [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger)
+## Domain
+
+| Class |
+|-------|
+| [Building](../classes/Building.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingDataProperty](BuildingDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies the total number of building units in a building.
 |-------|
 | [Building](../classes/Building.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/numBuildingUnits`

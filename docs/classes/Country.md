@@ -2,6 +2,8 @@
 
 A Country is a specialization of a Jurisdictional Area that is formally identified as such.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Country`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ A Country is a specialization of a Jurisdictional Area that is formally identifi
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [ContactThing](ContactThing.md) |
 

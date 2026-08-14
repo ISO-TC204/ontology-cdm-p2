@@ -2,7 +2,19 @@
 
 The operational status.
 
-**Range**: [Code](../classes/Code.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/status`
+
+## Range
+
+| Class |
+|-------|
+| [Code](../classes/Code.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertObjectProperty](AlertObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ The operational status.
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/status`

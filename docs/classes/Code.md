@@ -2,6 +2,8 @@
 
 A code represents a possible set of values for a property, according to some predefined system of values.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Code`
+
 
 ## Diagram
 
@@ -83,12 +85,45 @@ A code represents a possible set of values for a property, according to some pre
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | datatype xsd:string |
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | max 1 |
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | max 1 xsd:string |
+| [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | datatype xsd:string |
 | [definedBy](../properties/definedBy.md) | max 1 |
 | [definedBy](../properties/definedBy.md) | max 1 [cdm1:Organization](https://w3id.org/citydata/part1/v1/Organization) |
+| [specification](../properties/specification.md) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [specification](../properties/specification.md) | datatype xsd:string |
 | subClassOf | [CodeThing](CodeThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Alert](Alert.md) | [category](../properties/category.md) |
+| [Alert](Alert.md) | [cause](../properties/cause.md) |
+| [Alert](Alert.md) | [certainty](../properties/certainty.md) |
+| [Alert](Alert.md) | [distribution](../properties/distribution.md) |
+| [Alert](Alert.md) | [effect](../properties/effect.md) |
+| [Alert](Alert.md) | [recommendation](../properties/recommendation.md) |
+| [Building Use](BuildingUse.md) | [hasCode](../properties/hasCode.md) |
+| [Catchment Area Type](CatchmentAreaType.md) | [hasCode](../properties/hasCode.md) |
+| [Construction Status](ConstructionStatus.md) | [hasCode](../properties/hasCode.md) |
+| [Country](Country.md) | [hasCode](../properties/hasCode.md) |
+| [Education](Education.md) | [hasCode](../properties/hasCode.md) |
+| [Employment Status](EmploymentStatus.md) | [hasCode](../properties/hasCode.md) |
+| [Gender](Gender.md) | [hasCode](../properties/hasCode.md) |
+| [Home Type](HomeType.md) | [hasCode](../properties/hasCode.md) |
+| [Id Type](IDType.md) | [hasCode](../properties/hasCode.md) |
+| [Impact Direction](ImpactDirection.md) | [hasCode](../properties/hasCode.md) |
+| [Importance](Importance.md) | [hasCode](../properties/hasCode.md) |
+| [Industry Type](IndustryType.md) | [hasCode](../properties/hasCode.md) |
+| [Land Use Classification](LandUseClassification.md) | [hasCode](../properties/hasCode.md) |
+| [Occupation](Occupation.md) | [hasCode](../properties/hasCode.md) |
+| [Residential Relationship](ResidentialRelationship.md) | [hasCode](../properties/hasCode.md) |
+| [Road Network Type](RoadNetworkType.md) | [hasCode](../properties/hasCode.md) |
+| [Sex](Sex.md) | [hasCode](../properties/hasCode.md) |
+| [Skill](Skill.md) | [hasCode](../properties/hasCode.md) |
+| [State](State.md) | [hasCode](../properties/hasCode.md) |
 

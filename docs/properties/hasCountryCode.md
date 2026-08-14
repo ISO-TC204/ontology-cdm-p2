@@ -2,9 +2,25 @@
 
 Identifies the country code for the telephone number.
 
-**Domain**: [PhoneNumber](../classes/PhoneNumber.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasCountryCode`
 
-**Range**: [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger)
+## Domain
+
+| Class |
+|-------|
+| [PhoneNumber](../classes/PhoneNumber.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TelephoneDataProperty](TelephoneDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the country code for the telephone number.
 |-------|
 | [PhoneNumber](../classes/PhoneNumber.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasCountryCode`

@@ -2,9 +2,25 @@
 
 Identifies as single string that is the family or last name of the Person.
 
-**Domain**: [PersonName](../classes/PersonName.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/familyName`
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+## Domain
+
+| Class |
+|-------|
+| [PersonName](../classes/PersonName.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonDataProperty](PersonDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies as single string that is the family or last name of the Person.
 |-------|
 | [PersonName](../classes/PersonName.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/familyName`

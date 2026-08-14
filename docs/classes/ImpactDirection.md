@@ -2,6 +2,8 @@
 
 Impact Direction is a type of Code that describes the direction of impact of an event or action.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ImpactDirection`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ Impact Direction is a type of Code that describes the direction of impact of an 
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
 

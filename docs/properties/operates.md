@@ -2,9 +2,25 @@
 
 Specifies an EntityOperation where the entity is an Organization that the resident operates.
 
-**Domain**: [CityResident](../classes/CityResident.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/operates`
 
-**Range**: [EntityOperation](../classes/EntityOperation.md)
+## Domain
+
+| Class |
+|-------|
+| [CityResident](../classes/CityResident.md) |
+
+## Range
+
+| Class |
+|-------|
+| [EntityOperation](../classes/EntityOperation.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityResidentObjectProperty](CityResidentObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies an EntityOperation where the entity is an Organization that the reside
 |-------|
 | [CityResident](../classes/CityResident.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/operates`

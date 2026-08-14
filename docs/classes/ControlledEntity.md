@@ -2,6 +2,8 @@
 
 A controlled entity is an entity that is subject to control by another entity.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ControlledEntity`
+
 
 ## Diagram
 

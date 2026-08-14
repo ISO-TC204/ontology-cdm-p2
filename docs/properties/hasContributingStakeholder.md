@@ -2,7 +2,19 @@
 
 Identifies the stakeholders that contribute to the domain object.
 
-**Range**: [Stakeholder](../classes/Stakeholder.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasContributingStakeholder`
+
+## Range
+
+| Class |
+|-------|
+| [Stakeholder](../classes/Stakeholder.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +24,3 @@ Identifies the stakeholders that contribute to the domain object.
 | [Program](../classes/Program.md) |
 | [Service](../classes/Service.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasContributingStakeholder`

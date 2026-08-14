@@ -2,7 +2,19 @@
 
 Identifies the type of network.
 
-**Range**: [Code](../classes/Code.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/networkType`
+
+## Range
+
+| Class |
+|-------|
+| [Code](../classes/Code.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TransportInfrastructureObjectProperty](TransportInfrastructureObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the type of network.
 |-------|
 | [RoadSegment](../classes/RoadSegment.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/networkType`

@@ -10,6 +10,7 @@ This pattern consists of the following classes:
 
 - [Alert](Alert.md)
 - [Alert Thing](AlertThing.md)
+
 This module defines the following properties:
 
 - [activities](../properties/activities.md)

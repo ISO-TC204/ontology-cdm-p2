@@ -15,9 +15,9 @@
 <g id="node1" class="node">
 <title>BylawThing</title>
 <g id="a_node1"><a xlink:href="../BylawThing" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="514.12,-697.12 514.12,-713.38 579.88,-713.38 579.88,-697.12 514.12,-697.12"/>
-<text xml:space="preserve" text-anchor="start" x="515.12" y="-701.12" font-family="Arial" font-size="12.00">BylawThing</text>
-<polygon fill="none" stroke="black" points="513.12,-696.12 513.12,-714.38 580.88,-714.38 580.88,-696.12 513.12,-696.12"/>
+<polygon fill="lightgray" stroke="none" points="502.12,-697.12 502.12,-713.38 567.88,-713.38 567.88,-697.12 502.12,-697.12"/>
+<text xml:space="preserve" text-anchor="start" x="503.12" y="-701.12" font-family="Arial" font-size="12.00">BylawThing</text>
+<polygon fill="none" stroke="black" points="501.12,-696.12 501.12,-714.38 568.88,-714.38 568.88,-696.12 501.12,-696.12"/>
 </a>
 </g>
 </g>
@@ -25,25 +25,25 @@
 <g id="node2" class="node">
 <title>Law</title>
 <g id="a_node2"><a xlink:href="../Law" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="451.5,-633 451.5,-649.25 642.5,-649.25 642.5,-633 451.5,-633"/>
-<text xml:space="preserve" text-anchor="start" x="535.75" y="-637" font-family="Arial" font-size="12.00">Law</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-620.75" font-family="Arial" font-size="12.00">abstract : xsd:string [0..1]</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-604.5" font-family="Arial" font-size="12.00">cdm1:hasName : xsd:string</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-588.25" font-family="Arial" font-size="12.00">dateInEffect : xsd:dateTime [0..1]</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-572" font-family="Arial" font-size="12.00">datePublished : xsd:dateTime [0..1]</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-555.75" font-family="Arial" font-size="12.00">expires : xsd:dateTime [0..1]</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-539.5" font-family="Arial" font-size="12.00">keywords : xsd:string</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-523.25" font-family="Arial" font-size="12.00">legislationDate : xsd:dateTime [0..1]</text>
-<text xml:space="preserve" text-anchor="start" x="452.5" y="-507" font-family="Arial" font-size="12.00">legislationIdentifier : xsd:string [0..1]</text>
-<polygon fill="none" stroke="black" points="450.5,-502 450.5,-650.25 643.5,-650.25 643.5,-502 450.5,-502"/>
+<polygon fill="lightgray" stroke="none" points="439.5,-633 439.5,-649.25 630.5,-649.25 630.5,-633 439.5,-633"/>
+<text xml:space="preserve" text-anchor="start" x="523.75" y="-637" font-family="Arial" font-size="12.00">Law</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-620.75" font-family="Arial" font-size="12.00">abstract : xsd:string [0..1]</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-604.5" font-family="Arial" font-size="12.00">cdm1:hasName : xsd:string</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-588.25" font-family="Arial" font-size="12.00">dateInEffect : xsd:dateTime [0..1]</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-572" font-family="Arial" font-size="12.00">datePublished : xsd:dateTime [0..1]</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-555.75" font-family="Arial" font-size="12.00">expires : xsd:dateTime [0..1]</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-539.5" font-family="Arial" font-size="12.00">keywords : xsd:string</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-523.25" font-family="Arial" font-size="12.00">legislationDate : xsd:dateTime [0..1]</text>
+<text xml:space="preserve" text-anchor="start" x="440.5" y="-507" font-family="Arial" font-size="12.00">legislationIdentifier : xsd:string [0..1]</text>
+<polygon fill="none" stroke="black" points="438.5,-502 438.5,-650.25 631.5,-650.25 631.5,-502 438.5,-502"/>
 </a>
 </g>
 </g>
 <!-- Law&#45;&gt;BylawThing -->
 <g id="edge1" class="edge">
 <title>Law&#45;&gt;BylawThing</title>
-<path fill="none" stroke="black" d="M547,-650.19C547,-659.33 547,-668.21 547,-676.04"/>
-<polygon fill="none" stroke="black" points="543.5,-675.86 547,-685.86 550.5,-675.86 543.5,-675.86"/>
+<path fill="none" stroke="black" d="M535,-650.19C535,-659.33 535,-668.21 535,-676.04"/>
+<polygon fill="none" stroke="black" points="531.5,-675.86 535,-685.86 538.5,-675.86 531.5,-675.86"/>
 </g>
 <!-- Invis -->
 <!-- Law&#45;&gt;Invis -->
@@ -58,44 +58,44 @@
 </g>
 </g>
 <!-- Law&#45;&gt;Clause -->
-<g id="edge9" class="edge">
+<g id="edge8" class="edge">
 <title>Law&#45;&gt;Clause</title>
-<path fill="none" stroke="black" d="M450.88,-565.8C337.84,-552.62 160.43,-524.24 120,-473 98.61,-445.89 112.34,-404.75 125.53,-377.87"/>
-<polygon fill="black" stroke="black" points="128.47,-379.82 129.98,-369.33 122.26,-376.59 128.47,-379.82"/>
+<path fill="none" stroke="black" d="M438.65,-565.04C328.64,-551.3 158.85,-522.57 120,-473 98.7,-445.82 112.41,-404.7 125.57,-377.85"/>
+<polygon fill="black" stroke="black" points="128.5,-379.8 130,-369.31 122.29,-376.57 128.5,-379.8"/>
 <polygon fill="white" stroke="none" points="120,-436.25 120,-457.75 179,-457.75 179,-436.25 120,-436.25"/>
 <text xml:space="preserve" text-anchor="start" x="124" y="-443.25" font-family="Arial" font-size="11.00">hasClause</text>
 </g>
 <!-- Law&#45;&gt;Clause -->
+<g id="edge10" class="edge">
+<title>Law&#45;&gt;Clause</title>
+<path fill="none" stroke="black" d="M438.76,-562.69C370.43,-549.79 279.71,-523.97 215,-473 198.3,-459.85 170.74,-409.51 154.38,-377.75"/>
+<polygon fill="black" stroke="black" points="157.64,-376.44 149.98,-369.12 151.41,-379.62 157.64,-376.44"/>
+<polygon fill="white" stroke="none" points="215,-436.25 215,-457.75 310,-457.75 310,-436.25 215,-436.25"/>
+<text xml:space="preserve" text-anchor="start" x="219" y="-443.25" font-family="Arial" font-size="11.00">hasPenaltyClause</text>
+</g>
+<!-- Law&#45;&gt;Clause -->
+<g id="edge11" class="edge">
+<title>Law&#45;&gt;Clause</title>
+<path fill="none" stroke="black" d="M438.51,-531.88C407.53,-515.7 374.12,-495.67 346.5,-473 326.86,-456.88 330.14,-444.48 310,-429 269.48,-397.86 214.53,-375.43 178.44,-362.83"/>
+<polygon fill="black" stroke="black" points="179.91,-359.63 169.32,-359.72 177.66,-366.26 179.91,-359.63"/>
+<polygon fill="white" stroke="none" points="346.5,-436.25 346.5,-457.75 440,-457.75 440,-436.25 346.5,-436.25"/>
+<text xml:space="preserve" text-anchor="start" x="350.5" y="-443.25" font-family="Arial" font-size="11.00">hasRepealClause</text>
+</g>
+<!-- Law&#45;&gt;Clause -->
 <g id="edge13" class="edge">
 <title>Law&#45;&gt;Clause</title>
-<path fill="none" stroke="black" d="M450.74,-564.02C379.63,-551.7 283.73,-526.03 215.5,-473 198.69,-459.93 170.94,-409.57 154.47,-377.78"/>
-<polygon fill="black" stroke="black" points="157.72,-376.44 150.04,-369.14 151.49,-379.63 157.72,-376.44"/>
-<polygon fill="white" stroke="none" points="215.5,-436.25 215.5,-457.75 321,-457.75 321,-436.25 215.5,-436.25"/>
-<text xml:space="preserve" text-anchor="start" x="219.5" y="-443.25" font-family="Arial" font-size="11.00">hasTransitionClause</text>
+<path fill="none" stroke="black" d="M494.33,-502.22C475.62,-471.03 454.42,-439.4 440,-429 359.64,-371.05 239.61,-356.12 178.97,-352.3"/>
+<polygon fill="black" stroke="black" points="179.35,-348.81 169.18,-351.75 178.97,-355.8 179.35,-348.81"/>
+<polygon fill="white" stroke="none" points="475.78,-436.25 475.78,-457.75 586.53,-457.75 586.53,-436.25 475.78,-436.25"/>
+<text xml:space="preserve" text-anchor="start" x="479.78" y="-443.25" font-family="Arial" font-size="11.00">hasSeveranceClause</text>
 </g>
 <!-- Law&#45;&gt;Clause -->
 <g id="edge14" class="edge">
 <title>Law&#45;&gt;Clause</title>
-<path fill="none" stroke="black" d="M450.61,-532.61C419.1,-516.35 385.04,-496.1 357,-473 337.5,-456.93 341.16,-444.23 321,-429 277.1,-395.83 216.92,-373.46 178.5,-361.47"/>
-<polygon fill="black" stroke="black" points="179.82,-358.22 169.24,-358.66 177.79,-364.92 179.82,-358.22"/>
-<polygon fill="white" stroke="none" points="357,-436.25 357,-457.75 452,-457.75 452,-436.25 357,-436.25"/>
-<text xml:space="preserve" text-anchor="start" x="361" y="-443.25" font-family="Arial" font-size="11.00">hasPenaltyClause</text>
-</g>
-<!-- Law&#45;&gt;Clause -->
-<g id="edge15" class="edge">
-<title>Law&#45;&gt;Clause</title>
-<path fill="none" stroke="black" d="M506.37,-502.16C487.67,-470.96 466.47,-439.33 452,-429 367.73,-368.83 241.73,-354.92 179.13,-351.81"/>
-<polygon fill="black" stroke="black" points="179.5,-348.32 169.36,-351.4 179.2,-355.32 179.5,-348.32"/>
-<polygon fill="white" stroke="none" points="487.83,-436.25 487.83,-457.75 598.58,-457.75 598.58,-436.25 487.83,-436.25"/>
-<text xml:space="preserve" text-anchor="start" x="491.83" y="-443.25" font-family="Arial" font-size="11.00">hasSeveranceClause</text>
-</g>
-<!-- Law&#45;&gt;Clause -->
-<g id="edge16" class="edge">
-<title>Law&#45;&gt;Clause</title>
-<path fill="none" stroke="black" d="M600.09,-502.17C611.66,-477.08 616.02,-450.04 599,-429 546.53,-364.15 279.86,-353.17 179.37,-351.35"/>
-<polygon fill="black" stroke="black" points="179.54,-347.85 169.48,-351.19 179.43,-354.85 179.54,-347.85"/>
-<polygon fill="white" stroke="none" points="610.3,-436.25 610.3,-457.75 703.8,-457.75 703.8,-436.25 610.3,-436.25"/>
-<text xml:space="preserve" text-anchor="start" x="614.3" y="-443.25" font-family="Arial" font-size="11.00">hasRepealClause</text>
+<path fill="none" stroke="black" d="M588.1,-502.16C599.68,-477.07 604.03,-450.03 587,-429 536,-366.04 277.92,-353.9 179.35,-351.56"/>
+<polygon fill="black" stroke="black" points="179.46,-348.06 169.38,-351.35 179.31,-355.06 179.46,-348.06"/>
+<polygon fill="white" stroke="none" points="598.31,-436.25 598.31,-457.75 703.81,-457.75 703.81,-436.25 598.31,-436.25"/>
+<text xml:space="preserve" text-anchor="start" x="602.31" y="-443.25" font-family="Arial" font-size="11.00">hasTransitionClause</text>
 </g>
 <!-- Definition -->
 <g id="node5" class="node">
@@ -108,9 +108,9 @@
 </g>
 </g>
 <!-- Law&#45;&gt;Definition -->
-<g id="edge10" class="edge">
+<g id="edge9" class="edge">
 <title>Law&#45;&gt;Definition</title>
-<path fill="none" stroke="black" d="M643.44,-534.31C693.2,-507.25 737.82,-469.39 708,-429 642.97,-340.92 295.45,-278.61 178.46,-259.88"/>
+<path fill="none" stroke="black" d="M631.32,-538.72C687.05,-511.98 740.34,-472.81 708,-429 642.97,-340.92 295.45,-278.61 178.46,-259.88"/>
 <polygon fill="black" stroke="black" points="179.16,-256.45 168.74,-258.34 178.07,-263.36 179.16,-256.45"/>
 <polygon fill="white" stroke="none" points="689.06,-389.5 689.06,-411 759.31,-411 759.31,-389.5 689.06,-389.5"/>
 <text xml:space="preserve" text-anchor="start" x="693.06" y="-396.5" font-family="Arial" font-size="11.00">hasDefinition</text>
@@ -126,9 +126,9 @@
 </g>
 </g>
 <!-- Law&#45;&gt;JurisdictionalArea -->
-<g id="edge11" class="edge">
+<g id="edge16" class="edge">
 <title>Law&#45;&gt;JurisdictionalArea</title>
-<path fill="none" stroke="black" d="M643.47,-539.72C720.19,-505.96 807.79,-451.23 763,-389.5 692.61,-292.49 325.88,-217.86 178.96,-191.41"/>
+<path fill="none" stroke="black" d="M631.26,-542.73C713.03,-509.83 810.22,-454.57 763,-389.5 692.61,-292.49 325.88,-217.86 178.96,-191.41"/>
 <polygon fill="black" stroke="black" points="179.89,-188.02 169.43,-189.7 178.65,-194.91 179.89,-188.02"/>
 <polygon fill="white" stroke="none" points="745.17,-328.5 745.17,-371.5 853.67,-371.5 853.67,-328.5 745.17,-328.5"/>
 <text xml:space="preserve" text-anchor="start" x="749.17" y="-357" font-family="Arial" font-size="11.00">legislationJurisdiction</text>
@@ -145,9 +145,9 @@
 </g>
 </g>
 <!-- Law&#45;&gt;LegislationLegalForceCode -->
-<g id="edge12" class="edge">
+<g id="edge15" class="edge">
 <title>Law&#45;&gt;LegislationLegalForceCode</title>
-<path fill="none" stroke="black" d="M643.47,-557.56C741.5,-536.9 879,-498.84 879,-448 879,-448 879,-448 879,-179 879,-144.2 384.55,-119.96 179.49,-111.4"/>
+<path fill="none" stroke="black" d="M631.28,-558.9C733.05,-538.95 879,-501.08 879,-448 879,-448 879,-448 879,-179 879,-144.2 384.55,-119.96 179.49,-111.4"/>
 <polygon fill="black" stroke="black" points="179.82,-107.92 169.69,-111 179.53,-114.91 179.82,-107.92"/>
 <polygon fill="white" stroke="none" points="879,-289 879,-310.5 988.25,-310.5 988.25,-289 879,-289"/>
 <text xml:space="preserve" text-anchor="start" x="883" y="-296" font-family="Arial" font-size="11.00">legislationLegalForce</text>
@@ -163,9 +163,9 @@
 </g>
 </g>
 <!-- Law&#45;&gt;Schedule -->
-<g id="edge8" class="edge">
+<g id="edge12" class="edge">
 <title>Law&#45;&gt;Schedule</title>
-<path fill="none" stroke="black" d="M643.43,-567.75C777.25,-554.81 1003,-522.02 1003,-448 1003,-448 1003,-448 1003,-106 1003,-62.77 324.64,-40.85 154.39,-36.03"/>
+<path fill="none" stroke="black" d="M631.4,-568.45C768.4,-556.28 1003,-524.3 1003,-448 1003,-448 1003,-448 1003,-106 1003,-62.77 324.64,-40.85 154.39,-36.03"/>
 <polygon fill="black" stroke="black" points="154.64,-32.54 144.54,-35.76 154.44,-39.53 154.64,-32.54"/>
 <polygon fill="white" stroke="none" points="1003,-242.25 1003,-263.75 1073.25,-263.75 1073.25,-242.25 1003,-242.25"/>
 <text xml:space="preserve" text-anchor="start" x="1007" y="-249.25" font-family="Arial" font-size="11.00">hasSchedule</text>

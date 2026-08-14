@@ -17,6 +17,7 @@ This pattern consists of the following classes:
 - [Home Type](HomeType.md)
 - [Residence](Residence.md)
 - [Residential Relationship](ResidentialRelationship.md)
+
 This module defines the following properties:
 
 - [CityResidentDataProperty](../properties/CityResidentDataProperty.md)

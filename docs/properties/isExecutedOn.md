@@ -2,9 +2,25 @@
 
 identifies the Interval or Instant in time at which the terms in the Contract are executed, if applicable.
 
-**Domain**: [Contract](../classes/Contract.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/isExecutedOn`
 
-**Range**: [time:TemporalEntity](https://w3id.org/citydata/imported/time/TemporalEntity)
+## Domain
+
+| Class |
+|-------|
+| [Contract](../classes/Contract.md) |
+
+## Range
+
+| Class |
+|-------|
+| [time:TemporalEntity](https://w3id.org/citydata/imported/time/TemporalEntity) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [ContractObjectProperty](ContractObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ identifies the Interval or Instant in time at which the terms in the Contract ar
 |-------|
 | [Contract](../classes/Contract.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/isExecutedOn`

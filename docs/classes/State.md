@@ -2,6 +2,8 @@
 
 A State is a political subdivision of a country.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/State`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ A State is a political subdivision of a country.
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [ContactThing](ContactThing.md) |
 

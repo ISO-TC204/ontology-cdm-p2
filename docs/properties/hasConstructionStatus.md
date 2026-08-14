@@ -2,9 +2,25 @@
 
 identifies the Construction Status of a Building.
 
-**Domain**: [Building](../classes/Building.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasConstructionStatus`
 
-**Range**: [ConstructionStatus](../classes/ConstructionStatus.md)
+## Domain
+
+| Class |
+|-------|
+| [Building](../classes/Building.md) |
+
+## Range
+
+| Class |
+|-------|
+| [ConstructionStatus](../classes/ConstructionStatus.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingObjectProperty](BuildingObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ identifies the Construction Status of a Building.
 |-------|
 | [Building](../classes/Building.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasConstructionStatus`

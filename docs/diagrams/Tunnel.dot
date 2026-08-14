@@ -21,8 +21,8 @@ digraph {
 	Tunnel -> Invis [style=invis]
 	Invis -> TravelledWaySegment [style=invis]
 	TravelledWaySegment -> TunnelSegment [style=invis]
-	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../TravelledWaySegment" margin=0]
-	Tunnel -> TravelledWaySegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">supports</TD></TR></TABLE>> arrowhead=normal style=solid]
 	TunnelSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TunnelSegment</TD></TR></TABLE>> URL="../TunnelSegment" margin=0]
 	Tunnel -> TunnelSegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">redefines</TD></TR><TR><TD ALIGN="CENTER">cdm1:hasProperPart</TD></TR></TABLE>> arrowhead=normal style=dashed]
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../TravelledWaySegment" margin=0]
+	Tunnel -> TravelledWaySegment [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">supports</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

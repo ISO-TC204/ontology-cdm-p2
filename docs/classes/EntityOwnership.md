@@ -2,6 +2,8 @@
 
 Activity of owning a Building, Land Area, or Organization by City Resident.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/EntityOwnership`
+
 
 ## Diagram
 
@@ -46,16 +48,16 @@ Activity of owning a Building, Land Area, or Organization by City Resident.
     </g>
     <!-- Invis -->
     <!-- EntityOwnership&#45;&gt;Invis -->
-    <!-- na3c433dde1d646699edc27e027b2ae59b9 -->
+    <!-- nb3622681a55f496abb0db0ed110df1e8b9 -->
     <g id="node7" class="node">
-    <title>na3c433dde1d646699edc27e027b2ae59b9</title>
+    <title>nb3622681a55f496abb0db0ed110df1e8b9</title>
     <polygon fill="lightyellow" stroke="none" points="115.62,-268.88 115.62,-287.12 175.12,-287.12 175.12,-268.88 115.62,-268.88"/>
     <text xml:space="preserve" text-anchor="start" x="117.62" y="-273.88" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="115.62,-268.88 115.62,-287.12 175.12,-287.12 175.12,-268.88 115.62,-268.88"/>
     </g>
-    <!-- EntityOwnership&#45;&gt;na3c433dde1d646699edc27e027b2ae59b9 -->
+    <!-- EntityOwnership&#45;&gt;nb3622681a55f496abb0db0ed110df1e8b9 -->
     <g id="edge9" class="edge">
-    <title>EntityOwnership&#45;&gt;na3c433dde1d646699edc27e027b2ae59b9</title>
+    <title>EntityOwnership&#45;&gt;nb3622681a55f496abb0db0ed110df1e8b9</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M106.86,-396.74C114.24,-374.19 127.45,-333.78 136.32,-306.68"/>
     <polygon fill="black" stroke="black" points="139.57,-308 139.35,-297.41 132.92,-305.83 139.57,-308"/>
     <polygon fill="white" stroke="none" points="133.57,-314 133.57,-378.5 185.82,-378.5 185.82,-314 133.57,-314"/>
@@ -96,23 +98,23 @@ Activity of owning a Building, Land Area, or Organization by City Resident.
     </g>
     </g>
     <!-- LandArea&#45;&gt;Organization -->
-    <!-- na3c433dde1d646699edc27e027b2ae59b9&#45;&gt;Building -->
+    <!-- nb3622681a55f496abb0db0ed110df1e8b9&#45;&gt;Building -->
     <g id="edge6" class="edge">
-    <title>na3c433dde1d646699edc27e027b2ae59b9&#45;&gt;Building</title>
+    <title>nb3622681a55f496abb0db0ed110df1e8b9&#45;&gt;Building</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M115.81,-261.68C99.37,-253.05 81.95,-243.66 80.62,-242 75.92,-236.08 72.89,-228.61 70.93,-221.32"/>
     <polygon fill="black" stroke="black" points="74.4,-220.83 68.95,-211.74 67.54,-222.24 74.4,-220.83"/>
     <text xml:space="preserve" text-anchor="middle" x="100.5" y="-231.55" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- na3c433dde1d646699edc27e027b2ae59b9&#45;&gt;LandArea -->
+    <!-- nb3622681a55f496abb0db0ed110df1e8b9&#45;&gt;LandArea -->
     <g id="edge7" class="edge">
-    <title>na3c433dde1d646699edc27e027b2ae59b9&#45;&gt;LandArea</title>
+    <title>nb3622681a55f496abb0db0ed110df1e8b9&#45;&gt;LandArea</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M139.08,-260.07C131.3,-239.55 117.38,-204.04 103.38,-174.5 97.07,-161.2 89.38,-146.79 82.73,-134.79"/>
     <polygon fill="black" stroke="black" points="85.9,-133.29 77.95,-126.28 79.8,-136.72 85.9,-133.29"/>
     <text xml:space="preserve" text-anchor="middle" x="139.03" y="-188.8" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- na3c433dde1d646699edc27e027b2ae59b9&#45;&gt;Organization -->
+    <!-- nb3622681a55f496abb0db0ed110df1e8b9&#45;&gt;Organization -->
     <g id="edge8" class="edge">
-    <title>na3c433dde1d646699edc27e027b2ae59b9&#45;&gt;Organization</title>
+    <title>nb3622681a55f496abb0db0ed110df1e8b9&#45;&gt;Organization</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M153.05,-260.36C161.45,-239.82 172.56,-204 163.38,-174.5 149.2,-129 113.71,-85.91 89.07,-59.97"/>
     <polygon fill="black" stroke="black" points="91.71,-57.67 82.23,-52.94 86.69,-62.55 91.71,-57.67"/>
     <text xml:space="preserve" text-anchor="middle" x="176.4" y="-146.05" font-family="Arial" font-size="11.00">member</text>
@@ -135,4 +137,10 @@ Activity of owning a Building, Land Area, or Organization by City Resident.
 | [percentOwnership](../properties/percentOwnership.md) | max 1 |
 | [percentOwnership](../properties/percentOwnership.md) | max 1 xsd:decimal |
 | subClassOf | [ControlledEntity](ControlledEntity.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [City Resident](CityResident.md) | [owns](../properties/owns.md) |
 

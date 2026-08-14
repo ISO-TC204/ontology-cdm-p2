@@ -2,7 +2,19 @@
 
 URI that identifies a website
 
-**Range**: [xsd:anyURI](https://w3id.org/citydata/imported/xsd/anyURI)
+**IRI**: `https://w3id.org/citydata/part2/v1/website`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:anyURI](https://w3id.org/citydata/imported/xsd/anyURI) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertDataProperty](AlertDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ URI that identifies a website
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/website`

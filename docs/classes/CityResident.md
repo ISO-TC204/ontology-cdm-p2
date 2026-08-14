@@ -4,6 +4,8 @@ A City Resident is a Person who satisfies the requirements of being a city resid
 
 NOTE: Different cities have different definitions of who is that city's Resident, the City Resident Pattern contains the core properties required by each. For example, the city of Toronto's definition of a city resident includes the concept of owning property or owning or operating a business in the city. For Beijing, nationality is a unique aspect. Central to all the definitions is the concept of residing. 
 
+**IRI**: `https://w3id.org/citydata/part2/v1/CityResident`
+
 
 ## Diagram
 
@@ -74,7 +76,7 @@ NOTE: Different cities have different definitions of who is that city's Resident
     </g>
     </g>
     <!-- CityResident&#45;&gt;EntityOperation -->
-    <g id="edge10" class="edge">
+    <g id="edge9" class="edge">
     <title>CityResident&#45;&gt;EntityOperation</title>
     <path fill="none" stroke="black" d="M153.88,-422.17C142.14,-414.47 129.3,-404.49 120,-393 97.93,-365.74 83.44,-327.67 75.5,-302.1"/>
     <polygon fill="black" stroke="black" points="78.93,-301.36 72.73,-292.77 72.22,-303.35 78.93,-301.36"/>
@@ -92,7 +94,7 @@ NOTE: Different cities have different definitions of who is that city's Resident
     </g>
     </g>
     <!-- CityResident&#45;&gt;EntityOwnership -->
-    <g id="edge8" class="edge">
+    <g id="edge10" class="edge">
     <title>CityResident&#45;&gt;EntityOwnership</title>
     <path fill="none" stroke="black" d="M183.06,-422.01C181.66,-403.61 178.22,-373.59 170,-349 151.66,-294.16 112.9,-238.3 88.8,-206.81"/>
     <polygon fill="black" stroke="black" points="91.66,-204.79 82.75,-199.04 86.13,-209.08 91.66,-204.79"/>
@@ -128,7 +130,7 @@ NOTE: Different cities have different definitions of who is that city's Resident
     </g>
     </g>
     <!-- CityResident&#45;&gt;Residence -->
-    <g id="edge9" class="edge">
+    <g id="edge8" class="edge">
     <title>CityResident&#45;&gt;Residence</title>
     <path fill="none" stroke="black" d="M220.2,-433.91C256.8,-426.49 308,-408.81 308,-368 308,-368 308,-368 308,-106 308,-66.76 185.12,-47.03 118.21,-39.2"/>
     <polygon fill="black" stroke="black" points="118.64,-35.72 108.31,-38.08 117.86,-42.68 118.64,-35.72"/>
@@ -153,9 +155,13 @@ NOTE: Different cities have different definitions of who is that city's Resident
 
 | Property | Constraint |
 |----------|------------|
+| [hasResidence](../properties/hasResidence.md) | only [Residence](Residence.md) |
 | [hasResidence](../properties/hasResidence.md) | only [Residence](https://w3id.org/citydata/part2/v1/Residence) |
+| [operates](../properties/operates.md) | only [EntityOperation](EntityOperation.md) |
 | [operates](../properties/operates.md) | only [EntityOperation](https://w3id.org/citydata/part2/v1/EntityOperation) |
+| [owns](../properties/owns.md) | only [EntityOwnership](EntityOwnership.md) |
 | [owns](../properties/owns.md) | only [EntityOwnership](https://w3id.org/citydata/part2/v1/EntityOwnership) |
+| [residentOf](../properties/residentOf.md) | only [JurisdictionalArea](JurisdictionalArea.md) |
 | [residentOf](../properties/residentOf.md) | only [JurisdictionalArea](https://w3id.org/citydata/part2/v1/JurisdictionalArea) |
 | subClassOf | [CityResidentThing](CityResidentThing.md) |
 | subClassOf | [Person](Person.md) |

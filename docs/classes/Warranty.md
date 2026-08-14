@@ -2,6 +2,8 @@
 
 A Warranty is a contractual promise of some indemnification if an assertion made in the Contract is false.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Warranty`
+
 
 ## Diagram
 

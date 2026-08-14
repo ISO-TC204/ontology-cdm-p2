@@ -2,6 +2,8 @@
 
 A code identifying whether a law is in force, not in force, or partially in force.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/LegislationLegalForceCode`
+
 
 ## Diagram
 
@@ -59,4 +61,10 @@ A code identifying whether a law is in force, not in force, or partially in forc
 | Property | Constraint |
 |----------|------------|
 | subClassOf | [BylawThing](BylawThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Law](Law.md) | [legislationLegalForce](../properties/legislationLegalForce.md) |
 

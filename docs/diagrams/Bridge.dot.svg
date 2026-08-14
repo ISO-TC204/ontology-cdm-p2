@@ -50,7 +50,7 @@
 </g>
 </g>
 <!-- Bridge&#45;&gt;BridgeSegment -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>Bridge&#45;&gt;BridgeSegment</title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M103.36,-262.74C98.72,-233.29 89.07,-171.94 83.4,-135.97"/>
 <polygon fill="black" stroke="black" points="86.9,-135.65 81.88,-126.32 79.98,-136.74 86.9,-135.65"/>
@@ -69,7 +69,7 @@
 </g>
 </g>
 <!-- Bridge&#45;&gt;TravelledWaySegment -->
-<g id="edge5" class="edge">
+<g id="edge6" class="edge">
 <title>Bridge&#45;&gt;TravelledWaySegment</title>
 <path fill="none" stroke="black" d="M132.64,-275.04C157.47,-269.31 193.13,-256.71 210,-230 221.27,-212.15 217.19,-202.35 210,-182.5 191.07,-130.26 143.52,-84.99 111.22,-58.84"/>
 <polygon fill="black" stroke="black" points="113.76,-56.38 103.74,-52.92 109.41,-61.87 113.76,-56.38"/>

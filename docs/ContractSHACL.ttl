@@ -1,77 +1,67 @@
 @prefix : <https://w3id.org/citydata/part2/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cc: <http://creativecommons.org/ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix i72: <https://w3id.org/citydata/21972/v1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
 
-:ContractSHACL
-    rdf:type owl:Ontology ;
-    dcterms:title "City Data Model Part 2 - Contract Pattern - SHACL constraints" ;
-    skos:definition "SHACL validation shapes for the Contract Pattern pattern module." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
-    vann:preferredNamespacePrefix "cdm2" ;
-    owl:imports :ContractPattern ;
-    owl:imports :CoreSHACL .
+<https://w3id.org/citydata/part2/v1/ContractSHACL> rdf:type owl:Ontology ;
+                                                    owl:imports :ContractPattern ,
+                                                                :CoreSHACL ;
+                                                    dcterms:title "City Data Model Part 2 - Contract Pattern - SHACL constraints" ;
+                                                    vann:preferredNamespacePrefix "cdm2" ;
+                                                    vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                    skos:definition "SHACL validation shapes for the Contract Pattern pattern module." .
 
-:ContractShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Contract ;
-    sh:property [
-        sh:path :isExecutedOn ;
-        sh:class time:TemporalEntity
-    ] ;
-    sh:property [
-        sh:path :isValidFor ;
-        sh:class time:Interval
-    ] ;
-    sh:property [
-        sh:path :specifiesAgreement ;
-        sh:node :MinOneShape ;
-        sh:class cdm1:Agreement
-    ] ;
-    sh:property [
-        sh:path :hasSignatory ;
-        sh:minCount 2 ;
-        sh:class :Person
-    ] ;
-    sh:property [
-        sh:path :hasContractualElement ;
-        sh:node :MinOneShape ;
-        sh:class :ContractualElement
-    ] .
+#################################################################
+#    Shapes
+#################################################################
 
-:ContractualCommitmentShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :ContractualCommitment ;
-    sh:property [
-        sh:path :specifiesAgreement ;
-        sh:class cdm1:Agreement
-    ] .
+###  https://w3id.org/citydata/part2/v1/ContractShape
+:ContractShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class time:TemporalEntity ;
+                             sh:path :isExecutedOn
+                           ] ,
+                           [ sh:class time:Interval ;
+                             sh:path :isValidFor
+                           ] ,
+                           [ sh:class cdm1:Agreement ;
+                             sh:node :MinOneShape ;
+                             sh:path :specifiesAgreement
+                           ] ,
+                           [ sh:class :Person ;
+                             sh:minCount "2"^^xsd:integer ;
+                             sh:path :hasSignatory
+                           ] ,
+                           [ sh:class :ContractualElement ;
+                             sh:node :MinOneShape ;
+                             sh:path :hasContractualElement
+                           ] ;
+               sh:targetClass :Contract .
 
-:ContractualElementShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :ContractualElement ;
-    sh:property [
-        sh:path :hasContractText ;
-        sh:node :MinOneShape ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path :contractualElementOf ;
-        sh:node :MinOneShape ;
-        sh:class :Contract
-    ] .
+
+###  https://w3id.org/citydata/part2/v1/ContractualCommitmentShape
+:ContractualCommitmentShape rdf:type sh:NodeShape ;
+                            sh:property [ sh:class cdm1:Agreement ;
+                                          sh:path :specifiesAgreement
+                                        ] ;
+                            sh:targetClass :ContractualCommitment .
+
+
+###  https://w3id.org/citydata/part2/v1/ContractualElementShape
+:ContractualElementShape rdf:type sh:NodeShape ;
+                         sh:property [ sh:datatype xsd:string ;
+                                       sh:node :MinOneShape ;
+                                       sh:path :hasContractText
+                                     ] ,
+                                     [ sh:class :Contract ;
+                                       sh:node :MinOneShape ;
+                                       sh:path :contractualElementOf
+                                     ] ;
+                         sh:targetClass :ContractualElement .

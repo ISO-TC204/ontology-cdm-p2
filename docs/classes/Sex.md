@@ -2,6 +2,8 @@
 
 Sex is a type of Code that describes the biological sex of a person.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Sex`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ Sex is a type of Code that describes the biological sex of a person.
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [PersonThing](PersonThing.md) |
 

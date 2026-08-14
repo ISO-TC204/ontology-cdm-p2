@@ -2,7 +2,19 @@
 
 Specifies the type of phone number.
 
-**Range**: [PhoneType](../classes/PhoneType.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasPhoneType`
+
+## Range
+
+| Class |
+|-------|
+| [PhoneType](../classes/PhoneType.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [ContactObjectProperty](ContactObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Specifies the type of phone number.
 |-------|
 | [PhoneNumber](../classes/PhoneNumber.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasPhoneType`

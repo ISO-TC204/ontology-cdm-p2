@@ -25,10 +25,10 @@ digraph {
 	Invis -> cdm1_Activity [style=invis]
 	cdm1_Activity -> cdm1_Resource [style=invis]
 	cdm1_Resource -> Goal [style=invis]
-	cdm1_Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Activity</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Activity" margin=0]
-	Role -> cdm1_Activity [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasProcess</TD></TR></TABLE>> arrowhead=normal style=solid]
 	Goal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Goal</TD></TR></TABLE>> URL="../Goal" margin=0]
 	Role -> Goal [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasGoal</TD></TR></TABLE>> arrowhead=normal style=solid]
+	cdm1_Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Activity</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Activity" margin=0]
+	Role -> cdm1_Activity [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasProcess</TD></TR></TABLE>> arrowhead=normal style=solid]
 	cdm1_Resource [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Resource</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Resource" margin=0]
 	Role -> cdm1_Resource [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasResource</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

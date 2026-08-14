@@ -2,6 +2,8 @@
 
 A contractual element is an element that forms part of a contract, such as a definition, condition, or commitment.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ContractualElement`
+
 
 ## Diagram
 

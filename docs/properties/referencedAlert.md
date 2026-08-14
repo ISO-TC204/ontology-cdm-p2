@@ -2,7 +2,19 @@
 
 Other alerts associated with this alert.
 
-**Range**: [Alert](../classes/Alert.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/referencedAlert`
+
+## Range
+
+| Class |
+|-------|
+| [Alert](../classes/Alert.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertObjectProperty](AlertObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Other alerts associated with this alert.
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/referencedAlert`

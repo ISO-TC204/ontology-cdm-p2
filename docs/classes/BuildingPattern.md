@@ -16,6 +16,7 @@ This pattern consists of the following classes:
 - [Construction Status](ConstructionStatus.md)
 - [Facility](Facility.md)
 - [Year](Year.md)
+
 This module defines the following properties:
 
 - [BuildingDataProperty](../properties/BuildingDataProperty.md)

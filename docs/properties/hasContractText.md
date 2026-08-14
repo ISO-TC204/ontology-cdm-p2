@@ -2,9 +2,25 @@
 
 Identifies the excerpt of text from the Contract that corresponds to the Contractual Element.
 
-**Domain**: [ContractualElement](../classes/ContractualElement.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasContractText`
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+## Domain
+
+| Class |
+|-------|
+| [ContractualElement](../classes/ContractualElement.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [ContractDataProperty](ContractDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the excerpt of text from the Contract that corresponds to the Contrac
 |-------|
 | [ContractualElement](../classes/ContractualElement.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasContractText`

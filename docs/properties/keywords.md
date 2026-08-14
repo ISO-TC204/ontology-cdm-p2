@@ -2,7 +2,19 @@
 
 Identifies keywords used to categorize the domain object for search purposes.
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+**IRI**: `https://w3id.org/citydata/part2/v1/keywords`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawDataProperty](BylawDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies keywords used to categorize the domain object for search purposes.
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/keywords`

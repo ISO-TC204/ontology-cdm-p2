@@ -2,7 +2,19 @@
 
 Clauses that make up the body of the domain object.
 
-**Range**: [Clause](../classes/Clause.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasClause`
+
+## Range
+
+| Class |
+|-------|
+| [Clause](../classes/Clause.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +24,3 @@ Clauses that make up the body of the domain object.
 | [Law](../classes/Law.md) |
 | [Schedule](../classes/Schedule.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasClause`

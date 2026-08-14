@@ -1,213 +1,226 @@
 @prefix : <https://w3id.org/citydata/part2/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix i72: <https://w3id.org/citydata/21972/v1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
 
-:ContractPattern
-    dcterms:title            "Information technology - City data model - Part 2: City level concepts - Contract pattern" ;
-    skos:definition          "This ontology specifies the city-level concepts for the contract pattern of the city data model. A contract is a legal document that specifies some agreement(s) between two or more parties. The aim of the contract pattern is not to formalize the semantics of all possible involved legal concepts, but rather to enable to representation of the general structure and contents of a particular contract. The Contract Ontology adopts the definition of Contract specified in the Financial Business Ontology (FIBO) [8] specified at: https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/ with a key modification that a Contract is defined as a type of Document and is distinct from an Agreement (not a subclass, as specified in FIBO)." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
-    vann:preferredNamespacePrefix "cdm2" ;
-    dcterms:creator          "Kenneth Vaughn" ;
-    dcterms:creator          "Mark Fox" ;
-    dcterms:creator          "Megan Katsumi" ;
-    dcterms:bibliographicCitation "ISO/IEC 5087-2:2024" ;
-    rdfs:seeAlso             <https://www.iso.org/standard/80742.html> ;
-    rdfs:comment             "The prior version of this ontology used a different ontology IRI. This update remains semantically consistent with the version adopted as ISO 5087-2:2024." ;
-    owl:priorVersion         <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contract/> ;
-    dcterms:modified         "2026-02-12"^^xsd:date ;
-    owl:versionInfo          "1.3.0" ;
-    owl:versionIRI           <https://w3id.org/citydata/part2/v1/ContractPattern/r3.0/> ;
-    cc:license               "http://creativecommons.org/licenses/by/4.0/" ;
-    owl:imports              cdm1:AgreementPattern ;
-    owl:imports              :OrganizationPattern ;
-    rdf:type                 owl:Ontology .
+<https://w3id.org/citydata/part2/v1/ContractPattern> rdf:type owl:Ontology ;
+                                                      owl:imports cdm1:AgreementPattern ,
+                                                                  :OrganizationPattern ;
+                                                      cc:license "http://creativecommons.org/licenses/by/4.0/" ;
+                                                      dcterms:creator "Kenneth Vaughn" ,
+                                                                      "Mark Fox" ,
+                                                                      "Megan Katsumi" ;
+                                                      dcterms:modified "2026-02-12"^^xsd:date ;
+                                                      dcterms:title "Information technology - City data model - Part 2: City level concepts - Contract pattern" ;
+                                                      dcterms:bibliographicCitation "ISO/IEC 5087-2:2024" ;
+                                                      vann:preferredNamespacePrefix "cdm2" ;
+                                                      vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                      rdfs:seeAlso <https://www.iso.org/standard/80742.html> ;
+                                                      rdfs:comment "The prior version of this ontology used a different ontology IRI. This update remains semantically consistent with the version adopted as ISO 5087-2:2024." ;
+                                                      owl:priorVersion <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contract/> ;
+                                                      owl:versionIRI <https://w3id.org/citydata/part2/v1/ContractPattern/r3.0/> ;
+                                                      owl:versionInfo "1.3.0" ;
+                                                      skos:definition "This ontology specifies the city-level concepts for the contract pattern of the city data model. A contract is a legal document that specifies some agreement(s) between two or more parties. The aim of the contract pattern is not to formalize the semantics of all possible involved legal concepts, but rather to enable to representation of the general structure and contents of a particular contract. The Contract Ontology adopts the definition of Contract specified in the Financial Business Ontology (FIBO) [8] specified at: https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/ with a key modification that a Contract is defined as a type of Document and is distinct from an Agreement (not a subclass, as specified in FIBO)." .
 
-:ContractDataProperty
-    rdf:type                 owl:DatatypeProperty ;
-    rdfs:subPropertyOf       :CityDataProperty ;
-    skos:definition          "Added for organizational purposes, to identify data properties defined in the Contract Pattern." .
+#################################################################
+#    Object Properties
+#################################################################
 
-:ContractObjectProperty
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :CityObjectProperty ;
-    skos:definition          "Added for organizational purposes, to identify object properties defined for the Contract Pattern in the City-level CDM ontology." .
+###  https://w3id.org/citydata/part2/v1/ContractObjectProperty
+:ContractObjectProperty rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :CityObjectProperty ;
+                        skos:definition "Added for organizational purposes, to identify object properties defined for the Contract Pattern in the City-level CDM ontology." .
 
-:hasContract
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "Identifies the Contract associated with the domain object." ;
-    rdfs:range               :Contract .
 
-:hasContractText
-    rdf:type                 owl:DatatypeProperty ;
-    rdfs:subPropertyOf       :ContractDataProperty ;
-    skos:definition          "Identifies the excerpt of text from the Contract that corresponds to the Contractual Element." ;
-    rdfs:domain              :ContractualElement ;
-    rdfs:range               xsd:string .
+###  https://w3id.org/citydata/part2/v1/contractualElementOf
+:contractualElementOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :ContractObjectProperty ;
+                      owl:inverseOf :hasContractualElement ;
+                      rdfs:domain :ContractualElement ;
+                      rdfs:range :Contract ;
+                      skos:definition "Identifies the Contract of which this Contractual Element is a part." .
 
-:hasContractualElement
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       cdm1:hasComponent ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "Identifies the decomposition of a Contract into more precise parts." ;
-    rdfs:domain              :Contract ;
-    rdfs:range               :ContractualElement ;
-    owl:inverseOf            :contractualElementOf .
 
-:contractualElementOf
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "Identifies the Contract of which this Contractual Element is a part." ;
-    rdfs:domain              :ContractualElement ;
-    rdfs:range               :Contract ;
-    owl:inverseOf            :hasContractualElement .
+###  https://w3id.org/citydata/part2/v1/hasContract
+:hasContract rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :ContractObjectProperty ;
+             rdfs:range :Contract ;
+             skos:definition "Identifies the Contract associated with the domain object." .
 
-:hasParty
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "Identifies all Persons or Organizations involved in the Contract." ;
-    rdfs:range               cdm1:Agent .
 
-:hasSignatory
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "identifies the Person(s) responsible for signing the Contract." ;
-    rdfs:domain              :Contract ;
-    rdfs:range               :Person .
+###  https://w3id.org/citydata/part2/v1/hasContractualElement
+:hasContractualElement rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf cdm1:hasComponent ,
+                                          :ContractObjectProperty ;
+                       owl:inverseOf :contractualElementOf ;
+                       rdfs:domain :Contract ;
+                       rdfs:range :ContractualElement ;
+                       skos:definition "Identifies the decomposition of a Contract into more precise parts." .
 
-:isExecutedOn
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "identifies the Interval or Instant in time at which the terms in the Contract are executed, if applicable." ;
-    rdfs:domain              :Contract ;
-    rdfs:range               time:TemporalEntity .
 
-:isValidFor
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "Identifies the Interval in time over which the domain object is valid." ;
-    rdfs:range               time:TimeInterval .
+###  https://w3id.org/citydata/part2/v1/hasParty
+:hasParty rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :ContractObjectProperty ;
+          rdfs:range cdm1:Agent ;
+          skos:definition "Identifies all Persons or Organizations involved in the Contract." .
 
-:specifiesAgreement
-    rdf:type                 owl:ObjectProperty ;
-    rdfs:subPropertyOf       :ContractObjectProperty ;
-    skos:definition          "Identifies an agreement that is specified by the domain object." ;
-    rdfs:range               cdm1:Agreement .
 
-:ConditionPrecedent
-    rdf:type                 owl:Class ;
-    skos:definition          "A condition precedent is a condition that must be met before a contract becomes effective." ;
-    rdfs:subClassOf          :ContractualElement .
+###  https://w3id.org/citydata/part2/v1/hasSignatory
+:hasSignatory rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :ContractObjectProperty ;
+              rdfs:domain :Contract ;
+              rdfs:range :Person ;
+              skos:definition "identifies the Person(s) responsible for signing the Contract." .
 
-:Contract
-    rdf:type                 owl:Class ;
-    skos:definition          "A contract is a legally binding agreement between two or more parties." ;
-    rdfs:subClassOf          :ContractThing ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :isExecutedOn ;
-        owl:onClass                  time:TemporalEntity
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :hasParty ;
-        owl:onClass                  [
-                rdf:type owl:Class ;
-                owl:unionOf (
-                    :Organization
-                    :Person
-                )
-            ] ;
-        owl:minQualifiedCardinality  "2"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :hasSignatory ;
-        owl:onClass                  :Person ;
-        owl:minQualifiedCardinality  "2"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :hasContractualElement ;
-        owl:onClass                  :ContractualElement ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :specifiesAgreement ;
-        owl:onClass                  cdm1:Agreement ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :isValidFor ;
-        owl:onClass                  time:Interval
-    ] .
 
-:ContractThing
-    rdf:type                 owl:Class ;
-    skos:definition          "Added for organizational purposes, to identify classes defined in the Contract ontology." ;
-    rdfs:subClassOf          :CityThing .
+###  https://w3id.org/citydata/part2/v1/isExecutedOn
+:isExecutedOn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :ContractObjectProperty ;
+              rdfs:domain :Contract ;
+              rdfs:range time:TemporalEntity ;
+              skos:definition "identifies the Interval or Instant in time at which the terms in the Contract are executed, if applicable." .
 
-:ContractualCommitment
-    rdf:type                 owl:Class ;
-    skos:definition          "A contractual commitment is a legally binding part of a contract that consists of a promise made by a party in relation to the contract." ;
-    rdfs:subClassOf          :ContractualElement ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :specifiesAgreement ;
-        owl:onClass                  cdm1:Agreement
-    ] .
 
-:ContractualDefinition
-    rdf:type                 owl:Class ;
-    skos:definition          "A contractual definition is a definition of a term used within a contract." ;
-    rdfs:subClassOf          :ContractualElement .
+###  https://w3id.org/citydata/part2/v1/isValidFor
+:isValidFor rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :ContractObjectProperty ;
+            rdfs:range time:TimeInterval ;
+            skos:definition "Identifies the Interval in time over which the domain object is valid." .
 
-:ContractualElement
-    rdf:type                 owl:Class ;
-    skos:definition          "A contractual element is an element that forms part of a contract, such as a definition, condition, or commitment." ;
-    rdfs:subClassOf          :ContractThing ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :hasContractText ;
-        owl:onDataRange              xsd:string ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                     owl:Restriction ;
-        owl:onProperty               :contractualElementOf ;
-        owl:onClass                  :Contract ;
-        owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger
-    ] .
 
-:NonBindingTerm
-    rdf:type                 owl:Class ;
-    skos:definition          "A NonBindingTerm is a term in a contract that does not have legal force." ;
-    rdfs:subClassOf          :ContractualElement .
+###  https://w3id.org/citydata/part2/v1/specifiesAgreement
+:specifiesAgreement rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :ContractObjectProperty ;
+                    rdfs:range cdm1:Agreement ;
+                    skos:definition "Identifies an agreement that is specified by the domain object." .
 
-:Representation
-    rdf:type                 owl:Class ;
-    skos:definition          "Part of the Contract that specifies some assertions that are taken to be true at the time of the contract and serve to influence a party's decision to enter into the Contract." ;
-    rdfs:subClassOf          :ContractualElement .
 
-:Warranty
-    rdf:type                 owl:Class ;
-    skos:definition          "A Warranty is a contractual promise of some indemnification if an assertion made in the Contract is false." ;
-    rdfs:subClassOf          :ContractualElement .
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/ContractDataProperty
+:ContractDataProperty rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :CityDataProperty ;
+                      skos:definition "Added for organizational purposes, to identify data properties defined in the Contract Pattern." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasContractText
+:hasContractText rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :ContractDataProperty ;
+                 rdfs:domain :ContractualElement ;
+                 rdfs:range xsd:string ;
+                 skos:definition "Identifies the excerpt of text from the Contract that corresponds to the Contractual Element." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/ConditionPrecedent
+:ConditionPrecedent rdf:type owl:Class ;
+                    rdfs:subClassOf :ContractualElement ;
+                    skos:definition "A condition precedent is a condition that must be met before a contract becomes effective." .
+
+
+###  https://w3id.org/citydata/part2/v1/Contract
+:Contract rdf:type owl:Class ;
+          rdfs:subClassOf :ContractThing ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :isExecutedOn ;
+                            owl:allValuesFrom time:TemporalEntity
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :isValidFor ;
+                            owl:allValuesFrom time:Interval
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasContractualElement ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :ContractualElement
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasParty ;
+                            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :Organization
+                                :Person
+                              )
+                            ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSignatory ;
+                            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Person
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :specifiesAgreement ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass cdm1:Agreement
+                          ] ;
+          skos:definition "A contract is a legally binding agreement between two or more parties." .
+
+
+###  https://w3id.org/citydata/part2/v1/ContractThing
+:ContractThing rdf:type owl:Class ;
+               rdfs:subClassOf :CityThing ;
+               skos:definition "Added for organizational purposes, to identify classes defined in the Contract ontology." .
+
+
+###  https://w3id.org/citydata/part2/v1/ContractualCommitment
+:ContractualCommitment rdf:type owl:Class ;
+                       rdfs:subClassOf :ContractualElement ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :specifiesAgreement ;
+                                         owl:allValuesFrom cdm1:Agreement
+                                       ] ;
+                       skos:definition "A contractual commitment is a legally binding part of a contract that consists of a promise made by a party in relation to the contract." .
+
+
+###  https://w3id.org/citydata/part2/v1/ContractualDefinition
+:ContractualDefinition rdf:type owl:Class ;
+                       rdfs:subClassOf :ContractualElement ;
+                       skos:definition "A contractual definition is a definition of a term used within a contract." .
+
+
+###  https://w3id.org/citydata/part2/v1/ContractualElement
+:ContractualElement rdf:type owl:Class ;
+                    rdfs:subClassOf :ContractThing ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :contractualElementOf ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Contract
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasContractText ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:string
+                                    ] ;
+                    skos:definition "A contractual element is an element that forms part of a contract, such as a definition, condition, or commitment." .
+
+
+###  https://w3id.org/citydata/part2/v1/NonBindingTerm
+:NonBindingTerm rdf:type owl:Class ;
+                rdfs:subClassOf :ContractualElement ;
+                skos:definition "A NonBindingTerm is a term in a contract that does not have legal force." .
+
+
+###  https://w3id.org/citydata/part2/v1/Representation
+:Representation rdf:type owl:Class ;
+                rdfs:subClassOf :ContractualElement ;
+                skos:definition "Part of the Contract that specifies some assertions that are taken to be true at the time of the contract and serve to influence a party's decision to enter into the Contract." .
+
+
+###  https://w3id.org/citydata/part2/v1/Warranty
+:Warranty rdf:type owl:Class ;
+          rdfs:subClassOf :ContractualElement ;
+          skos:definition "A Warranty is a contractual promise of some indemnification if an assertion made in the Contract is false." .

@@ -68,7 +68,7 @@
 </g>
 </g>
 <!-- Input&#45;&gt;Stakeholder -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>Input&#45;&gt;Stakeholder</title>
 <path fill="none" stroke="black" d="M149.52,-255.61C144.02,-224.13 134.45,-169.31 128.65,-136.07"/>
 <polygon fill="black" stroke="black" points="132.12,-135.62 126.96,-126.37 125.23,-136.82 132.12,-135.62"/>
@@ -86,7 +86,7 @@
 </g>
 </g>
 <!-- Input&#45;&gt;time_DateTimeInterval -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>Input&#45;&gt;time_DateTimeInterval</title>
 <path fill="none" stroke="black" d="M242,-262.65C260.75,-254.77 278.32,-243.27 289.75,-226.5 300.77,-210.34 297.76,-200.34 289.75,-182.5 264.41,-126.09 205.65,-82.46 165.3,-57.74"/>
 <polygon fill="black" stroke="black" points="167.15,-54.77 156.77,-52.65 163.56,-60.78 167.15,-54.77"/>

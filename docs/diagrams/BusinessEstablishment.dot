@@ -21,8 +21,8 @@ digraph {
 	BusinessEstablishment -> Invis [style=invis]
 	Invis -> Address [style=invis]
 	Address -> cdm1_Location [style=invis]
-	cdm1_Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Location</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Location" margin=0]
-	BusinessEstablishment -> cdm1_Location [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:hasLocation</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
 	Address [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Address</TD></TR></TABLE>> URL="../Address" margin=0]
 	BusinessEstablishment -> Address [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasAddress</TD></TR></TABLE>> arrowhead=normal style=solid]
+	cdm1_Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Location</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Location" margin=0]
+	BusinessEstablishment -> cdm1_Location [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:hasLocation</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

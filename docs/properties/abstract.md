@@ -2,7 +2,19 @@
 
 Specifies a brief statement describing the purpose of the domain object.
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+**IRI**: `https://w3id.org/citydata/part2/v1/abstract`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawDataProperty](BylawDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Specifies a brief statement describing the purpose of the domain object.
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/abstract`

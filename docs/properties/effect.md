@@ -2,7 +2,19 @@
 
 A code indicating the effect of the alert (e.g., congestion, delays).
 
-**Range**: [Code](../classes/Code.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/effect`
+
+## Range
+
+| Class |
+|-------|
+| [Code](../classes/Code.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertObjectProperty](AlertObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ A code indicating the effect of the alert (e.g., congestion, delays).
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/effect`

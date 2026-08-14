@@ -2,6 +2,8 @@
 
 A City is a specialization of a Jurisdictional Area that is formally identified as such.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/City`
+
 
 ## Diagram
 

@@ -2,6 +2,8 @@
 
 A Wage is a form of compensation paid to an employee and is defined on an hourly basis.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Wage`
+
 
 ## Diagram
 
@@ -13,7 +15,7 @@ A Wage is a form of compensation paid to an employee and is defined on an hourly
     <svg width="238pt" height="286pt"
      viewBox="0.00 0.00 238.00 286.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 282)">
-    <polygon fill="white" stroke="none" points="-4,4 -4,-282 233.77,-282 233.77,4 -4,4"/>
+    <polygon fill="white" stroke="none" points="-4,4 -4,-282 234.36,-282 234.36,4 -4,4"/>
     <g id="clust3" class="cluster">
     <title>cluster_associated</title>
     </g>
@@ -60,17 +62,17 @@ A Wage is a form of compensation paid to an employee and is defined on an hourly
     <title>Wage&#45;&gt;cdm1_MonetaryValue</title>
     <path fill="none" stroke="black" d="M102.45,-169.26C97,-143.53 86.49,-93.95 79.89,-62.77"/>
     <polygon fill="black" stroke="black" points="83.37,-62.35 77.88,-53.29 76.53,-63.8 83.37,-62.35"/>
-    <polygon fill="white" stroke="none" points="95.5,-89 95.5,-132 151.5,-132 151.5,-89 95.5,-89"/>
-    <text xml:space="preserve" text-anchor="start" x="99.5" y="-117.5" font-family="Arial" font-size="11.00">hourlyPay</text>
-    <text xml:space="preserve" text-anchor="start" x="114.5" y="-96" font-family="Arial" font-size="11.00">0..1</text>
+    <polygon fill="white" stroke="none" points="95.5,-99.75 95.5,-121.25 163.5,-121.25 163.5,-99.75 95.5,-99.75"/>
+    <text xml:space="preserve" text-anchor="start" x="99.5" y="-106.75" font-family="Arial" font-size="11.00">overtimePay</text>
     </g>
     <!-- Wage&#45;&gt;cdm1_MonetaryValue -->
     <g id="edge5" class="edge">
     <title>Wage&#45;&gt;cdm1_MonetaryValue</title>
-    <path fill="none" stroke="black" d="M129.41,-169.2C139.29,-160.66 149.71,-149.36 155,-136.5 163.03,-116.98 164.96,-107.61 155,-89 148.14,-76.18 136.75,-65.88 124.64,-57.86"/>
-    <polygon fill="black" stroke="black" points="126.51,-54.9 116.15,-52.69 122.87,-60.88 126.51,-54.9"/>
-    <polygon fill="white" stroke="none" points="161.77,-99.75 161.77,-121.25 229.77,-121.25 229.77,-99.75 161.77,-99.75"/>
-    <text xml:space="preserve" text-anchor="start" x="165.77" y="-106.75" font-family="Arial" font-size="11.00">overtimePay</text>
+    <path fill="none" stroke="black" d="M132.76,-171.86C145.66,-163.47 159.84,-151.52 167,-136.5 176.08,-117.44 177.53,-107.3 167,-89 159.28,-75.59 146.81,-65.2 133.48,-57.29"/>
+    <polygon fill="black" stroke="black" points="135.45,-54.38 125,-52.67 132.11,-60.53 135.45,-54.38"/>
+    <polygon fill="white" stroke="none" points="174.36,-89 174.36,-132 230.36,-132 230.36,-89 174.36,-89"/>
+    <text xml:space="preserve" text-anchor="start" x="178.36" y="-117.5" font-family="Arial" font-size="11.00">hourlyPay</text>
+    <text xml:space="preserve" text-anchor="start" x="193.36" y="-96" font-family="Arial" font-size="11.00">0..1</text>
     </g>
     <!-- Invis&#45;&gt;cdm1_MonetaryValue -->
     </g>
@@ -89,6 +91,7 @@ A Wage is a form of compensation paid to an employee and is defined on an hourly
 |----------|------------|
 | [hourlyPay](../properties/hourlyPay.md) | max 1 |
 | [hourlyPay](../properties/hourlyPay.md) | max 1 [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
+| [overtimePay](../properties/overtimePay.md) | only [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
 | [overtimePay](../properties/overtimePay.md) | only [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
 | subClassOf | [Compensation](Compensation.md) |
 

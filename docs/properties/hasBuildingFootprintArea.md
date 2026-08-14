@@ -2,9 +2,25 @@
 
 Identifies the footprint occupied by the Building.
 
-**Domain**: [Building](../classes/Building.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasBuildingFootprintArea`
 
-**Range**: [cdm1:Area](https://w3id.org/citydata/part1/v1/Area)
+## Domain
+
+| Class |
+|-------|
+| [Building](../classes/Building.md) |
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Area](https://w3id.org/citydata/part1/v1/Area) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingObjectProperty](BuildingObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the footprint occupied by the Building.
 |-------|
 | [Building](../classes/Building.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasBuildingFootprintArea`

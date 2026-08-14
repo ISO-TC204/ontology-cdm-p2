@@ -1,221 +1,191 @@
 @prefix : <https://w3id.org/citydata/part2/v1/> .
-@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
-@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
-@prefix cc: <http://creativecommons.org/ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix i72: <https://w3id.org/citydata/21972/v1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
 
-:PersonSHACL
-    rdf:type owl:Ontology ;
-    dcterms:title "City Data Model Part 2 - Person Pattern - SHACL constraints" ;
-    skos:definition "SHACL validation shapes for the Person Pattern pattern module." ;
-    vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
-    vann:preferredNamespacePrefix "cdm2" ;
-    owl:imports :PersonPattern ;
-    owl:imports :CoreSHACL .
+<https://w3id.org/citydata/part2/v1/PersonSHACL> rdf:type owl:Ontology ;
+                                                  owl:imports :CoreSHACL ,
+                                                              :PersonPattern ;
+                                                  dcterms:title "City Data Model Part 2 - Person Pattern - SHACL constraints" ;
+                                                  vann:preferredNamespacePrefix "cdm2" ;
+                                                  vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                  skos:definition "SHACL validation shapes for the Person Pattern pattern module." .
 
-:CitizenshipShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Citizenship ;
-    sh:property [
-        sh:path :validityPeriod ;
-        sh:node :MaxOneShape ;
-        sh:class time:ProperInterval
-    ] ;
-    sh:property [
-        sh:path :forCountry ;
-        sh:node :MaxOneShape ;
-        sh:class :Country
-    ] .
+#################################################################
+#    Shapes
+#################################################################
 
-:EducationShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Education ;
-    sh:property [
-        sh:path :hasCode ;
-        sh:class :Code
-    ] .
+###  https://w3id.org/citydata/part2/v1/CitizenshipShape
+:CitizenshipShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:class time:ProperInterval ;
+                                sh:node :MaxOneShape ;
+                                sh:path :validityPeriod
+                              ] ,
+                              [ sh:class :Country ;
+                                sh:node :MaxOneShape ;
+                                sh:path :forCountry
+                              ] ;
+                  sh:targetClass :Citizenship .
 
-:GenderShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Gender ;
-    sh:property [
-        sh:path :hasCode ;
-        sh:class :Code
-    ] .
 
-:IDTypeShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :IDType ;
-    sh:property [
-        sh:path :hasCode ;
-        sh:class :Code
-    ] .
+###  https://w3id.org/citydata/part2/v1/EducationShape
+:EducationShape rdf:type sh:NodeShape ;
+                sh:property [ sh:class :Code ;
+                              sh:path :hasCode
+                            ] ;
+                sh:targetClass :Education .
 
-:NameShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Name ;
-    sh:property [
-        sh:path cdm1:hasName ;
-        sh:datatype xsd:string
-    ] .
 
-:PersonShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Person ;
-    sh:property [
-        sh:path :hasEducation ;
-        sh:class :Education
-    ] ;
-    sh:property [
-        sh:path :deathPlace ;
-        sh:node :MaxOneShape ;
-        sh:class :Address
-    ] ;
-    sh:property [
-        sh:path :citizenOf ;
-        sh:class :Citizenship
-    ] ;
-    sh:property [
-        sh:path :birthDate ;
-        sh:node :MaxOneShape ;
-        sh:class time:Instant
-    ] ;
-    sh:property [
-        sh:path :parent ;
-        sh:class :Person
-    ] ;
-    sh:property [
-        sh:path :children ;
-        sh:class :Person
-    ] ;
-    sh:property [
-        sh:path :name ;
-        sh:node :MaxOneShape ;
-        sh:class :PersonName
-    ] ;
-    sh:property [
-        sh:path :income ;
-        sh:class cdm1:MonetaryValue
-    ] ;
-    sh:property [
-        sh:path :hasAddress ;
-        sh:class :Address
-    ] ;
-    sh:property [
-        sh:path :alias ;
-        sh:class :PersonName
-    ] ;
-    sh:property [
-        sh:path :hasSkill ;
-        sh:class :Skill
-    ] ;
-    sh:property [
-        sh:path :spouse ;
-        sh:class :Person
-    ] ;
-    sh:property [
-        sh:path :hasEmail ;
-        sh:class :EmailAddress
-    ] ;
-    sh:property [
-        sh:path :deathDate ;
-        sh:node :MaxOneShape ;
-        sh:class time:Instant
-    ] ;
-    sh:property [
-        sh:path :hasGenderIdentity ;
-        sh:class :Gender
-    ] ;
-    sh:property [
-        sh:path :birthplace ;
-        sh:node :MaxOneShape ;
-        sh:class :Address
-    ] ;
-    sh:property [
-        sh:path :hasTelephone ;
-        sh:class :PhoneNumber
-    ] ;
-    sh:property [
-        sh:path :sex ;
-        sh:node :MaxOneShape ;
-        sh:class :Sex
-    ] ;
-    sh:property [
-        sh:path :hasPersonID ;
-        sh:class :PersonId
-    ] .
+###  https://w3id.org/citydata/part2/v1/GenderShape
+:GenderShape rdf:type sh:NodeShape ;
+             sh:property [ sh:class :Code ;
+                           sh:path :hasCode
+                         ] ;
+             sh:targetClass :Gender .
 
-:PersonIdShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :PersonId ;
-    sh:property [
-        sh:path :hasIDType ;
-        sh:class :IDType
-    ] ;
-    sh:property [
-        sh:path :photoID ;
-        sh:node :MaxOneShape ;
-        sh:datatype xsd:boolean
-    ] ;
-    sh:property [
-        sh:path :validityPeriod ;
-        sh:node :MaxOneShape ;
-        sh:class time:Interval
-    ] ;
-    sh:property [
-        sh:path cdm1:hasIdentifier ;
-        sh:node :ExactlyOneShape ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path :issuedBy ;
-        sh:node :MaxOneShape ;
-        sh:class cdm1:Agent
-    ] .
 
-:PersonNameShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :PersonName ;
-    sh:property [
-        sh:path :familyName ;
-        sh:node :MaxOneShape ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path :additionalName ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path :givenName ;
-        sh:datatype xsd:string
-    ] .
+###  https://w3id.org/citydata/part2/v1/IDTypeShape
+:IDTypeShape rdf:type sh:NodeShape ;
+             sh:property [ sh:class :Code ;
+                           sh:path :hasCode
+                         ] ;
+             sh:targetClass :IDType .
 
-:SexShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Sex ;
-    sh:property [
-        sh:path :hasCode ;
-        sh:class :Code
-    ] .
 
-:SkillShape
-    rdf:type sh:NodeShape ;
-    sh:targetClass :Skill ;
-    sh:property [
-        sh:path :hasCode ;
-        sh:class :Code
-    ] .
+###  https://w3id.org/citydata/part2/v1/NameShape
+:NameShape rdf:type sh:NodeShape ;
+           sh:property [ sh:datatype xsd:string ;
+                         sh:path cdm1:hasName
+                       ] ;
+           sh:targetClass :Name .
+
+
+###  https://w3id.org/citydata/part2/v1/PersonIdShape
+:PersonIdShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :IDType ;
+                             sh:path :hasIDType
+                           ] ,
+                           [ sh:datatype xsd:boolean ;
+                             sh:node :MaxOneShape ;
+                             sh:path :photoID
+                           ] ,
+                           [ sh:class time:Interval ;
+                             sh:node :MaxOneShape ;
+                             sh:path :validityPeriod
+                           ] ,
+                           [ sh:datatype xsd:string ;
+                             sh:node :ExactlyOneShape ;
+                             sh:path cdm1:hasIdentifier
+                           ] ,
+                           [ sh:class cdm1:Agent ;
+                             sh:node :MaxOneShape ;
+                             sh:path :issuedBy
+                           ] ;
+               sh:targetClass :PersonId .
+
+
+###  https://w3id.org/citydata/part2/v1/PersonNameShape
+:PersonNameShape rdf:type sh:NodeShape ;
+                 sh:property [ sh:datatype xsd:string ;
+                               sh:node :MaxOneShape ;
+                               sh:path :familyName
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:path :additionalName
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:path :givenName
+                             ] ;
+                 sh:targetClass :PersonName .
+
+
+###  https://w3id.org/citydata/part2/v1/PersonShape
+:PersonShape rdf:type sh:NodeShape ;
+             sh:property [ sh:class time:Instant ;
+                           sh:node :MaxOneShape ;
+                           sh:path :birthDate
+                         ] ,
+                         [ sh:class :Person ;
+                           sh:path :parent
+                         ] ,
+                         [ sh:class :Person ;
+                           sh:path :children
+                         ] ,
+                         [ sh:class :PersonName ;
+                           sh:node :MaxOneShape ;
+                           sh:path :name
+                         ] ,
+                         [ sh:class cdm1:MonetaryValue ;
+                           sh:path :income
+                         ] ,
+                         [ sh:class :Address ;
+                           sh:path :hasAddress
+                         ] ,
+                         [ sh:class :PersonName ;
+                           sh:path :alias
+                         ] ,
+                         [ sh:class :Skill ;
+                           sh:path :hasSkill
+                         ] ,
+                         [ sh:class :Person ;
+                           sh:path :spouse
+                         ] ,
+                         [ sh:class :EmailAddress ;
+                           sh:path :hasEmail
+                         ] ,
+                         [ sh:class time:Instant ;
+                           sh:node :MaxOneShape ;
+                           sh:path :deathDate
+                         ] ,
+                         [ sh:class :Gender ;
+                           sh:path :hasGenderIdentity
+                         ] ,
+                         [ sh:class :Address ;
+                           sh:node :MaxOneShape ;
+                           sh:path :birthplace
+                         ] ,
+                         [ sh:class :PhoneNumber ;
+                           sh:path :hasTelephone
+                         ] ,
+                         [ sh:class :Sex ;
+                           sh:node :MaxOneShape ;
+                           sh:path :sex
+                         ] ,
+                         [ sh:class :PersonId ;
+                           sh:path :hasPersonID
+                         ] ,
+                         [ sh:class :Education ;
+                           sh:path :hasEducation
+                         ] ,
+                         [ sh:class :Address ;
+                           sh:node :MaxOneShape ;
+                           sh:path :deathPlace
+                         ] ,
+                         [ sh:class :Citizenship ;
+                           sh:path :citizenOf
+                         ] ;
+             sh:targetClass :Person .
+
+
+###  https://w3id.org/citydata/part2/v1/SexShape
+:SexShape rdf:type sh:NodeShape ;
+          sh:property [ sh:class :Code ;
+                        sh:path :hasCode
+                      ] ;
+          sh:targetClass :Sex .
+
+
+###  https://w3id.org/citydata/part2/v1/SkillShape
+:SkillShape rdf:type sh:NodeShape ;
+            sh:property [ sh:class :Code ;
+                          sh:path :hasCode
+                        ] ;
+            sh:targetClass :Skill .

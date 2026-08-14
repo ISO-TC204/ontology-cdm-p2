@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-"""Convert CDM Part 2 OWL/XML modules to RITSO-style Turtle.
+"""Convert CDM Part 2 OWL/XML modules to Protege/OWLAPI-style Turtle.
 
-Pattern files keep OWL class definitions with *inline* restriction blank nodes
-(as in ontology-its-regulation / ontology-cdm-p1). Validation companions are
-emitted as *SHACL.ttl.
+Pattern files keep OWL class definitions with *inline* restriction blank nodes.
+Validation companions are emitted as *SHACL.ttl.
+
+Layout matches Protege's Turtle export (section banners, ``### IRI`` markers,
+aligned predicates, full IRIs for ontology subjects) so diffs against Protege
+saves are useful.
+
+Usage:
+  python scripts/owl_to_ttl.py              # convert from *.owl (if present)
+  python scripts/owl_to_ttl.py --reformat   # re-serialize existing docs/*.ttl
 """
 
 from __future__ import annotations
@@ -14,6 +21,8 @@ from typing import Iterable
 from rdflib import Graph, Literal, Namespace, URIRef, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD, DCTERMS
+
+from protege_turtle import serialize_protege
 
 DOCS = Path(__file__).resolve().parents[1] / "docs"
 NS = Namespace("https://w3id.org/citydata/part2/v1/")
@@ -109,30 +118,9 @@ PREFIX_MAP: list[tuple[str, str]] = [
     ("contact", str(CONTACT)),
 ]
 
-# Always declare these so ont2md can shorten IRIs from imports (RITSO policy).
-ALWAYS_DECLARE_PREFIXES = frozenset(
-    {
-        "",
-        "cdm2",
-        "cdm1",
-        "cc",
-        "dcterms",
-        "owl",
-        "rdf",
-        "rdfs",
-        "skos",
-        "vann",
-        "xsd",
-        "time",
-        "prov",
-        "org",
-        "geo",
-        "i72",
-        "foaf",
-        "voaf",
-        "sh",
-    }
-)
+# Only always declare the default namespace. Other prefixes are added when their
+# IRIs appear in the graph (owl:imports, cdm1: terms, etc.).
+ALWAYS_DECLARE_PREFIXES = frozenset({""})
 
 
 def ontology_iri(local: str) -> URIRef:
@@ -289,17 +277,38 @@ def list_items(g: Graph, head) -> list:
 
 
 def transform_restriction(g: Graph, node: BNode) -> None:
-    """Rewrite OWL restriction vocabulary toward RITSO style used in samples.
+    """Rewrite OWL restriction vocabulary toward RITSO / Protege style.
 
-    - owl:allValuesFrom C  -> owl:onClass C  (drop allValuesFrom)
     - owl:someValuesFrom C -> owl:onClass C + owl:minQualifiedCardinality 1
-    - owl:onDataRange stays with qualified cardinality
+    - owl:allValuesFrom C stays as allValuesFrom unless a cardinality is present,
+      in which case it becomes owl:onClass C (qualified restriction form)
+    - unqualified onClass / onDataRange (no cardinality) -> owl:allValuesFrom
+    - onDataRange with a non-XSD filler is corrected to onClass
     """
+    has_card = any(
+        g.value(node, p) is not None
+        for p in (
+            OWL.qualifiedCardinality,
+            OWL.minQualifiedCardinality,
+            OWL.maxQualifiedCardinality,
+            OWL.cardinality,
+            OWL.minCardinality,
+            OWL.maxCardinality,
+        )
+    )
+
+    # Mis-tagged: onDataRange must be a datatype
+    on_data = g.value(node, OWL.onDataRange)
+    if on_data is not None and not str(on_data).startswith(str(XSD)):
+        g.remove((node, OWL.onDataRange, on_data))
+        if g.value(node, OWL.onClass) is None:
+            g.add((node, OWL.onClass, on_data))
+
     avf = g.value(node, OWL.allValuesFrom)
-    if avf is not None:
+    if avf is not None and has_card:
+        # Qualified cardinality restrictions use onClass / onDataRange
         g.remove((node, OWL.allValuesFrom, avf))
         if (node, OWL.onClass, None) not in g and (node, OWL.onDataRange, None) not in g:
-            # Datatype ranges use onDataRange
             if str(avf).startswith(str(XSD)):
                 g.add((node, OWL.onDataRange, avf))
             else:
@@ -325,6 +334,42 @@ def transform_restriction(g: Graph, node: BNode) -> None:
                     Literal(1, datatype=XSD.nonNegativeInteger),
                 )
             )
+
+    # Unqualified onClass / onDataRange (no cardinality) is invalid OWL; use allValuesFrom
+    has_card_now = any(
+        g.value(node, p) is not None
+        for p in (
+            OWL.qualifiedCardinality,
+            OWL.minQualifiedCardinality,
+            OWL.maxQualifiedCardinality,
+            OWL.cardinality,
+            OWL.minCardinality,
+            OWL.maxCardinality,
+        )
+    )
+    if not has_card_now and g.value(node, OWL.allValuesFrom) is None:
+        on_class = g.value(node, OWL.onClass)
+        if on_class is not None:
+            g.remove((node, OWL.onClass, on_class))
+            g.add((node, OWL.allValuesFrom, on_class))
+        on_data = g.value(node, OWL.onDataRange)
+        if on_data is not None:
+            g.remove((node, OWL.onDataRange, on_data))
+            g.add((node, OWL.allValuesFrom, on_data))
+
+    # Qualified cardinality without onClass/onDataRange is invalid; demote to unqualified
+    if g.value(node, OWL.onClass) is None and g.value(node, OWL.onDataRange) is None:
+        swaps = (
+            (OWL.qualifiedCardinality, OWL.cardinality),
+            (OWL.minQualifiedCardinality, OWL.minCardinality),
+            (OWL.maxQualifiedCardinality, OWL.maxCardinality),
+        )
+        for qpred, upred in swaps:
+            val = g.value(node, qpred)
+            if val is not None:
+                g.remove((node, qpred, val))
+                if g.value(node, upred) is None:
+                    g.add((node, upred, val))
 
 
 def transform_graph(g: Graph) -> None:
@@ -674,6 +719,7 @@ def used_prefixes(g: Graph) -> dict[str, str]:
 
 
 def serialize_pattern(g: Graph) -> str:
+    """Serialize an OWL module graph as Protege/OWLAPI-style Turtle."""
     normalize_graph_iris(g)
     transform_graph(g)
     # Normalize mainModule string literals to boolean (property lives in cdm1)
@@ -682,30 +728,9 @@ def serialize_pattern(g: Graph) -> str:
             g.remove((s, CDM1.mainModule, o))
             g.add((s, CDM1.mainModule, Literal(str(o).lower() == "true")))
     prefixes = used_prefixes(g)
-    # Stable prefix order from PREFIX_MAP
-    ordered_pfx = [(p, u) for p, u in PREFIX_MAP if p in prefixes]
-    for p, u in prefixes.items():
-        if (p, u) not in ordered_pfx:
-            ordered_pfx.append((p, u))
-
-    out = []
-    for pfx, uri in ordered_pfx:
-        if pfx == "":
-            out.append(f"@prefix : <{uri}> .")
-        else:
-            out.append(f"@prefix {pfx}: <{uri}> .")
-    out.append("")
-
-    subjects = [s for s in set(g.subjects()) if not isinstance(s, BNode)]
-    subjects.sort(key=lambda s: subject_sort_key(s, g))
-    consumed: set = set()
-
-    blocks = []
-    for s in subjects:
-        blocks.append(write_subject(g, s, dict(ordered_pfx), consumed))
-    out.append("\n\n".join(blocks))
-    out.append("")
-    return "\n".join(out)
+    ordered = {p: u for p, u in PREFIX_MAP if p in prefixes}
+    ordered.update({p: u for p, u in prefixes.items() if p not in ordered})
+    return serialize_protege(g, ordered, str(NS))
 
 
 def restriction_to_shacl_props(g: Graph, class_uri: URIRef) -> list[dict]:
@@ -727,15 +752,22 @@ def restriction_to_shacl_props(g: Graph, class_uri: URIRef) -> list[dict]:
 
         on_class = g.value(obj, OWL.onClass)
         on_data = g.value(obj, OWL.onDataRange)
+        avf = g.value(obj, OWL.allValuesFrom)
         # Skip complex class expressions in SHACL (anonymous intersections/unions)
         if on_class is not None:
             if isinstance(on_class, BNode):
                 continue
             entry["class"] = on_class
+        elif avf is not None and not str(avf).startswith(str(XSD)):
+            if isinstance(avf, BNode):
+                continue
+            entry["class"] = avf
         if on_data is not None:
             if isinstance(on_data, BNode):
                 continue
             entry["datatype"] = on_data
+        elif avf is not None and str(avf).startswith(str(XSD)):
+            entry["datatype"] = avf
 
         qc = g.value(obj, OWL.qualifiedCardinality)
         minq = g.value(obj, OWL.minQualifiedCardinality)
@@ -1027,7 +1059,49 @@ def write_catalog() -> None:
     print("Wrote catalog-v001.xml")
 
 
+def reformat_existing_ttl() -> None:
+    """Re-serialize existing pattern/master TTL files in Protege layout (no OWL sources)."""
+    paths = sorted(DOCS.glob("*Pattern.ttl")) + [DOCS / "5087-2.ttl"]
+    for path in paths:
+        if not path.is_file():
+            continue
+        g = Graph()
+        g.parse(path, format="turtle")
+        text = serialize_pattern(g)
+        # Round-trip check
+        g2 = Graph()
+        g2.parse(data=text, format="turtle")
+        if len(g2) < len(g) * 0.9:
+            raise SystemExit(
+                f"{path.name}: reformatted graph shrank suspiciously ({len(g)} → {len(g2)})"
+            )
+        path.write_text(text, encoding="utf-8")
+        print(f"Reformatted {path.name} ({len(g)} → {len(g2)} triples)")
+
+
+def reformat_existing_shacl() -> None:
+    """Re-serialize existing *SHACL.ttl files in Protege layout."""
+    for path in sorted(DOCS.glob("*SHACL.ttl")):
+        g = Graph()
+        g.parse(path, format="turtle")
+        prefixes = used_prefixes(g)
+        ordered = {p: u for p, u in PREFIX_MAP if p in prefixes}
+        ordered.update({p: u for p, u in prefixes.items() if p not in ordered})
+        text = serialize_protege(g, ordered, str(NS))
+        g2 = Graph()
+        g2.parse(data=text, format="turtle")
+        path.write_text(text, encoding="utf-8")
+        print(f"Reformatted {path.name} ({len(g)} → {len(g2)} triples)")
+
+
 def main() -> int:
+    import sys
+
+    if "--reformat" in sys.argv or "-r" in sys.argv:
+        reformat_existing_ttl()
+        reformat_existing_shacl()
+        return 0
+
     for owl_name, (pattern, shacl, local) in MODULES.items():
         convert_module(owl_name, pattern, shacl, local)
     write_master()

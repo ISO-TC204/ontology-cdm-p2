@@ -2,6 +2,8 @@
 
 Catchment Area Type is a type of Code that describes the type of catchment area that stakeholders represent
 
+**IRI**: `https://w3id.org/citydata/part2/v1/CatchmentAreaType`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Catchment Area Type is a type of Code that describes the type of catchment area 
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Stakeholder](Stakeholder.md) | [hasCatchmentAreaType](../properties/hasCatchmentAreaType.md) |
 

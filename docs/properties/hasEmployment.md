@@ -2,9 +2,25 @@
 
 Specifies the details of an agent’s Employment.
 
-**Domain**: [OrganizationAgent](../classes/OrganizationAgent.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasEmployment`
 
-**Range**: [Employment](../classes/Employment.md)
+## Domain
+
+| Class |
+|-------|
+| [OrganizationAgent](../classes/OrganizationAgent.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Employment](../classes/Employment.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies the details of an agent’s Employment.
 |-------|
 | [OrganizationAgent](../classes/OrganizationAgent.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasEmployment`

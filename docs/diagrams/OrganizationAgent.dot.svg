@@ -66,7 +66,7 @@
 </g>
 </g>
 <!-- OrganizationAgent&#45;&gt;Employment -->
-<g id="edge11" class="edge">
+<g id="edge8" class="edge">
 <title>OrganizationAgent&#45;&gt;Employment</title>
 <path fill="none" stroke="black" d="M167.36,-422.28C150.81,-415.13 133.28,-405.5 119.75,-393 92.26,-367.6 73.21,-328.21 62.7,-301.9"/>
 <polygon fill="black" stroke="black" points="65.98,-300.67 59.14,-292.58 59.44,-303.17 65.98,-300.67"/>
@@ -120,7 +120,7 @@
 </g>
 </g>
 <!-- OrganizationAgent&#45;&gt;Role -->
-<g id="edge8" class="edge">
+<g id="edge11" class="edge">
 <title>OrganizationAgent&#45;&gt;Role</title>
 <path fill="none" stroke="black" d="M270.58,-434.41C311.9,-427.57 363,-410.51 363,-368 363,-368 363,-368 363,-106 363,-51.62 177.27,-38.88 95.21,-35.9"/>
 <polygon fill="black" stroke="black" points="95.51,-32.41 85.4,-35.58 95.28,-39.41 95.51,-32.41"/>

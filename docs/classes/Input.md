@@ -2,6 +2,8 @@
 
 Input defines the resources and the stakeholders that are needed for an Activity.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Input`
+
 
 ## Diagram
 
@@ -74,7 +76,7 @@ Input defines the resources and the stakeholders that are needed for an Activity
     </g>
     </g>
     <!-- Input&#45;&gt;Stakeholder -->
-    <g id="edge6" class="edge">
+    <g id="edge7" class="edge">
     <title>Input&#45;&gt;Stakeholder</title>
     <path fill="none" stroke="black" d="M149.52,-255.61C144.02,-224.13 134.45,-169.31 128.65,-136.07"/>
     <polygon fill="black" stroke="black" points="132.12,-135.62 126.96,-126.37 125.23,-136.82 132.12,-135.62"/>
@@ -92,7 +94,7 @@ Input defines the resources and the stakeholders that are needed for an Activity
     </g>
     </g>
     <!-- Input&#45;&gt;time_DateTimeInterval -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>Input&#45;&gt;time_DateTimeInterval</title>
     <path fill="none" stroke="black" d="M242,-262.65C260.75,-254.77 278.32,-243.27 289.75,-226.5 300.77,-210.34 297.76,-200.34 289.75,-182.5 264.41,-126.09 205.65,-82.46 165.3,-57.74"/>
     <polygon fill="black" stroke="black" points="167.15,-54.77 156.77,-52.65 163.56,-60.78 167.15,-54.77"/>
@@ -115,11 +117,21 @@ Input defines the resources and the stakeholders that are needed for an Activity
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | datatype xsd:string |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
+| [hasContributingStakeholder](../properties/hasContributingStakeholder.md) | only [Stakeholder](Stakeholder.md) |
 | [hasContributingStakeholder](../properties/hasContributingStakeholder.md) | only [Stakeholder](https://w3id.org/citydata/part2/v1/Stakeholder) |
+| [i72:for_time_interval](https://w3id.org/citydata/21972/v1/for_time_interval) | only [time:DateTimeInterval](https://w3id.org/citydata/imported/time/DateTimeInterval) |
 | [i72:for_time_interval](https://w3id.org/citydata/21972/v1/for_time_interval) | only [time:DateTimeInterval](http://www.w3.org/2006/time#DateTimeInterval) |
 | subClassOf | [cdm1:TerminalResourceState](https://w3id.org/citydata/part1/v1/TerminalResourceState) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Program](Program.md) | [hasInput](../properties/hasInput.md) |
+| [Service](Service.md) | [hasInput](../properties/hasInput.md) |
 

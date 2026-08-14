@@ -2,6 +2,8 @@
 
 Person ID is a type of City Thing that represents an identification document issued to a person by an authoritative body.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/PersonId`
+
 
 ## Diagram
 
@@ -58,7 +60,7 @@ Person ID is a type of City Thing that represents an identification document iss
     </g>
     </g>
     <!-- PersonId&#45;&gt;cdm1_Agent -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>PersonId&#45;&gt;cdm1_Agent</title>
     <path fill="none" stroke="black" d="M133.25,-342.66C115.36,-308.67 82.92,-247.04 64.25,-211.58"/>
     <polygon fill="black" stroke="black" points="67.39,-210.03 59.64,-202.81 61.2,-213.29 67.39,-210.03"/>
@@ -95,7 +97,7 @@ Person ID is a type of City Thing that represents an identification document iss
     </g>
     </g>
     <!-- PersonId&#45;&gt;time_Interval -->
-    <g id="edge7" class="edge">
+    <g id="edge8" class="edge">
     <title>PersonId&#45;&gt;time_Interval</title>
     <path fill="none" stroke="black" d="M217.52,-342.6C240.91,-329.83 261,-311.22 261,-285 261,-285 261,-285 261,-106 261,-71.25 156.91,-50.29 94.95,-40.89"/>
     <polygon fill="black" stroke="black" points="95.8,-37.48 85.4,-39.49 94.78,-44.4 95.8,-37.48"/>
@@ -122,6 +124,7 @@ Person ID is a type of City Thing that represents an identification document iss
 |----------|------------|
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | exactly 1 |
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | exactly 1 xsd:string |
+| [hasIDType](../properties/hasIDType.md) | only [IDType](IDType.md) |
 | [hasIDType](../properties/hasIDType.md) | only [IDType](https://w3id.org/citydata/part2/v1/IDType) |
 | [issuedBy](../properties/issuedBy.md) | max 1 |
 | [issuedBy](../properties/issuedBy.md) | max 1 [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent) |
@@ -130,4 +133,10 @@ Person ID is a type of City Thing that represents an identification document iss
 | [validityPeriod](../properties/validityPeriod.md) | max 1 |
 | [validityPeriod](../properties/validityPeriod.md) | max 1 [time:Interval](http://www.w3.org/2006/time#Interval) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person](Person.md) | [hasPersonID](../properties/hasPersonID.md) |
 

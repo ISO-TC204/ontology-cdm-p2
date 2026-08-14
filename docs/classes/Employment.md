@@ -2,6 +2,8 @@
 
 Employment is a type of Organizational membership in which the Agent receives monetary compensation for the value that they provide to the Organization.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Employment`
+
 
 ## Diagram
 
@@ -56,7 +58,7 @@ Employment is a type of Organizational membership in which the Agent receives mo
     </g>
     </g>
     <!-- Employment&#45;&gt;Compensation -->
-    <g id="edge7" class="edge">
+    <g id="edge10" class="edge">
     <title>Employment&#45;&gt;Compensation</title>
     <path fill="none" stroke="black" d="M193.65,-458.72C170.15,-451.3 140.04,-438.52 120,-418 94.35,-391.75 80.48,-350.88 73.67,-323.78"/>
     <polygon fill="black" stroke="black" points="77.12,-323.17 71.44,-314.22 70.3,-324.76 77.12,-323.17"/>
@@ -75,7 +77,7 @@ Employment is a type of Organizational membership in which the Agent receives mo
     </g>
     </g>
     <!-- Employment&#45;&gt;EmploymentStatus -->
-    <g id="edge10" class="edge">
+    <g id="edge8" class="edge">
     <title>Employment&#45;&gt;EmploymentStatus</title>
     <path fill="none" stroke="black" d="M231.75,-450.75C234.25,-429.33 234.95,-392.38 215,-370.5 191.9,-345.17 164.81,-376.15 140,-352.5 114.7,-328.39 131.02,-309.43 118,-277 108.3,-252.84 94.45,-226.7 83.78,-207.81"/>
     <polygon fill="black" stroke="black" points="86.84,-206.11 78.83,-199.17 80.77,-209.59 86.84,-206.11"/>
@@ -93,7 +95,7 @@ Employment is a type of Organizational membership in which the Agent receives mo
     </g>
     </g>
     <!-- Employment&#45;&gt;Occupation -->
-    <g id="edge9" class="edge">
+    <g id="edge7" class="edge">
     <title>Employment&#45;&gt;Occupation</title>
     <path fill="none" stroke="black" d="M244.73,-450.58C256.3,-436.34 270,-414.85 270,-393 270,-393 270,-393 270,-179 270,-148.59 182.1,-126.44 127.16,-115.56"/>
     <polygon fill="black" stroke="black" points="127.94,-112.15 117.46,-113.7 126.62,-119.02 127.94,-112.15"/>
@@ -111,7 +113,7 @@ Employment is a type of Organizational membership in which the Agent receives mo
     </g>
     </g>
     <!-- Employment&#45;&gt;Organization -->
-    <g id="edge8" class="edge">
+    <g id="edge9" class="edge">
     <title>Employment&#45;&gt;Organization</title>
     <path fill="none" stroke="black" d="M264.02,-463.54C304.32,-456.81 365,-439.04 365,-393 365,-393 365,-393 365,-106 365,-58.34 211.13,-42.34 131.12,-37.24"/>
     <polygon fill="black" stroke="black" points="131.58,-33.76 121.39,-36.65 131.16,-40.75 131.58,-33.76"/>
@@ -137,11 +139,19 @@ Employment is a type of Organizational membership in which the Agent receives mo
 
 | Property | Constraint |
 |----------|------------|
+| [employedAs](../properties/employedAs.md) | only [Occupation](Occupation.md) |
 | [employedAs](../properties/employedAs.md) | only [Occupation](https://w3id.org/citydata/part2/v1/Occupation) |
 | [employedBy](../properties/employedBy.md) | min 1 |
 | [employedBy](../properties/employedBy.md) | min 1 [Organization](https://w3id.org/citydata/part2/v1/Organization) |
 | [hasCompensation](../properties/hasCompensation.md) | min 1 |
 | [hasCompensation](../properties/hasCompensation.md) | min 1 [Compensation](https://w3id.org/citydata/part2/v1/Compensation) |
+| [hasEmploymentStatus](../properties/hasEmploymentStatus.md) | only [EmploymentStatus](EmploymentStatus.md) |
 | [hasEmploymentStatus](../properties/hasEmploymentStatus.md) | only [EmploymentStatus](https://w3id.org/citydata/part2/v1/EmploymentStatus) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Organization Agent](OrganizationAgent.md) | [hasEmployment](../properties/hasEmployment.md) |
 

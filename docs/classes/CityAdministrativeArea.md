@@ -2,6 +2,8 @@
 
 Jurisdictional Area that has been identified for use by a City to reflect its unique areas such as districts, wards, neighbourhoods, or prefectures. 
 
+**IRI**: `https://w3id.org/citydata/part2/v1/CityAdministrativeArea`
+
 
 ## Diagram
 

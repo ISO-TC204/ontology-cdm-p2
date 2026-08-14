@@ -2,9 +2,25 @@
 
 identifies an Indicator used to measure to the Outcome.
 
-**Domain**: [Outcome](../classes/Outcome.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasIndicator`
 
-**Range**: [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator)
+## Domain
+
+| Class |
+|-------|
+| [Outcome](../classes/Outcome.md) |
+
+## Range
+
+| Class |
+|-------|
+| [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ identifies an Indicator used to measure to the Outcome.
 |-------|
 | [Outcome](../classes/Outcome.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasIndicator`

@@ -2,6 +2,8 @@
 
 A Tunnel Segment is a type of Infrastructure Element that represents part of a Tunnel.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/TunnelSegment`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ A Tunnel Segment is a type of Infrastructure Element that represents part of a T
 
 | Property | Constraint |
 |----------|------------|
+| [supports](../properties/supports.md) | only [TravelledWaySegment](TravelledWaySegment.md) |
 | [supports](../properties/supports.md) | only [TravelledWaySegment](https://w3id.org/citydata/part2/v1/TravelledWaySegment) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Tunnel (cdm1)](Tunnel.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 

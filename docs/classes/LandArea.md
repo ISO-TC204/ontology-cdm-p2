@@ -2,6 +2,8 @@
 
 A Land Area is a defined geographic area of land.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/LandArea`
+
 
 ## Diagram
 
@@ -73,7 +75,7 @@ A Land Area is a defined geographic area of land.
     </g>
     </g>
     <!-- LandArea&#45;&gt;cdm1_Area -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>LandArea&#45;&gt;cdm1_Area</title>
     <path fill="none" stroke="black" d="M134.41,-328.85C129.76,-320.28 124.35,-309.55 120.5,-299.5 108.91,-269.27 99.97,-233.12 94.63,-208.77"/>
     <polygon fill="black" stroke="black" points="98.12,-208.37 92.61,-199.32 91.27,-209.83 98.12,-208.37"/>
@@ -91,7 +93,7 @@ A Land Area is a defined geographic area of land.
     </g>
     </g>
     <!-- LandArea&#45;&gt;i72_Population -->
-    <g id="edge9" class="edge">
+    <g id="edge8" class="edge">
     <title>LandArea&#45;&gt;i72_Population</title>
     <path fill="none" stroke="black" d="M155.66,-328.87C160.84,-320.48 166.36,-309.89 169,-299.5 173.82,-280.55 172.93,-274.66 169,-255.5 159.93,-211.22 151.49,-201.2 129,-162 123.46,-152.34 116.49,-142.37 109.92,-133.67"/>
     <polygon fill="black" stroke="black" points="112.87,-131.76 103.97,-126 107.33,-136.05 112.87,-131.76"/>
@@ -109,7 +111,7 @@ A Land Area is a defined geographic area of land.
     </g>
     </g>
     <!-- LandArea&#45;&gt;LandUseClassification -->
-    <g id="edge7" class="edge">
+    <g id="edge9" class="edge">
     <title>LandArea&#45;&gt;LandUseClassification</title>
     <path fill="none" stroke="black" d="M226.7,-328.57C252.34,-318.14 274,-301.37 274,-274.5 274,-274.5 274,-274.5 274,-106 274,-78.9 206.92,-59.21 151.24,-47.53"/>
     <polygon fill="black" stroke="black" points="152.26,-44.17 141.77,-45.6 150.87,-51.03 152.26,-44.17"/>
@@ -133,10 +135,20 @@ A Land Area is a defined geographic area of land.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | datatype xsd:string |
 | [hasArea](../properties/hasArea.md) | only [cdm1:Area](https://w3id.org/citydata/part1/v1/Area) |
+| [hasArea](../properties/hasArea.md) | only [cdm1:Area](https://w3id.org/citydata/part1/v1/Area) |
 | [hasPopulation](../properties/hasPopulation.md) | only [i72:Population](https://w3id.org/citydata/21972/v1/Population) |
+| [hasPopulation](../properties/hasPopulation.md) | only [i72:Population](https://w3id.org/citydata/21972/v1/Population) |
+| [landUse](../properties/landUse.md) | only [LandUseClassification](LandUseClassification.md) |
 | [landUse](../properties/landUse.md) | only [LandUseClassification](https://w3id.org/citydata/part2/v1/LandUseClassification) |
 | subClassOf | [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
 | subClassOf | [LandUseThing](LandUseThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Jurisdictional Area (FuzzyTime)](JurisdictionalArea.md) | [hasLandArea](../properties/hasLandArea.md) |
 

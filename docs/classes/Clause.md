@@ -2,6 +2,8 @@
 
 A Clause is a statement of a rule, provision, requirement, etc. that is part of the body of the Law, or its schedules, penalties, etc.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Clause`
+
 
 ## Diagram
 
@@ -53,9 +55,9 @@ A Clause is a statement of a rule, provision, requirement, etc. that is part of 
     </g>
     <!-- Invis -->
     <!-- Clause&#45;&gt;Invis -->
-    <!-- n7e2422bf65d74402b04f4f26665f0ae6b23 -->
+    <!-- n731f58bd9e014cd09116d86a58fc00e8b17 -->
     <g id="node11" class="node">
-    <title>n7e2422bf65d74402b04f4f26665f0ae6b23</title>
+    <title>n731f58bd9e014cd09116d86a58fc00e8b17</title>
     <polygon fill="lightgray" stroke="none" points="93.38,-615.5 93.38,-646 418.62,-646 418.62,-615.5 93.38,-615.5"/>
     <text xml:space="preserve" text-anchor="start" x="233.5" y="-633.75" font-family="Arial" font-size="12.00">«Enum»</text>
     <text xml:space="preserve" text-anchor="start" x="94.38" y="-619.5" font-family="Arial" font-size="12.00">Enum: bylaw, penalty, repeal, schedule, severance, transition</text>
@@ -67,25 +69,25 @@ A Clause is a statement of a rule, provision, requirement, etc. that is part of 
     <text xml:space="preserve" text-anchor="start" x="97.75" y="-532" font-family="Arial" font-size="12.00">+ transition</text>
     <polygon fill="none" stroke="black" points="92.38,-527 92.38,-647 419.62,-647 419.62,-527 92.38,-527"/>
     </g>
-    <!-- Clause&#45;&gt;n7e2422bf65d74402b04f4f26665f0ae6b23 -->
+    <!-- Clause&#45;&gt;n731f58bd9e014cd09116d86a58fc00e8b17 -->
     <g id="edge11" class="edge">
-    <title>Clause&#45;&gt;n7e2422bf65d74402b04f4f26665f0ae6b23</title>
+    <title>Clause&#45;&gt;n731f58bd9e014cd09116d86a58fc00e8b17</title>
     <path fill="none" stroke="black" d="M272.51,-726.35C266.69,-721.22 261.26,-715.03 258,-708 250.88,-692.65 248.08,-674.96 247.57,-657.97"/>
     <polygon fill="black" stroke="black" points="251.07,-658.43 247.54,-648.44 244.07,-658.45 251.07,-658.43"/>
     <polygon fill="white" stroke="none" points="258,-665 258,-708 320,-708 320,-665 258,-665"/>
     <text xml:space="preserve" text-anchor="start" x="262" y="-693.5" font-family="Arial" font-size="11.00">clauseType</text>
     <text xml:space="preserve" text-anchor="start" x="280.75" y="-672" font-family="Arial" font-size="11.00">1..&#42;</text>
     </g>
-    <!-- n7e2422bf65d74402b04f4f26665f0ae6b31 -->
+    <!-- n731f58bd9e014cd09116d86a58fc00e8b25 -->
     <g id="node12" class="node">
-    <title>n7e2422bf65d74402b04f4f26665f0ae6b31</title>
+    <title>n731f58bd9e014cd09116d86a58fc00e8b25</title>
     <polygon fill="lightyellow" stroke="none" points="437.25,-577.88 437.25,-596.12 496.75,-596.12 496.75,-577.88 437.25,-577.88"/>
     <text xml:space="preserve" text-anchor="start" x="439.25" y="-582.88" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="437.25,-577.88 437.25,-596.12 496.75,-596.12 496.75,-577.88 437.25,-577.88"/>
     </g>
-    <!-- Clause&#45;&gt;n7e2422bf65d74402b04f4f26665f0ae6b31 -->
+    <!-- Clause&#45;&gt;n731f58bd9e014cd09116d86a58fc00e8b25 -->
     <g id="edge14" class="edge">
-    <title>Clause&#45;&gt;n7e2422bf65d74402b04f4f26665f0ae6b31</title>
+    <title>Clause&#45;&gt;n731f58bd9e014cd09116d86a58fc00e8b25</title>
     <path fill="none" stroke="black" d="M309.2,-726.18C312.81,-720.5 316.72,-714.06 320,-708 330.01,-689.5 323.26,-678.05 339.75,-665 371.48,-639.88 395.58,-669.81 429,-647 440.48,-639.17 449.28,-626.6 455.5,-615.07"/>
     <polygon fill="black" stroke="black" points="458.54,-616.82 459.82,-606.3 452.26,-613.72 458.54,-616.82"/>
     <polygon fill="white" stroke="none" points="339.75,-665 339.75,-708 440,-708 440,-665 339.75,-665"/>
@@ -169,16 +171,16 @@ A Clause is a statement of a rule, provision, requirement, etc. that is part of 
     </g>
     </g>
     <!-- severance&#45;&gt;transition -->
-    <!-- n7e2422bf65d74402b04f4f26665f0ae6b31&#45;&gt;Clause -->
+    <!-- n731f58bd9e014cd09116d86a58fc00e8b25&#45;&gt;Clause -->
     <g id="edge12" class="edge">
-    <title>n7e2422bf65d74402b04f4f26665f0ae6b31&#45;&gt;Clause</title>
+    <title>n731f58bd9e014cd09116d86a58fc00e8b25&#45;&gt;Clause</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M469,-604.86C471.04,-630.67 470.81,-679.93 444,-708 429.36,-723.33 374.37,-733.31 336.23,-738.55"/>
     <polygon fill="black" stroke="black" points="335.95,-735.06 326.49,-739.83 336.86,-742 335.95,-735.06"/>
     <text xml:space="preserve" text-anchor="middle" x="484.61" y="-682.8" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n7e2422bf65d74402b04f4f26665f0ae6b31&#45;&gt;Law -->
+    <!-- n731f58bd9e014cd09116d86a58fc00e8b25&#45;&gt;Law -->
     <g id="edge13" class="edge">
-    <title>n7e2422bf65d74402b04f4f26665f0ae6b31&#45;&gt;Law</title>
+    <title>n731f58bd9e014cd09116d86a58fc00e8b25&#45;&gt;Law</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M460.02,-569.26C453.72,-556.05 443.25,-538.05 429,-527 322.07,-444.05 158.34,-413.92 84.92,-404.17"/>
     <polygon fill="black" stroke="black" points="85.8,-400.75 75.44,-402.96 84.92,-407.7 85.8,-400.75"/>
     <text xml:space="preserve" text-anchor="middle" x="390.53" y="-468.3" font-family="Arial" font-size="11.00">member</text>
@@ -205,6 +207,19 @@ A Clause is a statement of a rule, provision, requirement, etc. that is part of 
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | exactly 1 |
 | [clauseType](../properties/clauseType.md) | min 1 |
+| [hasClause](../properties/hasClause.md) | only [Clause](Clause.md) |
 | [hasClause](../properties/hasClause.md) | only [Clause](https://w3id.org/citydata/part2/v1/Clause) |
 | subClassOf | [BylawThing](BylawThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Clause](Clause.md) | [hasClause](../properties/hasClause.md) |
+| [Law](Law.md) | [hasClause](../properties/hasClause.md) |
+| [Law](Law.md) | [hasPenaltyClause](../properties/hasPenaltyClause.md) |
+| [Law](Law.md) | [hasRepealClause](../properties/hasRepealClause.md) |
+| [Law](Law.md) | [hasSeveranceClause](../properties/hasSeveranceClause.md) |
+| [Law](Law.md) | [hasTransitionClause](../properties/hasTransitionClause.md) |
+| [Schedule](Schedule.md) | [hasClause](../properties/hasClause.md) |
 

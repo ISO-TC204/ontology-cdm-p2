@@ -2,9 +2,25 @@
 
 sSecifies the box number for the address.
 
-**Domain**: [Address](../classes/Address.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasPostalBox`
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+## Domain
+
+| Class |
+|-------|
+| [Address](../classes/Address.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AddressDataProperty](AddressDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ sSecifies the box number for the address.
 |-------|
 | [Address](../classes/Address.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasPostalBox`

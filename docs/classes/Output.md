@@ -4,6 +4,8 @@ Output is a quantitative summary of an activity.
 
 EXAMPLE: produced 100 meals for the homeless
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Output`
+
 
 ## Diagram
 
@@ -98,10 +100,19 @@ EXAMPLE: produced 100 meals for the homeless
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | datatype xsd:string |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
 | [usedByIndicator](../properties/usedByIndicator.md) | only [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator) |
+| [usedByIndicator](../properties/usedByIndicator.md) | only [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator) |
 | subClassOf | [cdm1:TerminalResourceState](https://w3id.org/citydata/part1/v1/TerminalResourceState) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Program](Program.md) | [hasOutput](../properties/hasOutput.md) |
+| [Service](Service.md) | [hasOutput](../properties/hasOutput.md) |
 

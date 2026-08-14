@@ -2,6 +2,8 @@
 
 Added for organizational purposes, to identify classes defined in the City Services part of the City Data Model.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/CityPatternThing`
+
 
 ## Diagram
 

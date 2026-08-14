@@ -2,6 +2,8 @@
 
 A NonProfitOrganization is an non-governmental organization that operates for purposes other than generating profit.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/NonProfitOrganization`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ A NonProfitOrganization is an non-governmental organization that operates for pu
 
 | Property | Constraint |
 |----------|------------|
+| [hasProgram](../properties/hasProgram.md) | only [Program](Program.md) |
 | [hasProgram](../properties/hasProgram.md) | only [Program](https://w3id.org/citydata/part2/v1/Program) |
 | subClassOf | [Organization](Organization.md) |
 

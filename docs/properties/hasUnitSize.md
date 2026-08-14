@@ -2,9 +2,25 @@
 
 Identifies the size of the Building Unit as an Area.
 
-**Domain**: [BuildingUnit](../classes/BuildingUnit.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasUnitSize`
 
-**Range**: [cdm1:Area](https://w3id.org/citydata/part1/v1/Area)
+## Domain
+
+| Class |
+|-------|
+| [BuildingUnit](../classes/BuildingUnit.md) |
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Area](https://w3id.org/citydata/part1/v1/Area) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingObjectProperty](BuildingObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the size of the Building Unit as an Area.
 |-------|
 | [BuildingUnit](../classes/BuildingUnit.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasUnitSize`

@@ -2,9 +2,25 @@
 
 Schedules that are attached to the Law and are referenced by the Law. A Schedule is part of the Law.
 
-**Domain**: [Law](../classes/Law.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasSchedule`
 
-**Range**: [Schedule](../classes/Schedule.md)
+## Domain
+
+| Class |
+|-------|
+| [Law](../classes/Law.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Schedule](../classes/Schedule.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Schedules that are attached to the Law and are referenced by the Law. A Schedule
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasSchedule`

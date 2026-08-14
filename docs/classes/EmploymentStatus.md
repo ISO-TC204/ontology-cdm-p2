@@ -2,6 +2,8 @@
 
 Employment Status is a type of Code that describes the employment status of an Agent within an Organization.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/EmploymentStatus`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Employment Status is a type of Code that describes the employment status of an A
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Employment](Employment.md) | [hasEmploymentStatus](../properties/hasEmploymentStatus.md) |
 

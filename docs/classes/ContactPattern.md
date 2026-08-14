@@ -17,6 +17,7 @@ This pattern consists of the following classes:
 - [State](State.md)
 - [Street Direction](StreetDirection.md)
 - [Street Type](StreetType.md)
+
 This module defines the following properties:
 
 - [AddressDataProperty](../properties/AddressDataProperty.md)
@@ -47,6 +48,11 @@ This module defines the following properties:
 - [maxStreetNumber](../properties/maxStreetNumber.md)
 - [minStreetNumber](../properties/minStreetNumber.md)
 - [TelephoneDataProperty](../properties/TelephoneDataProperty.md)
+
+
+This module defines the following datatypes:
+
+- [EmailAddress](../datatypes/EmailAddress.md)
 
 
 The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../ContactPattern.ttl) and the SHACL [restrictions](../ContactSHACL.ttl).

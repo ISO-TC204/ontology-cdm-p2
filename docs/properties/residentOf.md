@@ -2,9 +2,25 @@
 
 Identifies the JurisdictionalArea that a CityResident is a resident.
 
-**Domain**: [CityResident](../classes/CityResident.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/residentOf`
 
-**Range**: [JurisdictionalArea](../classes/JurisdictionalArea.md)
+## Domain
+
+| Class |
+|-------|
+| [CityResident](../classes/CityResident.md) |
+
+## Range
+
+| Class |
+|-------|
+| [JurisdictionalArea](../classes/JurisdictionalArea.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityResidentObjectProperty](CityResidentObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the JurisdictionalArea that a CityResident is a resident.
 |-------|
 | [CityResident](../classes/CityResident.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/residentOf`

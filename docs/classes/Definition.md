@@ -2,6 +2,8 @@
 
 A definition is a statement that explains the meaning of a term or concept as used within the domain object (e.g., a document).
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Definition`
+
 
 ## Diagram
 
@@ -88,4 +90,10 @@ A definition is a statement that explains the meaning of a term or concept as us
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | exactly 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | exactly 1 [Law](https://w3id.org/citydata/part2/v1/Law) |
 | subClassOf | [BylawThing](BylawThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Law](Law.md) | [hasDefinition](../properties/hasDefinition.md) |
 

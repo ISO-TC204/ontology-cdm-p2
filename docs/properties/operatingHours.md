@@ -2,9 +2,25 @@
 
 Identifies the OperatingHours of the Organization.
 
-**Domain**: [Organization](../classes/Organization.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/operatingHours`
 
-**Range**: [Operation](../classes/Operation.md)
+## Domain
+
+| Class |
+|-------|
+| [Organization](../classes/Organization.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Operation](../classes/Operation.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the OperatingHours of the Organization.
 |-------|
 | [Organization](../classes/Organization.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/operatingHours`

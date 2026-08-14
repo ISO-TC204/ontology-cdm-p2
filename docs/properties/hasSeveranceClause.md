@@ -2,9 +2,25 @@
 
 Clauses that specify that the bylaw remains valid if any portion of the Law is found to be invalid by a higher jurisdiction.
 
-**Domain**: [Law](../classes/Law.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasSeveranceClause`
 
-**Range**: [Clause](../classes/Clause.md)
+## Domain
+
+| Class |
+|-------|
+| [Law](../classes/Law.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Clause](../classes/Clause.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Clauses that specify that the bylaw remains valid if any portion of the Law is f
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasSeveranceClause`

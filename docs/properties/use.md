@@ -2,9 +2,25 @@
 
 Identifies the use of the Building, typically associated with some classification system.
 
-**Domain**: [Building](../classes/Building.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/use`
 
-**Range**: [BuildingUse](../classes/BuildingUse.md)
+## Domain
+
+| Class |
+|-------|
+| [Building](../classes/Building.md) |
+
+## Range
+
+| Class |
+|-------|
+| [BuildingUse](../classes/BuildingUse.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingObjectProperty](BuildingObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the use of the Building, typically associated with some classificatio
 |-------|
 | [Building](../classes/Building.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/use`

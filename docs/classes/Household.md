@@ -4,6 +4,8 @@ A Household refers to a collection of persons occupying a shared place of reside
 
 NOTE: More precise definitions of Household may be adopted as required for different contexts and applications through extensions to this class.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Household`
+
 
 ## Diagram
 
@@ -76,7 +78,7 @@ NOTE: More precise definitions of Household may be adopted as required for diffe
     </g>
     </g>
     <!-- Household&#45;&gt;Residence -->
-    <g id="edge7" class="edge">
+    <g id="edge8" class="edge">
     <title>Household&#45;&gt;Residence</title>
     <path fill="none" stroke="black" d="M183.2,-350C191.34,-342.14 199.7,-332.09 204,-321 211.07,-302.77 209.94,-295.63 204,-277 185.41,-218.71 138.59,-163.31 109.23,-132.66"/>
     <polygon fill="black" stroke="black" points="112,-130.49 102.51,-125.78 106.99,-135.38 112,-130.49"/>
@@ -95,7 +97,7 @@ NOTE: More precise definitions of Household may be adopted as required for diffe
     </g>
     </g>
     <!-- Household&#45;&gt;time_ProperInterval -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>Household&#45;&gt;time_ProperInterval</title>
     <path fill="none" stroke="black" d="M192.93,-367.54C242.69,-366.61 335,-356.71 335,-296 335,-296 335,-296 335,-106 335,-64.05 210.38,-46.28 131.41,-39.23"/>
     <polygon fill="black" stroke="black" points="131.88,-35.76 121.62,-38.4 131.29,-42.74 131.88,-35.76"/>
@@ -121,7 +123,9 @@ NOTE: More precise definitions of Household may be adopted as required for diffe
 |----------|------------|
 | [householdOccupies](../properties/householdOccupies.md) | max 1 |
 | [householdOccupies](../properties/householdOccupies.md) | max 1 [Residence](https://w3id.org/citydata/part2/v1/Residence) |
+| [org:hasMember](https://w3id.org/citydata/imported/org/hasMember) | only [Person](Person.md) |
 | [org:hasMember](https://w3id.org/citydata/imported/org/hasMember) | only [Person](https://w3id.org/citydata/part2/v1/Person) |
+| [time:hasTime](https://w3id.org/citydata/imported/time/hasTime) | only [time:ProperInterval](https://w3id.org/citydata/imported/time/ProperInterval) |
 | [time:hasTime](https://w3id.org/citydata/imported/time/hasTime) | only [time:ProperInterval](http://www.w3.org/2006/time#ProperInterval) |
 | subClassOf | [HouseholdThing](HouseholdThing.md) |
 

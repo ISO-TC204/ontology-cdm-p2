@@ -4,6 +4,8 @@ Member of an organization
 
 NOTE: Organization Agents have goals, authority, and may be members of some team.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/OrganizationAgent`
+
 
 ## Diagram
 
@@ -74,7 +76,7 @@ NOTE: Organization Agents have goals, authority, and may be members of some team
     </g>
     </g>
     <!-- OrganizationAgent&#45;&gt;Employment -->
-    <g id="edge11" class="edge">
+    <g id="edge8" class="edge">
     <title>OrganizationAgent&#45;&gt;Employment</title>
     <path fill="none" stroke="black" d="M167.36,-422.28C150.81,-415.13 133.28,-405.5 119.75,-393 92.26,-367.6 73.21,-328.21 62.7,-301.9"/>
     <polygon fill="black" stroke="black" points="65.98,-300.67 59.14,-292.58 59.44,-303.17 65.98,-300.67"/>
@@ -128,7 +130,7 @@ NOTE: Organization Agents have goals, authority, and may be members of some team
     </g>
     </g>
     <!-- OrganizationAgent&#45;&gt;Role -->
-    <g id="edge8" class="edge">
+    <g id="edge11" class="edge">
     <title>OrganizationAgent&#45;&gt;Role</title>
     <path fill="none" stroke="black" d="M270.58,-434.41C311.9,-427.57 363,-410.51 363,-368 363,-368 363,-368 363,-106 363,-51.62 177.27,-38.88 95.21,-35.9"/>
     <polygon fill="black" stroke="black" points="95.51,-32.41 85.4,-35.58 95.28,-39.41 95.51,-32.41"/>
@@ -153,9 +155,13 @@ NOTE: Organization Agents have goals, authority, and may be members of some team
 
 | Property | Constraint |
 |----------|------------|
+| [hasEmployment](../properties/hasEmployment.md) | only [Employment](Employment.md) |
 | [hasEmployment](../properties/hasEmployment.md) | only [Employment](https://w3id.org/citydata/part2/v1/Employment) |
+| [hasGoal](../properties/hasGoal.md) | only [Goal](Goal.md) |
 | [hasGoal](../properties/hasGoal.md) | only [Goal](https://w3id.org/citydata/part2/v1/Goal) |
+| [org:memberOf](https://w3id.org/citydata/imported/org/memberOf) | only [Organization](Organization.md) |
 | [org:memberOf](https://w3id.org/citydata/imported/org/memberOf) | only [Organization](https://w3id.org/citydata/part2/v1/Organization) |
+| [playsRole](../properties/playsRole.md) | only [Role](Role.md) |
 | [playsRole](../properties/playsRole.md) | only [Role](https://w3id.org/citydata/part2/v1/Role) |
 | subClassOf | [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |

@@ -2,9 +2,25 @@
 
 Specifies the number of bedrooms in a building unit.
 
-**Domain**: [BuildingUnit](../classes/BuildingUnit.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/numberOfBedrooms`
 
-**Range**: [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger)
+## Domain
+
+| Class |
+|-------|
+| [BuildingUnit](../classes/BuildingUnit.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BuildingDataProperty](BuildingDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies the number of bedrooms in a building unit.
 |-------|
 | [BuildingUnit](../classes/BuildingUnit.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/numberOfBedrooms`

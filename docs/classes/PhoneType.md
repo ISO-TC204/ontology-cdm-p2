@@ -4,6 +4,8 @@ A PhoneType defines the type of phone number.
 
 EXAMPLE: home, cell, work, etc.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/PhoneType`
+
 
 ## Diagram
 
@@ -80,6 +82,7 @@ EXAMPLE: home, cell, work, etc.
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [ContactThing](ContactThing.md) |
 

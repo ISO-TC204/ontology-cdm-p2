@@ -2,7 +2,19 @@
 
 Identifies the Services that make up the domain object.
 
-**Range**: [Service](../classes/Service.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasService`
+
+## Range
+
+| Class |
+|-------|
+| [Service](../classes/Service.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the Services that make up the domain object.
 |-------|
 | [Program](../classes/Program.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasService`

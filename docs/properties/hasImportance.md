@@ -2,9 +2,25 @@
 
 Specifies how important the Outcome is.
 
-**Domain**: [Outcome](../classes/Outcome.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasImportance`
 
-**Range**: [Importance](../classes/Importance.md)
+## Domain
+
+| Class |
+|-------|
+| [Outcome](../classes/Outcome.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Importance](../classes/Importance.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies how important the Outcome is.
 |-------|
 | [Outcome](../classes/Outcome.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasImportance`

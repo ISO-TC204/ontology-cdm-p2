@@ -2,9 +2,25 @@
 
 Identifies the MonetaryValue of the Compensation.
 
-**Domain**: [Compensation](../classes/Compensation.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasPay`
 
-**Range**: [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue)
+## Domain
+
+| Class |
+|-------|
+| [Compensation](../classes/Compensation.md) |
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the MonetaryValue of the Compensation.
 |-------|
 | [Compensation](../classes/Compensation.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasPay`

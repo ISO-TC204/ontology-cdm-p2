@@ -2,9 +2,25 @@
 
 Identifies the bylaws in existence in the JurisdictionalArea.
 
-**Domain**: [JurisdictionalArea](../classes/JurisdictionalArea.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasBylaw`
 
-**Range**: [Bylaw](../classes/Bylaw.md)
+## Domain
+
+| Class |
+|-------|
+| [JurisdictionalArea](../classes/JurisdictionalArea.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Bylaw](../classes/Bylaw.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the bylaws in existence in the JurisdictionalArea.
 |-------|
 | [JurisdictionalArea](../classes/JurisdictionalArea.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasBylaw`

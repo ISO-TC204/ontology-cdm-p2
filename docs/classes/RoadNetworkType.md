@@ -1,5 +1,7 @@
 # RoadNetworkType
 
+**IRI**: `https://w3id.org/citydata/part2/v1/RoadNetworkType`
+
 
 ## Diagram
 
@@ -76,6 +78,13 @@
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [InfrastructureThing](InfrastructureThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Road Segment](RoadSegment.md) | [networkType](../properties/networkType.md) |
 

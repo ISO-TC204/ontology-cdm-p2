@@ -2,9 +2,25 @@
 
 specifies the type of the street for the address.
 
-**Domain**: [Address](../classes/Address.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasStreetType`
 
-**Range**: [StreetType](../classes/StreetType.md)
+## Domain
+
+| Class |
+|-------|
+| [Address](../classes/Address.md) |
+
+## Range
+
+| Class |
+|-------|
+| [StreetType](../classes/StreetType.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AddressProperty](AddressProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ specifies the type of the street for the address.
 |-------|
 | [Address](../classes/Address.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasStreetType`

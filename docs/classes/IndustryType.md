@@ -2,6 +2,8 @@
 
 Industry Type is a type of Code that describes the industry sector of a business establishment.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/IndustryType`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Industry Type is a type of Code that describes the industry sector of a business
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [For Profit Organization](ForProfitOrganization.md) | [hasIndustryType](../properties/hasIndustryType.md) |
 

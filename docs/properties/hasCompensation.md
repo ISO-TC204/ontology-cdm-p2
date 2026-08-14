@@ -2,9 +2,25 @@
 
 identifies the monetary compensation received by the agent.
 
-**Domain**: [Employment](../classes/Employment.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasCompensation`
 
-**Range**: [Compensation](../classes/Compensation.md)
+## Domain
+
+| Class |
+|-------|
+| [Employment](../classes/Employment.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Compensation](../classes/Compensation.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ identifies the monetary compensation received by the agent.
 |-------|
 | [Employment](../classes/Employment.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasCompensation`

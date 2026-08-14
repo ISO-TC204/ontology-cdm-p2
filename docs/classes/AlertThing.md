@@ -2,6 +2,8 @@
 
 Added for organizational purposes, to identify classes defined for the Alert Pattern.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/AlertThing`
+
 
 ## Diagram
 

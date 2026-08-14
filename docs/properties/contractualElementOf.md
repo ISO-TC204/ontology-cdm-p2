@@ -2,9 +2,25 @@
 
 Identifies the Contract of which this Contractual Element is a part.
 
-**Domain**: [ContractualElement](../classes/ContractualElement.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/contractualElementOf`
 
-**Range**: [Contract](../classes/Contract.md)
+## Domain
+
+| Class |
+|-------|
+| [ContractualElement](../classes/ContractualElement.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Contract](../classes/Contract.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [ContractObjectProperty](ContractObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the Contract of which this Contractual Element is a part.
 |-------|
 | [ContractualElement](../classes/ContractualElement.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/contractualElementOf`

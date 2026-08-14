@@ -2,7 +2,19 @@
 
 Identifies the annual income of a person.
 
-**Range**: [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue)
+**IRI**: `https://w3id.org/citydata/part2/v1/income`
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the annual income of a person.
 |-------|
 | [Person](../classes/Person.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/income`

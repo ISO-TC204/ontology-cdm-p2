@@ -2,6 +2,8 @@
 
 Citizenship is a type of City Thing that indicates the country of citizenship for a person during a specific period.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Citizenship`
+
 
 ## Diagram
 
@@ -56,7 +58,7 @@ Citizenship is a type of City Thing that indicates the country of citizenship fo
     </g>
     </g>
     <!-- Citizenship&#45;&gt;Country -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>Citizenship&#45;&gt;Country</title>
     <path fill="none" stroke="black" d="M102.69,-284.21C96.17,-251.06 81.56,-176.89 73.54,-136.14"/>
     <polygon fill="black" stroke="black" points="76.98,-135.51 71.62,-126.37 70.12,-136.86 76.98,-135.51"/>
@@ -75,7 +77,7 @@ Citizenship is a type of City Thing that indicates the country of citizenship fo
     </g>
     </g>
     <!-- Citizenship&#45;&gt;time_ProperInterval -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>Citizenship&#45;&gt;time_ProperInterval</title>
     <path fill="none" stroke="black" d="M131.83,-284.13C142.34,-275.72 153.33,-264.55 159,-251.5 167.41,-232.14 163.67,-224.59 159,-204 146.51,-148.93 110.68,-92.71 87.88,-61"/>
     <polygon fill="black" stroke="black" points="90.89,-59.19 82.16,-53.19 85.25,-63.32 90.89,-59.19"/>
@@ -104,4 +106,10 @@ Citizenship is a type of City Thing that indicates the country of citizenship fo
 | [validityPeriod](../properties/validityPeriod.md) | max 1 |
 | [validityPeriod](../properties/validityPeriod.md) | max 1 [time:ProperInterval](http://www.w3.org/2006/time#ProperInterval) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person](Person.md) | [citizenOf](../properties/citizenOf.md) |
 

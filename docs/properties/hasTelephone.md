@@ -2,7 +2,19 @@
 
 Identifies the PhoneNumber for the domain object.
 
-**Range**: [PhoneNumber](../classes/PhoneNumber.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasTelephone`
+
+## Range
+
+| Class |
+|-------|
+| [PhoneNumber](../classes/PhoneNumber.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [ContactObjectProperty](ContactObjectProperty.md) |
 
 ## Used in classes
 
@@ -11,4 +23,3 @@ Identifies the PhoneNumber for the domain object.
 | [Person](../classes/Person.md) |
 | [Organization](../classes/Organization.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasTelephone`

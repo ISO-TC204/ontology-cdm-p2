@@ -2,6 +2,8 @@
 
 A Schedule is a component of a bylaw that outlines specific provisions, terms, or details related to the main content of the document.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Schedule`
+
 
 ## Diagram
 
@@ -59,7 +61,7 @@ A Schedule is a component of a bylaw that outlines specific provisions, terms, o
     </g>
     </g>
     <!-- Schedule&#45;&gt;Clause -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>Schedule&#45;&gt;Clause</title>
     <path fill="none" stroke="black" d="M98.74,-277.39C93.75,-256.36 86.66,-228.35 79,-204 71.63,-180.55 61.73,-154.46 54.18,-135.4"/>
     <polygon fill="black" stroke="black" points="57.46,-134.19 50.5,-126.21 50.97,-136.79 57.46,-134.19"/>
@@ -77,7 +79,7 @@ A Schedule is a component of a bylaw that outlines specific provisions, terms, o
     </g>
     </g>
     <!-- Schedule&#45;&gt;Law -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>Schedule&#45;&gt;Law</title>
     <path fill="none" stroke="black" d="M137.62,-277.12C144.31,-268.34 150.43,-258.37 154,-248 160.36,-229.51 159.57,-222.74 154,-204 137.07,-147.04 93.99,-91.51 66.75,-60.43"/>
     <polygon fill="black" stroke="black" points="69.47,-58.21 60.19,-53.09 64.25,-62.88 69.47,-58.21"/>
@@ -109,6 +111,13 @@ A Schedule is a component of a bylaw that outlines specific provisions, terms, o
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | exactly 1 |
 | [cdm1:properPartOf](https://w3id.org/citydata/part1/v1/properPartOf) | exactly 1 [Law](https://w3id.org/citydata/part2/v1/Law) |
+| [hasClause](../properties/hasClause.md) | only [Clause](Clause.md) |
 | [hasClause](../properties/hasClause.md) | only [Clause](https://w3id.org/citydata/part2/v1/Clause) |
 | subClassOf | [BylawThing](BylawThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Law](Law.md) | [hasSchedule](../properties/hasSchedule.md) |
 

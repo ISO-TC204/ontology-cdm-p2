@@ -2,7 +2,19 @@
 
 Identifies any alternative names associated with a Person. 
 
-**Range**: [Name](../classes/Name.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/alias`
+
+## Range
+
+| Class |
+|-------|
+| [Name](../classes/Name.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies any alternative names associated with a Person.
 |-------|
 | [Person](../classes/Person.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/alias`

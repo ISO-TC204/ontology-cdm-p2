@@ -2,9 +2,25 @@
 
 Identifies the Indicators that use this Output in determining the value of the Indicator.
 
-**Domain**: [Output](../classes/Output.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/usedByIndicator`
 
-**Range**: [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator)
+## Domain
+
+| Class |
+|-------|
+| [Output](../classes/Output.md) |
+
+## Range
+
+| Class |
+|-------|
+| [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the Indicators that use this Output in determining the value of the I
 |-------|
 | [Output](../classes/Output.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/usedByIndicator`

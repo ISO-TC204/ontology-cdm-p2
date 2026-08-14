@@ -2,6 +2,8 @@
 
 A Stakeholder is an Organization or Person that has an interest in a Program or Service.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Stakeholder`
+
 
 ## Diagram
 
@@ -108,7 +110,7 @@ A Stakeholder is an Organization or Person that has an interest in a Program or 
     </g>
     </g>
     <!-- Stakeholder&#45;&gt;cdm1_Activity -->
-    <g id="edge8" class="edge">
+    <g id="edge10" class="edge">
     <title>Stakeholder&#45;&gt;cdm1_Activity</title>
     <path fill="none" stroke="black" d="M220.33,-350.26C229.84,-342.22 238.79,-332.36 244,-321 252.15,-303.22 251.07,-295.23 244,-277 219.71,-214.38 160.12,-160.9 122.31,-131.71"/>
     <polygon fill="black" stroke="black" points="124.49,-128.97 114.4,-125.73 120.27,-134.56 124.49,-128.97"/>
@@ -127,7 +129,7 @@ A Stakeholder is an Organization or Person that has an interest in a Program or 
     </g>
     </g>
     <!-- Stakeholder&#45;&gt;cdm1_Location -->
-    <g id="edge10" class="edge">
+    <g id="edge8" class="edge">
     <title>Stakeholder&#45;&gt;cdm1_Location</title>
     <path fill="none" stroke="black" d="M269.91,-356.41C298.96,-344.94 324,-326.27 324,-296 324,-296 324,-296 324,-106 324,-68.05 210.28,-48.54 141.05,-40.18"/>
     <polygon fill="black" stroke="black" points="141.77,-36.74 131.44,-39.06 140.97,-43.69 141.77,-36.74"/>
@@ -151,12 +153,25 @@ A Stakeholder is an Organization or Person that has an interest in a Program or 
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | datatype xsd:string |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
 | [hasCatchmentArea](../properties/hasCatchmentArea.md) | only [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [hasCatchmentArea](../properties/hasCatchmentArea.md) | only [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [hasCatchmentAreaType](../properties/hasCatchmentAreaType.md) | only [CatchmentAreaType](CatchmentAreaType.md) |
 | [hasCatchmentAreaType](../properties/hasCatchmentAreaType.md) | only [CatchmentAreaType](https://w3id.org/citydata/part2/v1/CatchmentAreaType) |
 | [performs](../properties/performs.md) | min 1 |
 | [performs](../properties/performs.md) | min 1 [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Input](Input.md) | [hasContributingStakeholder](../properties/hasContributingStakeholder.md) |
+| [Program](Program.md) | [hasBeneficialStakeholder](../properties/hasBeneficialStakeholder.md) |
+| [Program](Program.md) | [hasContributingStakeholder](../properties/hasContributingStakeholder.md) |
+| [Service](Service.md) | [hasBeneficialStakeholder](../properties/hasBeneficialStakeholder.md) |
+| [Service](Service.md) | [hasContributingStakeholder](../properties/hasContributingStakeholder.md) |
 

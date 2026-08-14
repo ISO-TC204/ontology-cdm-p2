@@ -2,6 +2,8 @@
 
 ID Type is a type of Code that describes the type of identification document issued to a person.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/IDType`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ ID Type is a type of Code that describes the type of identification document iss
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person Id](PersonId.md) | [hasIDType](../properties/hasIDType.md) |
 

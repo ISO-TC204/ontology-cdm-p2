@@ -2,6 +2,8 @@
 
 A goal represents some state or complex states, and allows for the representation of various groups' responsibilities.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Goal`
+
 
 ## Diagram
 
@@ -76,4 +78,12 @@ A goal represents some state or complex states, and allows for the representatio
 |----------|------------|
 | subClassOf | [cdm1:State](https://w3id.org/citydata/part1/v1/State) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Organization](Organization.md) | [hasGoal](../properties/hasGoal.md) |
+| [Organization Agent](OrganizationAgent.md) | [hasGoal](../properties/hasGoal.md) |
+| [Role](Role.md) | [hasGoal](../properties/hasGoal.md) |
 

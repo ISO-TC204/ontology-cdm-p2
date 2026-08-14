@@ -2,6 +2,8 @@
 
 A for-profit organization is an organization that operates with the primary goal of generating profit for its owners or shareholders.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ForProfitOrganization`
+
 
 ## Diagram
 
@@ -56,7 +58,7 @@ A for-profit organization is an organization that operates with the primary goal
     </g>
     </g>
     <!-- ForProfitOrganization&#45;&gt;BusinessEstablishment -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>ForProfitOrganization&#45;&gt;BusinessEstablishment</title>
     <path fill="none" stroke="black" d="M103.42,-255.52C99.11,-227.17 90.42,-169.97 85.21,-135.72"/>
     <polygon fill="black" stroke="black" points="88.72,-135.5 83.76,-126.14 81.8,-136.56 88.72,-135.5"/>
@@ -74,7 +76,7 @@ A for-profit organization is an organization that operates with the primary goal
     </g>
     </g>
     <!-- ForProfitOrganization&#45;&gt;IndustryType -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>ForProfitOrganization&#45;&gt;IndustryType</title>
     <path fill="none" stroke="black" d="M161.93,-255.61C175.38,-248.79 188.12,-239.37 196,-226.5 206.21,-209.82 200.01,-201.64 196,-182.5 186.69,-138.09 181.42,-125.89 155,-89 147.26,-78.2 137.07,-67.92 127.33,-59.29"/>
     <polygon fill="black" stroke="black" points="129.63,-56.66 119.75,-52.84 125.1,-61.99 129.63,-56.66"/>
@@ -97,7 +99,9 @@ A for-profit organization is an organization that operates with the primary goal
 
 | Property | Constraint |
 |----------|------------|
+| [hasEstablishment](../properties/hasEstablishment.md) | only [BusinessEstablishment](BusinessEstablishment.md) |
 | [hasEstablishment](../properties/hasEstablishment.md) | only [BusinessEstablishment](https://w3id.org/citydata/part2/v1/BusinessEstablishment) |
+| [hasIndustryType](../properties/hasIndustryType.md) | only [IndustryType](IndustryType.md) |
 | [hasIndustryType](../properties/hasIndustryType.md) | only [IndustryType](https://w3id.org/citydata/part2/v1/IndustryType) |
 | subClassOf | [Organization](Organization.md) |
 

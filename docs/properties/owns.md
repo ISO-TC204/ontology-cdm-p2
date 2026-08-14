@@ -2,7 +2,19 @@
 
 Identifies an entity that is owned by another entity.
 
-**Range**: [EntityOwnership](../classes/EntityOwnership.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/owns`
+
+## Range
+
+| Class |
+|-------|
+| [EntityOwnership](../classes/EntityOwnership.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityResidentObjectProperty](CityResidentObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies an entity that is owned by another entity.
 |-------|
 | [CityResident](../classes/CityResident.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/owns`

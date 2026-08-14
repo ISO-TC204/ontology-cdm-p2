@@ -2,6 +2,8 @@
 
 A Jurisdictional Area is an abstract entity that is characterized not only by its location, but by the objects that occupy it (persons, buildings, etc), the governing body(s) it is subject to, and the activities that occur within it.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/JurisdictionalArea`
+
 
 ## Diagram
 
@@ -48,16 +50,16 @@ A Jurisdictional Area is an abstract entity that is characterized not only by it
     <title>JurisdictionalArea&#45;&gt;JurisdictionalArea</title>
     <path fill="none" stroke="black" d="M238.81,-450.31C249.37,-449.98 257,-448.87 257,-447 257,-445.92 254.45,-445.09 250.26,-444.52"/>
     <polygon fill="black" stroke="black" points="250.55,-441.04 240.32,-443.8 250.04,-448.02 250.55,-441.04"/>
-    <polygon fill="white" stroke="none" points="257,-436.25 257,-457.75 365.5,-457.75 365.5,-436.25 257,-436.25"/>
-    <text xml:space="preserve" text-anchor="start" x="261" y="-443.25" font-family="Arial" font-size="11.00">administrativeAreaOf</text>
+    <polygon fill="white" stroke="none" points="257,-436.25 257,-457.75 354.25,-457.75 354.25,-436.25 257,-436.25"/>
+    <text xml:space="preserve" text-anchor="start" x="261" y="-443.25" font-family="Arial" font-size="11.00">administrativeArea</text>
     </g>
     <!-- JurisdictionalArea&#45;&gt;JurisdictionalArea -->
-    <g id="edge11" class="edge">
+    <g id="edge9" class="edge">
     <title>JurisdictionalArea&#45;&gt;JurisdictionalArea</title>
-    <path fill="none" stroke="black" d="M238.61,-452.69C292.01,-455.33 365.5,-453.43 365.5,-447 365.5,-441.01 301.71,-438.95 249.81,-440.83"/>
-    <polygon fill="black" stroke="black" points="249.96,-437.32 240.12,-441.24 250.26,-444.31 249.96,-437.32"/>
-    <polygon fill="white" stroke="none" points="365.5,-436.25 365.5,-457.75 462.75,-457.75 462.75,-436.25 365.5,-436.25"/>
-    <text xml:space="preserve" text-anchor="start" x="369.5" y="-443.25" font-family="Arial" font-size="11.00">administrativeArea</text>
+    <path fill="none" stroke="black" d="M238.76,-452.82C288.59,-455.27 354.25,-453.33 354.25,-447 354.25,-441.14 297.97,-439.05 250.09,-440.71"/>
+    <polygon fill="black" stroke="black" points="250.12,-437.2 240.28,-441.12 250.41,-444.2 250.12,-437.2"/>
+    <polygon fill="white" stroke="none" points="354.25,-436.25 354.25,-457.75 462.75,-457.75 462.75,-436.25 354.25,-436.25"/>
+    <text xml:space="preserve" text-anchor="start" x="358.25" y="-443.25" font-family="Arial" font-size="11.00">administrativeAreaOf</text>
     </g>
     <!-- Invis -->
     <!-- JurisdictionalArea&#45;&gt;Invis -->
@@ -108,7 +110,7 @@ A Jurisdictional Area is an abstract entity that is characterized not only by it
     </g>
     </g>
     <!-- JurisdictionalArea&#45;&gt;i72_Population -->
-    <g id="edge10" class="edge">
+    <g id="edge11" class="edge">
     <title>JurisdictionalArea&#45;&gt;i72_Population</title>
     <path fill="none" stroke="black" d="M209.91,-429.04C223.62,-415.91 239,-396.41 239,-375 239,-375 239,-375 239,-179 239,-142.98 199.42,-125.03 164.63,-116.21"/>
     <polygon fill="black" stroke="black" points="165.57,-112.84 155.04,-114 163.99,-119.66 165.57,-112.84"/>
@@ -127,7 +129,7 @@ A Jurisdictional Area is an abstract entity that is characterized not only by it
     </g>
     </g>
     <!-- JurisdictionalArea&#45;&gt;LandArea -->
-    <g id="edge9" class="edge">
+    <g id="edge10" class="edge">
     <title>JurisdictionalArea&#45;&gt;LandArea</title>
     <path fill="none" stroke="black" d="M238.68,-446.03C290.42,-443.12 364,-429.43 364,-375 364,-375 364,-375 364,-106 364,-64.46 230.57,-45.43 162.28,-38.41"/>
     <polygon fill="black" stroke="black" points="162.92,-34.95 152.62,-37.46 162.23,-41.92 162.92,-34.95"/>
@@ -159,14 +161,28 @@ A Jurisdictional Area is an abstract entity that is characterized not only by it
 
 | Property | Constraint |
 |----------|------------|
+| [administrativeArea](../properties/administrativeArea.md) | only [JurisdictionalArea](JurisdictionalArea.md) |
 | [administrativeArea](../properties/administrativeArea.md) | only [JurisdictionalArea](https://w3id.org/citydata/part2/v1/JurisdictionalArea) |
+| [administrativeAreaOf](../properties/administrativeAreaOf.md) | only [JurisdictionalArea](JurisdictionalArea.md) |
 | [administrativeAreaOf](../properties/administrativeAreaOf.md) | only [JurisdictionalArea](https://w3id.org/citydata/part2/v1/JurisdictionalArea) |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | max 1 xsd:string |
+| [hasBylaw](../properties/hasBylaw.md) | only [Bylaw](Bylaw.md) |
 | [hasBylaw](../properties/hasBylaw.md) | only [Bylaw](https://w3id.org/citydata/part2/v1/Bylaw) |
+| [hasGovernment](../properties/hasGovernment.md) | only [GovernmentOrganization](GovernmentOrganization.md) |
 | [hasGovernment](../properties/hasGovernment.md) | only [GovernmentOrganization](https://w3id.org/citydata/part2/v1/GovernmentOrganization) |
+| [hasLandArea](../properties/hasLandArea.md) | only [LandArea](LandArea.md) |
 | [hasLandArea](../properties/hasLandArea.md) | only [LandArea](https://w3id.org/citydata/part2/v1/LandArea) |
 | [residentPopulation](../properties/residentPopulation.md) | max 1 |
 | [residentPopulation](../properties/residentPopulation.md) | max 1 [i72:Population](https://w3id.org/citydata/21972/v1/Population) |
 | subClassOf | [CityPatternThing](CityPatternThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [City Resident](CityResident.md) | [residentOf](../properties/residentOf.md) |
+| [Government Organization](GovernmentOrganization.md) | [jurisdiction](../properties/jurisdiction.md) |
+| [Jurisdictional Area (FuzzyTime)](JurisdictionalArea.md) | [administrativeArea](../properties/administrativeArea.md) |
+| [Jurisdictional Area (FuzzyTime)](JurisdictionalArea.md) | [administrativeAreaOf](../properties/administrativeAreaOf.md) |
 

@@ -2,7 +2,19 @@
 
 Identifies the Outcomes or expected Outcomes of the domain object.
 
-**Range**: [Outcome](../classes/Outcome.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasOutcome`
+
+## Range
+
+| Class |
+|-------|
+| [Outcome](../classes/Outcome.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -11,4 +23,3 @@ Identifies the Outcomes or expected Outcomes of the domain object.
 | [Program](../classes/Program.md) |
 | [Service](../classes/Service.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasOutcome`

@@ -2,9 +2,25 @@
 
 Identifies the regional span of the stakeholders.
 
-**Domain**: [Stakeholder](../classes/Stakeholder.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasCatchmentArea`
 
-**Range**: [cdm1:Location](https://w3id.org/citydata/part1/v1/Location)
+## Domain
+
+| Class |
+|-------|
+| [Stakeholder](../classes/Stakeholder.md) |
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the regional span of the stakeholders.
 |-------|
 | [Stakeholder](../classes/Stakeholder.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasCatchmentArea`

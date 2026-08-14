@@ -2,7 +2,19 @@
 
 Identifies the place where the Person was born.
 
-**Range**: [Address](../classes/Address.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/birthplace`
+
+## Range
+
+| Class |
+|-------|
+| [Address](../classes/Address.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonObjectProperty](PersonObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the place where the Person was born.
 |-------|
 | [Person](../classes/Person.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/birthplace`

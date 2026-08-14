@@ -2,6 +2,8 @@
 
 An Operation defines the regular opening hours of an Organization or Infrastructure Element.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Operation`
+
 
 ## Diagram
 
@@ -82,4 +84,10 @@ An Operation defines the regular opening hours of an Organization or Infrastruct
 | [hasOpeningTime](../properties/hasOpeningTime.md) | max 1 xsd:time |
 | subClassOf | [cdm1:RecurringEvent](https://w3id.org/citydata/part1/v1/RecurringEvent) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Organization](Organization.md) | [operatingHours](../properties/operatingHours.md) |
 

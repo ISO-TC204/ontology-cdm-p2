@@ -2,6 +2,8 @@
 
 A Rail Link is a type of Travelled Way Link that represents a length of RailLine.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/RailLink`
+
 
 ## Diagram
 
@@ -79,6 +81,13 @@ A Rail Link is a type of Travelled Way Link that represents a length of RailLine
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | only [RailLine](RailLine.md) |
 | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | only [RailLine](https://w3id.org/citydata/part2/v1/RailLine) |
 | subClassOf | [TravelledWayLink](TravelledWayLink.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Rail Line (cdm1)](RailLine.md) | [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) |
 

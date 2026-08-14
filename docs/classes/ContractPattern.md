@@ -18,6 +18,7 @@ This pattern consists of the following classes:
 - [Non Binding Term](NonBindingTerm.md)
 - [Representation](Representation.md)
 - [Warranty](Warranty.md)
+
 This module defines the following properties:
 
 - [ContractDataProperty](../properties/ContractDataProperty.md)

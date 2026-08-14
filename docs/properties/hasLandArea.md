@@ -2,7 +2,19 @@
 
 Identifies the spatial area occupied by the object.
 
-**Range**: [LandArea](../classes/LandArea.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasLandArea`
+
+## Range
+
+| Class |
+|-------|
+| [LandArea](../classes/LandArea.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [LandUseObjectProperty](LandUseObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the spatial area occupied by the object.
 |-------|
 | [JurisdictionalArea](../classes/JurisdictionalArea.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasLandArea`

@@ -2,9 +2,25 @@
 
 Specifies whether the Law is currently in force, not in force or partially in force.
 
-**Domain**: [Law](../classes/Law.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/legislationLegalForce`
 
-**Range**: [LegislationLegalForceCode](../classes/LegislationLegalForceCode.md)
+## Domain
+
+| Class |
+|-------|
+| [Law](../classes/Law.md) |
+
+## Range
+
+| Class |
+|-------|
+| [LegislationLegalForceCode](../classes/LegislationLegalForceCode.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies whether the Law is currently in force, not in force or partially in fo
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/legislationLegalForce`

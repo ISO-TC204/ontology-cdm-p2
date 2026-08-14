@@ -2,9 +2,25 @@
 
 Type of bylaw chosen from mainBylaw, amendingBylaw or revisionBylaw.
 
-**Domain**: [Bylaw](../classes/Bylaw.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/legislationType`
 
-**Range**: [BylawTypeCode](../classes/BylawTypeCode.md)
+## Domain
+
+| Class |
+|-------|
+| [Bylaw](../classes/Bylaw.md) |
+
+## Range
+
+| Class |
+|-------|
+| [BylawTypeCode](../classes/BylawTypeCode.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -15,4 +31,3 @@ Type of bylaw chosen from mainBylaw, amendingBylaw or revisionBylaw.
 | [MainBylaw](../classes/MainBylaw.md) |
 | [RevisionBylaw](../classes/RevisionBylaw.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/legislationType`

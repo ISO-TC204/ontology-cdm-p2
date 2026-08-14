@@ -2,6 +2,8 @@
 
 An Organization defined broadly as a formal or semi-formal group for which structure and behaviour are defined.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Organization`
+
 
 ## Diagram
 
@@ -90,7 +92,7 @@ An Organization defined broadly as a formal or semi-formal group for which struc
     </g>
     </g>
     <!-- Organization&#45;&gt;cdm1_Location -->
-    <g id="edge11" class="edge">
+    <g id="edge10" class="edge">
     <title>Organization&#45;&gt;cdm1_Location</title>
     <path fill="none" stroke="black" d="M217.53,-495.06C213.74,-475 204.64,-441.81 184,-422 166.66,-405.36 151.06,-419.86 133,-404 127.92,-399.54 90.35,-322.89 70,-280.94"/>
     <polygon fill="black" stroke="black" points="73.28,-279.68 65.78,-272.2 66.98,-282.73 73.28,-279.68"/>
@@ -108,7 +110,7 @@ An Organization defined broadly as a formal or semi-formal group for which struc
     </g>
     </g>
     <!-- Organization&#45;&gt;Goal -->
-    <g id="edge10" class="edge">
+    <g id="edge9" class="edge">
     <title>Organization&#45;&gt;Goal</title>
     <path fill="none" stroke="black" d="M225.13,-495.08C231.9,-469.78 241.48,-420.98 228,-382.5 220.79,-361.91 131.26,-255.91 88.92,-206.46"/>
     <polygon fill="black" stroke="black" points="91.75,-204.38 82.58,-199.07 86.43,-208.94 91.75,-204.38"/>
@@ -126,7 +128,7 @@ An Organization defined broadly as a formal or semi-formal group for which struc
     </g>
     </g>
     <!-- Organization&#45;&gt;Operation -->
-    <g id="edge9" class="edge">
+    <g id="edge12" class="edge">
     <title>Organization&#45;&gt;Operation</title>
     <path fill="none" stroke="black" d="M246.14,-495.12C262.31,-482.44 280,-463.43 280,-441 280,-441 280,-441 280,-179 280,-142.75 167.54,-121.69 106.06,-112.89"/>
     <polygon fill="black" stroke="black" points="106.73,-109.45 96.35,-111.55 105.77,-116.38 106.73,-109.45"/>
@@ -144,7 +146,7 @@ An Organization defined broadly as a formal or semi-formal group for which struc
     </g>
     </g>
     <!-- Organization&#45;&gt;PhoneNumber -->
-    <g id="edge12" class="edge">
+    <g id="edge11" class="edge">
     <title>Organization&#45;&gt;PhoneNumber</title>
     <path fill="none" stroke="black" d="M256.02,-510.99C302.37,-507.54 377,-493.8 377,-441 377,-441 377,-441 377,-106 377,-51.82 199.98,-38.96 109.26,-35.92"/>
     <polygon fill="black" stroke="black" points="109.47,-32.43 99.37,-35.63 109.26,-39.43 109.47,-32.43"/>
@@ -179,10 +181,21 @@ An Organization defined broadly as a formal or semi-formal group for which struc
 | Property | Constraint |
 |----------|------------|
 | [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | only [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | only [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [hasGoal](../properties/hasGoal.md) | only [Goal](Goal.md) |
 | [hasGoal](../properties/hasGoal.md) | only [Goal](https://w3id.org/citydata/part2/v1/Goal) |
+| [hasTelephone](../properties/hasTelephone.md) | only [PhoneNumber](PhoneNumber.md) |
 | [hasTelephone](../properties/hasTelephone.md) | only [PhoneNumber](https://w3id.org/citydata/part2/v1/PhoneNumber) |
+| [operatingHours](../properties/operatingHours.md) | only [Operation](Operation.md) |
 | [operatingHours](../properties/operatingHours.md) | only [Operation](https://w3id.org/citydata/part2/v1/Operation) |
+| [orgAddress](../properties/orgAddress.md) | only [Address](Address.md) |
 | [orgAddress](../properties/orgAddress.md) | only [Address](https://w3id.org/citydata/part2/v1/Address) |
 | subClassOf | [cdm1:Organization](https://w3id.org/citydata/part1/v1/Organization) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Organization Agent (org)](OrganizationAgent.md) | [org:memberOf](https://w3id.org/citydata/imported/org/memberOf) |
 

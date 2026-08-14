@@ -2,6 +2,8 @@
 
 An Infrastructure Element is a generic representation of a city structure of interest.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/InfrastructureElement`
+
 
 ## Diagram
 
@@ -44,7 +46,7 @@ An Infrastructure Element is a generic representation of a city structure of int
     <polygon fill="none" stroke="black" points="148.5,-390.16 152,-400.16 155.5,-390.16 148.5,-390.16"/>
     </g>
     <!-- InfrastructureElement&#45;&gt;InfrastructureElement -->
-    <g id="edge9" class="edge">
+    <g id="edge8" class="edge">
     <title>InfrastructureElement&#45;&gt;InfrastructureElement</title>
     <path fill="none" stroke="black" d="M210.47,-352.97C221.14,-352.15 228.62,-349.99 228.62,-346.5 228.62,-344.43 225.99,-342.82 221.61,-341.69"/>
     <polygon fill="black" stroke="black" points="222.37,-338.27 211.96,-340.26 221.34,-345.19 222.37,-338.27"/>
@@ -64,7 +66,7 @@ An Infrastructure Element is a generic representation of a city structure of int
     </g>
     </g>
     <!-- InfrastructureElement&#45;&gt;Address -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>InfrastructureElement&#45;&gt;Address</title>
     <path fill="none" stroke="black" d="M137.92,-328.5C131.65,-320.2 124.64,-309.79 120,-299.5 106.67,-269.97 98.92,-233.42 94.84,-208.78"/>
     <polygon fill="black" stroke="black" points="98.34,-208.57 93.35,-199.22 91.43,-209.64 98.34,-208.57"/>
@@ -82,7 +84,7 @@ An Infrastructure Element is a generic representation of a city structure of int
     </g>
     </g>
     <!-- InfrastructureElement&#45;&gt;cdm1_Location -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>InfrastructureElement&#45;&gt;cdm1_Location</title>
     <path fill="none" stroke="black" d="M168.03,-328.59C174.65,-320.46 181.57,-310.17 185,-299.5 190.99,-280.88 190.36,-274.31 185,-255.5 171.47,-208.01 137.2,-161.34 114,-133.6"/>
     <polygon fill="black" stroke="black" points="116.74,-131.43 107.58,-126.1 111.42,-135.98 116.74,-131.43"/>
@@ -100,7 +102,7 @@ An Infrastructure Element is a generic representation of a city structure of int
     </g>
     </g>
     <!-- InfrastructureElement&#45;&gt;cdm1_MonetaryValue -->
-    <g id="edge6" class="edge">
+    <g id="edge9" class="edge">
     <title>InfrastructureElement&#45;&gt;cdm1_MonetaryValue</title>
     <path fill="none" stroke="black" d="M210.46,-342.14C255.1,-336.04 309,-319.37 309,-274.5 309,-274.5 309,-274.5 309,-106 309,-71.03 212.42,-51.72 143.09,-42.36"/>
     <polygon fill="black" stroke="black" points="143.66,-38.9 133.29,-41.08 142.75,-45.84 143.66,-38.9"/>
@@ -145,12 +147,25 @@ An Infrastructure Element is a generic representation of a city structure of int
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | datatype xsd:string |
+| [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | datatype xsd:string |
 | [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | only [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | only [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
+| [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | datatype xsd:string |
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [InfrastructureElement](InfrastructureElement.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [InfrastructureElement](https://w3id.org/citydata/part2/v1/InfrastructureElement) |
+| [hasAddress](../properties/hasAddress.md) | only [Address](Address.md) |
 | [hasAddress](../properties/hasAddress.md) | only [Address](https://w3id.org/citydata/part2/v1/Address) |
 | [i72:hasValue](https://w3id.org/citydata/21972/v1/hasValue) | only [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
+| [i72:hasValue](https://w3id.org/citydata/21972/v1/hasValue) | only [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
 | subClassOf | [InfrastructureThing](InfrastructureThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Infrastructure Element (cdm1)](InfrastructureElement.md) | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) |
 

@@ -2,7 +2,19 @@
 
 Identifies activities performed by the domain object.
 
-**Range**: [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity)
+**IRI**: `https://w3id.org/citydata/part2/v1/performs`
+
+## Range
+
+| Class |
+|-------|
+| [cdm1:Activity](https://w3id.org/citydata/part1/v1/Activity) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies activities performed by the domain object.
 |-------|
 | [Stakeholder](../classes/Stakeholder.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/performs`

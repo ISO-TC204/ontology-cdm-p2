@@ -2,6 +2,8 @@
 
 A Travelled Way is a type of Infrastructure Element that enables travel.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/TravelledWay`
+
 
 ## Diagram
 
@@ -85,6 +87,13 @@ A Travelled Way is a type of Infrastructure Element that enables travel.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) | only [TravelledWayLink](TravelledWayLink.md) |
 | [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) | only [TravelledWayLink](https://w3id.org/citydata/part2/v1/TravelledWayLink) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Travelled Way Link (cdm1)](TravelledWayLink.md) | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) |
 

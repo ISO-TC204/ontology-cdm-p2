@@ -2,9 +2,25 @@
 
 Identifies the occupation in which the agent is employed.
 
-**Domain**: [Employment](../classes/Employment.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/employedAs`
 
-**Range**: [Occupation](../classes/Occupation.md)
+## Domain
+
+| Class |
+|-------|
+| [Employment](../classes/Employment.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Occupation](../classes/Occupation.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the occupation in which the agent is employed.
 |-------|
 | [Employment](../classes/Employment.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/employedAs`

@@ -2,7 +2,19 @@
 
 Specifies a Role that the domain object fulfils.
 
-**Range**: [Role](../classes/Role.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/playsRole`
+
+## Range
+
+| Class |
+|-------|
+| [Role](../classes/Role.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Specifies a Role that the domain object fulfils.
 |-------|
 | [OrganizationAgent](../classes/OrganizationAgent.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/playsRole`

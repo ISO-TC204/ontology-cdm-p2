@@ -10,6 +10,7 @@ This pattern consists of the following classes:
 
 - [Household](Household.md)
 - [Household Thing](HouseholdThing.md)
+
 This module defines the following properties:
 
 - [HouseholdObjectProperty](../properties/HouseholdObjectProperty.md)

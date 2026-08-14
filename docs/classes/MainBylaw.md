@@ -2,6 +2,8 @@
 
 A Main Bylaw is a legally enforceable rule that serves as the primary legislative document for a law within a Jurisdictional Area.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/MainBylaw`
+
 
 ## Diagram
 

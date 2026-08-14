@@ -2,7 +2,19 @@
 
 The time at which the alert was last updated.
 
-**Range**: [time:Instant](https://w3id.org/citydata/imported/time/Instant)
+**IRI**: `https://w3id.org/citydata/part2/v1/lastUpdateInstant`
+
+## Range
+
+| Class |
+|-------|
+| [time:Instant](https://w3id.org/citydata/imported/time/Instant) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [AlertObjectProperty](AlertObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ The time at which the alert was last updated.
 |-------|
 | [Alert](../classes/Alert.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/lastUpdateInstant`

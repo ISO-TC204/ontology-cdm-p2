@@ -2,6 +2,8 @@
 
 A RevisionBylaw is a bylaw that amends an existing bylaw.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/RevisionBylaw`
+
 
 ## Diagram
 

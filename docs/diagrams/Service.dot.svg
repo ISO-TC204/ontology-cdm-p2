@@ -68,7 +68,7 @@
 </g>
 </g>
 <!-- Service&#45;&gt;Input -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>Service&#45;&gt;Input</title>
 <path fill="none" stroke="black" d="M155.72,-422.14C143.04,-414.03 129.98,-404.18 119.75,-393 95.11,-366.07 77.11,-327.68 66.86,-301.96"/>
 <polygon fill="black" stroke="black" points="70.23,-300.95 63.37,-292.87 63.69,-303.46 70.23,-300.95"/>
@@ -86,7 +86,7 @@
 </g>
 </g>
 <!-- Service&#45;&gt;Outcome -->
-<g id="edge8" class="edge">
+<g id="edge11" class="edge">
 <title>Service&#45;&gt;Outcome</title>
 <path fill="none" stroke="black" d="M198.58,-422.11C194.55,-400.92 186.1,-370.29 169,-349 159.32,-336.95 149.94,-342.16 139.25,-331 120.83,-311.78 87.86,-245.9 69.76,-208.15"/>
 <polygon fill="black" stroke="black" points="72.98,-206.75 65.52,-199.23 66.66,-209.76 72.98,-206.75"/>
@@ -104,7 +104,7 @@
 </g>
 </g>
 <!-- Service&#45;&gt;Output -->
-<g id="edge11" class="edge">
+<g id="edge12" class="edge">
 <title>Service&#45;&gt;Output</title>
 <path fill="none" stroke="black" d="M208.17,-422.16C214.14,-394.23 220.59,-347.3 208,-309.5 201.28,-289.34 117.64,-183.53 77.81,-133.83"/>
 <polygon fill="black" stroke="black" points="80.63,-131.75 71.64,-126.14 75.17,-136.13 80.63,-131.75"/>
@@ -122,20 +122,20 @@
 </g>
 </g>
 <!-- Service&#45;&gt;Stakeholder -->
-<g id="edge10" class="edge">
+<g id="edge8" class="edge">
 <title>Service&#45;&gt;Stakeholder</title>
 <path fill="none" stroke="black" d="M238.79,-422.16C254.81,-408.5 270,-389.8 270,-368 270,-368 270,-368 270,-106 270,-69.56 159.3,-49.09 94.95,-40.27"/>
 <polygon fill="black" stroke="black" points="95.77,-36.85 85.39,-39.01 94.85,-43.79 95.77,-36.85"/>
-<polygon fill="white" stroke="none" points="270,-216 270,-237.5 411.5,-237.5 411.5,-216 270,-216"/>
-<text xml:space="preserve" text-anchor="start" x="274" y="-223" font-family="Arial" font-size="11.00">hasContributingStakeholder</text>
+<polygon fill="white" stroke="none" points="270,-216 270,-237.5 399.5,-237.5 399.5,-216 270,-216"/>
+<text xml:space="preserve" text-anchor="start" x="274" y="-223" font-family="Arial" font-size="11.00">hasBeneficialStakeholder</text>
 </g>
 <!-- Service&#45;&gt;Stakeholder -->
-<g id="edge12" class="edge">
+<g id="edge9" class="edge">
 <title>Service&#45;&gt;Stakeholder</title>
-<path fill="none" stroke="black" d="M304.2,-430.68C366.8,-418.07 435,-397.55 435,-368 435,-368 435,-368 435,-106 435,-71.84 197.56,-47.55 95.62,-38.69"/>
-<polygon fill="black" stroke="black" points="95.94,-35.2 85.67,-37.84 95.34,-42.18 95.94,-35.2"/>
-<polygon fill="white" stroke="none" points="435,-216 435,-237.5 564.5,-237.5 564.5,-216 435,-216"/>
-<text xml:space="preserve" text-anchor="start" x="439" y="-223" font-family="Arial" font-size="11.00">hasBeneficialStakeholder</text>
+<path fill="none" stroke="black" d="M304.41,-428.6C362.22,-415.55 423,-395.33 423,-368 423,-368 423,-368 423,-106 423,-40.04 195.08,-33.82 95.57,-34.24"/>
+<polygon fill="black" stroke="black" points="95.58,-30.74 85.6,-34.31 95.63,-37.74 95.58,-30.74"/>
+<polygon fill="white" stroke="none" points="423,-216 423,-237.5 564.5,-237.5 564.5,-216 423,-216"/>
+<text xml:space="preserve" text-anchor="start" x="427" y="-223" font-family="Arial" font-size="11.00">hasContributingStakeholder</text>
 </g>
 <!-- Invis&#45;&gt;Input -->
 <!-- Input&#45;&gt;Outcome -->

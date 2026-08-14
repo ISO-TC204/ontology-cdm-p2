@@ -2,9 +2,25 @@
 
 Specifies the remaining digits of the number after the area code.
 
-**Domain**: [PhoneNumber](../classes/PhoneNumber.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasPhoneNumber`
 
-**Range**: [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger)
+## Domain
+
+| Class |
+|-------|
+| [PhoneNumber](../classes/PhoneNumber.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:nonNegativeInteger](https://w3id.org/citydata/imported/xsd/nonNegativeInteger) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TelephoneDataProperty](TelephoneDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Specifies the remaining digits of the number after the area code.
 |-------|
 | [PhoneNumber](../classes/PhoneNumber.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasPhoneNumber`

@@ -2,6 +2,8 @@
 
 Outcomes are what stakeholders experience as a result of a Program or Service.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Outcome`
+
 
 ## Diagram
 
@@ -57,7 +59,7 @@ Outcomes are what stakeholders experience as a result of a Program or Service.
     </g>
     </g>
     <!-- Outcome&#45;&gt;i72_Indicator -->
-    <g id="edge10" class="edge">
+    <g id="edge7" class="edge">
     <title>Outcome&#45;&gt;i72_Indicator</title>
     <path fill="none" stroke="black" d="M164.8,-472.05C148.94,-465.07 132.67,-455.59 120.5,-443 89.01,-410.42 72.82,-359 65.4,-327.37"/>
     <polygon fill="black" stroke="black" points="68.85,-326.79 63.29,-317.77 62.02,-328.29 68.85,-326.79"/>
@@ -75,7 +77,7 @@ Outcomes are what stakeholders experience as a result of a Program or Service.
     </g>
     </g>
     <!-- Outcome&#45;&gt;ImpactDirection -->
-    <g id="edge9" class="edge">
+    <g id="edge11" class="edge">
     <title>Outcome&#45;&gt;ImpactDirection</title>
     <path fill="none" stroke="black" d="M217.96,-472.26C214.72,-452.4 206.59,-419.41 187,-399 172.51,-383.91 158.08,-396.01 143.5,-381 109.05,-345.53 123.09,-322.61 104,-277 94.18,-253.53 82.08,-227.3 73.05,-208.19"/>
     <polygon fill="black" stroke="black" points="76.24,-206.74 68.78,-199.21 69.91,-209.74 76.24,-206.74"/>
@@ -94,7 +96,7 @@ Outcomes are what stakeholders experience as a result of a Program or Service.
     </g>
     </g>
     <!-- Outcome&#45;&gt;Importance -->
-    <g id="edge8" class="edge">
+    <g id="edge10" class="edge">
     <title>Outcome&#45;&gt;Importance</title>
     <path fill="none" stroke="black" d="M225.47,-472.07C233.84,-442.96 246.71,-382.27 225,-338 219.25,-326.27 210.29,-329.89 201.75,-320 149.13,-259.02 157.95,-228.83 113,-162 106.55,-152.41 98.85,-142.37 91.76,-133.59"/>
     <polygon fill="black" stroke="black" points="94.69,-131.65 85.64,-126.14 89.28,-136.09 94.69,-131.65"/>
@@ -113,7 +115,7 @@ Outcomes are what stakeholders experience as a result of a Program or Service.
     </g>
     </g>
     <!-- Outcome&#45;&gt;Stakeholder -->
-    <g id="edge7" class="edge">
+    <g id="edge8" class="edge">
     <title>Outcome&#45;&gt;Stakeholder</title>
     <path fill="none" stroke="black" d="M255.3,-472.09C274.76,-460.08 295,-441.85 295,-418 295,-418 295,-418 295,-106 295,-68.71 181.19,-48.55 115.46,-40.01"/>
     <polygon fill="black" stroke="black" points="116.03,-36.56 105.67,-38.79 115.16,-43.5 116.03,-36.56"/>
@@ -122,7 +124,7 @@ Outcomes are what stakeholders experience as a result of a Program or Service.
     <text xml:space="preserve" text-anchor="start" x="340.62" y="-223" font-family="Arial" font-size="11.00">1</text>
     </g>
     <!-- Outcome&#45;&gt;Stakeholder -->
-    <g id="edge11" class="edge">
+    <g id="edge9" class="edge">
     <title>Outcome&#45;&gt;Stakeholder</title>
     <path fill="none" stroke="black" d="M312.36,-472.04C362.76,-460.05 415,-441.87 415,-418 415,-418 415,-418 415,-106 415,-45.52 209.06,-36.12 115.4,-34.96"/>
     <polygon fill="black" stroke="black" points="115.57,-31.46 105.54,-34.87 115.5,-38.46 115.57,-31.46"/>
@@ -157,7 +159,15 @@ Outcomes are what stakeholders experience as a result of a Program or Service.
 | [hasImportance](../properties/hasImportance.md) | max 1 |
 | [hasImportance](../properties/hasImportance.md) | max 1 [Importance](https://w3id.org/citydata/part2/v1/Importance) |
 | [hasIndicator](../properties/hasIndicator.md) | only [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator) |
+| [hasIndicator](../properties/hasIndicator.md) | only [i72:Indicator](https://w3id.org/citydata/21972/v1/Indicator) |
 | [intendedImpact](../properties/intendedImpact.md) | max 1 |
 | [intendedImpact](../properties/intendedImpact.md) | max 1 [ImpactDirection](https://w3id.org/citydata/part2/v1/ImpactDirection) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Program](Program.md) | [hasOutcome](../properties/hasOutcome.md) |
+| [Service](Service.md) | [hasOutcome](../properties/hasOutcome.md) |
 

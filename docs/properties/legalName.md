@@ -2,7 +2,19 @@
 
 Identifies the legal name of the domain object.
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+**IRI**: `https://w3id.org/citydata/part2/v1/legalName`
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityPatternDataProperty](CityPatternDataProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the legal name of the domain object.
 |-------|
 | [City](../classes/City.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/legalName`

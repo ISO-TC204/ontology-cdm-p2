@@ -4,6 +4,8 @@ Occupation describes the work performed by some Employee.
 
 EXAMPLE: sales, skilled trade
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Occupation`
+
 
 ## Diagram
 
@@ -80,6 +82,13 @@ EXAMPLE: sales, skilled trade
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityOrgThing](CityOrgThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Employment](Employment.md) | [employedAs](../properties/employedAs.md) |
 

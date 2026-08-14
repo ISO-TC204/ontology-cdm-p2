@@ -2,9 +2,25 @@
 
 identifies the Person(s) responsible for signing the Contract.
 
-**Domain**: [Contract](../classes/Contract.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasSignatory`
 
-**Range**: [Person](../classes/Person.md)
+## Domain
+
+| Class |
+|-------|
+| [Contract](../classes/Contract.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Person](../classes/Person.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [ContractObjectProperty](ContractObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ identifies the Person(s) responsible for signing the Contract.
 |-------|
 | [Contract](../classes/Contract.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasSignatory`

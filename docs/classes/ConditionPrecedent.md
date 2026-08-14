@@ -2,6 +2,8 @@
 
 A condition precedent is a condition that must be met before a contract becomes effective.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/ConditionPrecedent`
+
 
 ## Diagram
 

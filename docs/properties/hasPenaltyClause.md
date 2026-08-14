@@ -2,7 +2,19 @@
 
 Identifies the Clauses that specify penalties for not adhering to the domain object.
 
-**Range**: [Clause](../classes/Clause.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasPenaltyClause`
+
+## Range
+
+| Class |
+|-------|
+| [Clause](../classes/Clause.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +22,3 @@ Identifies the Clauses that specify penalties for not adhering to the domain obj
 |-------|
 | [Law](../classes/Law.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasPenaltyClause`

@@ -11,6 +11,7 @@ This pattern consists of the following classes:
 - [Land Area](LandArea.md)
 - [Land Use Classification](LandUseClassification.md)
 - [Land Use Thing](LandUseThing.md)
+
 This module defines the following properties:
 
 - [hasArea](../properties/hasArea.md)

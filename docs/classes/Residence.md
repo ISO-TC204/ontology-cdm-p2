@@ -1,5 +1,7 @@
 # Residence
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Residence`
+
 
 ## Diagram
 
@@ -54,7 +56,7 @@
     </g>
     </g>
     <!-- Residence&#45;&gt;Address -->
-    <g id="edge8" class="edge">
+    <g id="edge10" class="edge">
     <title>Residence&#45;&gt;Address</title>
     <path fill="none" stroke="black" d="M187.49,-569.03C164.95,-562.18 135.58,-549.33 120,-526.5 95.78,-491.02 97.27,-438.99 101.19,-407.29"/>
     <polygon fill="black" stroke="black" points="104.61,-408.1 102.55,-397.71 97.68,-407.12 104.61,-408.1"/>
@@ -73,7 +75,7 @@
     </g>
     </g>
     <!-- Residence&#45;&gt;City -->
-    <g id="edge11" class="edge">
+    <g id="edge9" class="edge">
     <title>Residence&#45;&gt;City</title>
     <path fill="none" stroke="black" d="M212.45,-559.32C195.25,-507.63 142.68,-349.69 121.25,-285.29"/>
     <polygon fill="black" stroke="black" points="124.58,-284.21 118.1,-275.83 117.94,-286.42 124.58,-284.21"/>
@@ -92,7 +94,7 @@
     </g>
     </g>
     <!-- Residence&#45;&gt;HomeType -->
-    <g id="edge9" class="edge">
+    <g id="edge11" class="edge">
     <title>Residence&#45;&gt;HomeType</title>
     <path fill="none" stroke="black" d="M220.98,-559.19C225.6,-530.1 232.97,-468.62 223,-418 206.01,-331.76 189.25,-312.62 148,-235 143.06,-225.7 136.93,-216 131.14,-207.42"/>
     <polygon fill="black" stroke="black" points="134.02,-205.44 125.44,-199.21 128.26,-209.42 134.02,-205.44"/>
@@ -111,7 +113,7 @@
     </g>
     </g>
     <!-- Residence&#45;&gt;ResidentialRelationship -->
-    <g id="edge12" class="edge">
+    <g id="edge8" class="edge">
     <title>Residence&#45;&gt;ResidentialRelationship</title>
     <path fill="none" stroke="black" d="M248.78,-570.13C283.15,-561.58 334,-542.07 334,-501.5 334,-501.5 334,-501.5 334,-179 334,-142.2 233.16,-123.54 159.06,-114.81"/>
     <polygon fill="black" stroke="black" points="159.72,-111.36 149.38,-113.71 158.93,-118.31 159.72,-111.36"/>
@@ -130,7 +132,7 @@
     </g>
     </g>
     <!-- Residence&#45;&gt;time_ProperInterval -->
-    <g id="edge10" class="edge">
+    <g id="edge12" class="edge">
     <title>Residence&#45;&gt;time_ProperInterval</title>
     <path fill="none" stroke="black" d="M248.86,-573.99C319.52,-568.53 487,-550.44 487,-501.5 487,-501.5 487,-501.5 487,-106 487,-72.41 264.46,-49.36 152.19,-39.86"/>
     <polygon fill="black" stroke="black" points="152.8,-36.4 142.54,-39.06 152.21,-43.38 152.8,-36.4"/>
@@ -168,4 +170,10 @@
 | [time:hasTime](https://w3id.org/citydata/imported/time/hasTime) | max 1 |
 | [time:hasTime](https://w3id.org/citydata/imported/time/hasTime) | max 1 [time:ProperInterval](http://www.w3.org/2006/time#ProperInterval) |
 | subClassOf | [CityResidentThing](CityResidentThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [City Resident](CityResident.md) | [hasResidence](../properties/hasResidence.md) |
 

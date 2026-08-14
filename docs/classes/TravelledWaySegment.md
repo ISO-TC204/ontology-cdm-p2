@@ -2,6 +2,8 @@
 
 A Travelled Way Segment is a type of Infrastructure Element that represents part of a Travelled Way Link.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/TravelledWaySegment`
+
 
 ## Diagram
 
@@ -89,4 +91,13 @@ A Travelled Way Segment is a type of Infrastructure Element that represents part
 | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | min 1 |
 | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | min 1 [TravelledWayLink](https://w3id.org/citydata/part2/v1/TravelledWayLink) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Bridge](Bridge.md) | [supports](../properties/supports.md) |
+| [Bridge Segment](BridgeSegment.md) | [supports](../properties/supports.md) |
+| [Tunnel](Tunnel.md) | [supports](../properties/supports.md) |
+| [Tunnel Segment](TunnelSegment.md) | [supports](../properties/supports.md) |
 

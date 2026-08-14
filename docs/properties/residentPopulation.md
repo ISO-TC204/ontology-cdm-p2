@@ -2,9 +2,25 @@
 
 Number of residents of the area.
 
-**Domain**: [JurisdictionalArea](../classes/JurisdictionalArea.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/residentPopulation`
 
-**Range**: [i72:Population](https://w3id.org/citydata/21972/v1/Population)
+## Domain
+
+| Class |
+|-------|
+| [JurisdictionalArea](../classes/JurisdictionalArea.md) |
+
+## Range
+
+| Class |
+|-------|
+| [i72:Population](https://w3id.org/citydata/21972/v1/Population) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityPatternObjectProperty](CityPatternObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Number of residents of the area.
 |-------|
 | [JurisdictionalArea](../classes/JurisdictionalArea.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/residentPopulation`

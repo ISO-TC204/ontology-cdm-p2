@@ -23,6 +23,7 @@ This pattern consists of the following classes:
 - [Main Bylaw](MainBylaw.md)
 - [Revision Bylaw](RevisionBylaw.md)
 - [Schedule](Schedule.md)
+
 This module defines the following properties:
 
 - [abstract](../properties/abstract.md)

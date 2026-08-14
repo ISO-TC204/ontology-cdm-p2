@@ -2,6 +2,8 @@
 
 An Amending Bylaw is a type of Bylaw that modifies or updates an existing bylaw.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/AmendingBylaw`
+
 
 ## Diagram
 

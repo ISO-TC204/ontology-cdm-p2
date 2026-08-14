@@ -1,5 +1,7 @@
 # PersonName
 
+**IRI**: `https://w3id.org/citydata/part2/v1/PersonName`
+
 
 ## Diagram
 
@@ -75,10 +77,18 @@
 
 | Property | Constraint |
 |----------|------------|
+| [additionalName](../properties/additionalName.md) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [additionalName](../properties/additionalName.md) | datatype xsd:string |
 | [familyName](../properties/familyName.md) | max 1 |
 | [familyName](../properties/familyName.md) | max 1 xsd:string |
+| [givenName](../properties/givenName.md) | only [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
 | [givenName](../properties/givenName.md) | datatype xsd:string |
 | subClassOf | [Name](Name.md) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person](Person.md) | [alias](../properties/alias.md) |
 

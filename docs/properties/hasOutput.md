@@ -2,7 +2,19 @@
 
 Identifies an output produced by the domain object.
 
-**Range**: [Output](../classes/Output.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasOutput`
+
+## Range
+
+| Class |
+|-------|
+| [Output](../classes/Output.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityServiceObjectProperty](CityServiceObjectProperty.md) |
 
 ## Used in classes
 
@@ -11,4 +23,3 @@ Identifies an output produced by the domain object.
 | [Program](../classes/Program.md) |
 | [Service](../classes/Service.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasOutput`

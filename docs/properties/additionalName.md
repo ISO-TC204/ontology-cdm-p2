@@ -2,9 +2,25 @@
 
 Identifies a string that is the middle or additional names of the Person.
 
-**Domain**: [PersonName](../classes/PersonName.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/additionalName`
 
-**Range**: [xsd:string](https://w3id.org/citydata/imported/xsd/string)
+## Domain
+
+| Class |
+|-------|
+| [PersonName](../classes/PersonName.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:string](https://w3id.org/citydata/imported/xsd/string) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [PersonDataProperty](PersonDataProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies a string that is the middle or additional names of the Person.
 |-------|
 | [PersonName](../classes/PersonName.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/additionalName`

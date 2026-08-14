@@ -4,6 +4,8 @@ A Person is an individual human being.
 
 NOTE: Some properties are not defined in the Person ontology, but in an extension of the Person ontology that captures the interaction between iCity domain ontologies (e.g. Persons and their Vehicles)
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Person`
+
 
 ## Diagram
 
@@ -62,28 +64,28 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     <polygon fill="none" stroke="black" points="395.53,-1093.23 403.78,-1099.89 401.48,-1089.54 395.53,-1093.23"/>
     </g>
     <!-- Person&#45;&gt;Person -->
-    <g id="edge28" class="edge">
+    <g id="edge16" class="edge">
     <title>Person&#45;&gt;Person</title>
     <path fill="none" stroke="black" d="M397.79,-1048.28C407.78,-1048.35 416,-1047.59 416,-1046 416,-1045.08 413.25,-1044.44 409.01,-1044.07"/>
     <polygon fill="black" stroke="black" points="409.41,-1040.59 399.31,-1043.77 409.19,-1047.58 409.41,-1040.59"/>
-    <polygon fill="white" stroke="none" points="416,-1035.25 416,-1056.75 454.75,-1056.75 454.75,-1035.25 416,-1035.25"/>
-    <text xml:space="preserve" text-anchor="start" x="420" y="-1042.25" font-family="Arial" font-size="11.00">parent</text>
+    <polygon fill="white" stroke="none" points="416,-1035.25 416,-1056.75 461.5,-1056.75 461.5,-1035.25 416,-1035.25"/>
+    <text xml:space="preserve" text-anchor="start" x="420" y="-1042.25" font-family="Arial" font-size="11.00">children</text>
     </g>
     <!-- Person&#45;&gt;Person -->
-    <g id="edge30" class="edge">
+    <g id="edge25" class="edge">
     <title>Person&#45;&gt;Person</title>
-    <path fill="none" stroke="black" d="M397.58,-1049.78C423.38,-1051.56 454.75,-1050.3 454.75,-1046 454.75,-1042.32 431.79,-1040.87 409,-1041.64"/>
-    <polygon fill="black" stroke="black" points="408.9,-1038.14 399.09,-1042.14 409.26,-1045.13 408.9,-1038.14"/>
-    <polygon fill="white" stroke="none" points="454.75,-1035.25 454.75,-1056.75 497.25,-1056.75 497.25,-1035.25 454.75,-1035.25"/>
-    <text xml:space="preserve" text-anchor="start" x="458.75" y="-1042.25" font-family="Arial" font-size="11.00">spouse</text>
+    <path fill="none" stroke="black" d="M397.6,-1049.69C425.6,-1051.6 461.5,-1050.37 461.5,-1046 461.5,-1042.21 434.5,-1040.78 409.07,-1041.71"/>
+    <polygon fill="black" stroke="black" points="408.92,-1038.22 399.11,-1042.23 409.28,-1045.21 408.92,-1038.22"/>
+    <polygon fill="white" stroke="none" points="461.5,-1035.25 461.5,-1056.75 500.25,-1056.75 500.25,-1035.25 461.5,-1035.25"/>
+    <text xml:space="preserve" text-anchor="start" x="465.5" y="-1042.25" font-family="Arial" font-size="11.00">parent</text>
     </g>
     <!-- Person&#45;&gt;Person -->
-    <g id="edge32" class="edge">
+    <g id="edge26" class="edge">
     <title>Person&#45;&gt;Person</title>
-    <path fill="none" stroke="black" d="M397.89,-1050.74C437.28,-1054.67 497.25,-1053.09 497.25,-1046 497.25,-1039.54 447.57,-1037.66 408.94,-1040.33"/>
-    <polygon fill="black" stroke="black" points="409.07,-1036.81 399.4,-1041.14 409.65,-1043.79 409.07,-1036.81"/>
-    <polygon fill="white" stroke="none" points="497.25,-1035.25 497.25,-1056.75 542.75,-1056.75 542.75,-1035.25 497.25,-1035.25"/>
-    <text xml:space="preserve" text-anchor="start" x="501.25" y="-1042.25" font-family="Arial" font-size="11.00">children</text>
+    <path fill="none" stroke="black" d="M397.97,-1050.71C438.15,-1054.68 500.25,-1053.11 500.25,-1046 500.25,-1039.53 448.81,-1037.65 409.27,-1040.36"/>
+    <polygon fill="black" stroke="black" points="409.15,-1036.85 399.47,-1041.17 409.73,-1043.83 409.15,-1036.85"/>
+    <polygon fill="white" stroke="none" points="500.25,-1035.25 500.25,-1056.75 542.75,-1056.75 542.75,-1035.25 500.25,-1035.25"/>
+    <text xml:space="preserve" text-anchor="start" x="504.25" y="-1042.25" font-family="Arial" font-size="11.00">spouse</text>
     </g>
     <!-- Invis -->
     <!-- Person&#45;&gt;Invis -->
@@ -98,7 +100,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;Address -->
-    <g id="edge16" class="edge">
+    <g id="edge18" class="edge">
     <title>Person&#45;&gt;Address</title>
     <path fill="none" stroke="black" d="M344.2,-1043.12C267.52,-1037.62 52.09,-1021.22 42,-1010 29.22,-995.79 35.08,-984.82 42,-967 43.27,-963.73 45,-960.58 47.01,-957.59"/>
     <polygon fill="black" stroke="black" points="49.66,-959.88 53.19,-949.89 44.2,-955.51 49.66,-959.88"/>
@@ -106,22 +108,22 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     <text xml:space="preserve" text-anchor="start" x="46" y="-984.75" font-family="Arial" font-size="11.00">hasAddress</text>
     </g>
     <!-- Person&#45;&gt;Address -->
-    <g id="edge25" class="edge">
+    <g id="edge28" class="edge">
     <title>Person&#45;&gt;Address</title>
-    <path fill="none" stroke="black" d="M344.35,-1044.11C289.06,-1041.79 164.17,-1033.98 130,-1010 112.26,-997.55 119.66,-984.59 107,-967 104.56,-963.61 101.82,-960.22 98.99,-956.94"/>
-    <polygon fill="black" stroke="black" points="101.76,-954.79 92.43,-949.77 96.6,-959.51 101.76,-954.79"/>
-    <polygon fill="white" stroke="none" points="130,-967 130,-1010 192,-1010 192,-967 130,-967"/>
-    <text xml:space="preserve" text-anchor="start" x="134" y="-995.5" font-family="Arial" font-size="11.00">deathPlace</text>
-    <text xml:space="preserve" text-anchor="start" x="152" y="-974" font-family="Arial" font-size="11.00">0..1</text>
+    <path fill="none" stroke="black" d="M344,-1044.06C288.65,-1041.66 164.62,-1033.73 130.5,-1010 112.62,-997.57 119.8,-984.62 107,-967 104.55,-963.63 101.8,-960.24 98.96,-956.96"/>
+    <polygon fill="black" stroke="black" points="101.73,-954.81 92.4,-949.79 96.57,-959.53 101.73,-954.81"/>
+    <polygon fill="white" stroke="none" points="130.5,-967 130.5,-1010 185,-1010 185,-967 130.5,-967"/>
+    <text xml:space="preserve" text-anchor="start" x="134.5" y="-995.5" font-family="Arial" font-size="11.00">birthplace</text>
+    <text xml:space="preserve" text-anchor="start" x="148.75" y="-974" font-family="Arial" font-size="11.00">0..1</text>
     </g>
     <!-- Person&#45;&gt;Address -->
-    <g id="edge29" class="edge">
+    <g id="edge30" class="edge">
     <title>Person&#45;&gt;Address</title>
-    <path fill="none" stroke="black" d="M344.04,-1045.42C310.64,-1044.6 253.5,-1038.65 215.5,-1010 198.11,-996.89 208.94,-980.69 192,-967 169.18,-948.57 136.91,-939.84 111.88,-935.71"/>
-    <polygon fill="black" stroke="black" points="112.5,-932.26 102.1,-934.29 111.49,-939.19 112.5,-932.26"/>
-    <polygon fill="white" stroke="none" points="215.5,-967 215.5,-1010 270,-1010 270,-967 215.5,-967"/>
-    <text xml:space="preserve" text-anchor="start" x="219.5" y="-995.5" font-family="Arial" font-size="11.00">birthplace</text>
-    <text xml:space="preserve" text-anchor="start" x="233.75" y="-974" font-family="Arial" font-size="11.00">0..1</text>
+    <path fill="none" stroke="black" d="M344.22,-1045.86C309.42,-1045.61 248.34,-1040.39 208,-1010 190.69,-996.96 201.68,-980.84 185,-967 164.38,-949.89 135.34,-941.12 112.14,-936.63"/>
+    <polygon fill="black" stroke="black" points="112.88,-933.21 102.44,-934.96 111.7,-940.11 112.88,-933.21"/>
+    <polygon fill="white" stroke="none" points="208,-967 208,-1010 270,-1010 270,-967 208,-967"/>
+    <text xml:space="preserve" text-anchor="start" x="212" y="-995.5" font-family="Arial" font-size="11.00">deathPlace</text>
+    <text xml:space="preserve" text-anchor="start" x="230" y="-974" font-family="Arial" font-size="11.00">0..1</text>
     </g>
     <!-- cdm1_MonetaryValue -->
     <g id="node6" class="node">
@@ -134,7 +136,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;cdm1_MonetaryValue -->
-    <g id="edge22" class="edge">
+    <g id="edge24" class="edge">
     <title>Person&#45;&gt;cdm1_MonetaryValue</title>
     <path fill="none" stroke="black" d="M344.29,-1036.26C329.49,-1030.48 311.42,-1021.77 298,-1010 280.86,-994.96 288.14,-980.82 270,-967 249.04,-951.03 236.76,-961.38 213.5,-949 169.64,-925.65 125.83,-888.03 99.32,-863.28"/>
     <polygon fill="black" stroke="black" points="101.79,-860.8 92.12,-856.46 96.97,-865.88 101.79,-860.8"/>
@@ -152,7 +154,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;Citizenship -->
-    <g id="edge31" class="edge">
+    <g id="edge17" class="edge">
     <title>Person&#45;&gt;Citizenship</title>
     <path fill="none" stroke="black" d="M344.19,-1028.07C336.87,-1022.78 329.25,-1016.58 323,-1010 307.31,-993.45 307.9,-985.81 295,-967 278.25,-942.59 274.77,-935.89 256,-913 212.21,-859.61 156.12,-801.42 124.52,-769.46"/>
     <polygon fill="black" stroke="black" points="127.26,-767.25 117.73,-762.62 122.29,-772.18 127.26,-767.25"/>
@@ -170,7 +172,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;Education -->
-    <g id="edge23" class="edge">
+    <g id="edge19" class="edge">
     <title>Person&#45;&gt;Education</title>
     <path fill="none" stroke="black" d="M359.12,-1028.3C355.33,-1022.63 351.28,-1016.16 348,-1010 317.15,-951.95 334.78,-922.55 291,-873.5 280.07,-861.25 270.9,-866.54 258.75,-855.5 192.74,-795.51 139.89,-702.45 116.32,-656.93"/>
     <polygon fill="black" stroke="black" points="119.57,-655.6 111.91,-648.29 113.34,-658.79 119.57,-655.6"/>
@@ -188,7 +190,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;Gender -->
-    <g id="edge21" class="edge">
+    <g id="edge20" class="edge">
     <title>Person&#45;&gt;Gender</title>
     <path fill="none" stroke="black" d="M370.31,-1028.14C368.05,-981.26 359.38,-850.72 332,-819.5 314.27,-799.29 295.33,-818.19 274.25,-801.5 228.22,-765.06 148.6,-605.9 117.74,-541.85"/>
     <polygon fill="black" stroke="black" points="121.02,-540.6 113.54,-533.09 114.71,-543.62 121.02,-540.6"/>
@@ -206,7 +208,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;PersonId -->
-    <g id="edge26" class="edge">
+    <g id="edge21" class="edge">
     <title>Person&#45;&gt;PersonId</title>
     <path fill="none" stroke="black" d="M376.36,-1028.26C389.46,-983.98 418.65,-861.6 370,-780 361.44,-765.65 346.82,-775.51 337,-762 317.19,-734.75 323,-721.19 323,-687.5 323,-687.5 323,-687.5 323,-513 323,-432.9 205.57,-409.51 143.08,-402.73"/>
     <polygon fill="black" stroke="black" points="143.53,-399.26 133.24,-401.76 142.85,-406.22 143.53,-399.26"/>
@@ -232,7 +234,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     <text xml:space="preserve" text-anchor="start" x="400.25" y="-682.75" font-family="Arial" font-size="11.00">alias</text>
     </g>
     <!-- Person&#45;&gt;PersonName -->
-    <g id="edge19" class="edge">
+    <g id="edge31" class="edge">
     <title>Person&#45;&gt;PersonName</title>
     <path fill="none" stroke="black" d="M397.76,-1030.87C406.6,-1025.25 415.97,-1018.17 423,-1010 448.03,-980.92 460,-970.37 460,-932 460,-932 460,-932 460,-789.75 460,-753.09 453.59,-744.37 449,-708 441.4,-647.84 433,-633.14 433,-572.5 433,-572.5 433,-572.5 433,-398 433,-339.56 237.06,-328.95 143.55,-327.22"/>
     <polygon fill="black" stroke="black" points="143.71,-323.72 133.65,-327.06 143.6,-330.72 143.71,-323.72"/>
@@ -251,7 +253,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;PhoneNumber -->
-    <g id="edge18" class="edge">
+    <g id="edge23" class="edge">
     <title>Person&#45;&gt;PhoneNumber</title>
     <path fill="none" stroke="black" d="M397.78,-1038.35C415.09,-1032.97 437.25,-1023.97 453,-1010 482.94,-983.45 498,-972.02 498,-932 498,-932 498,-932 498,-743 498,-666.75 479,-648.75 479,-572.5 479,-572.5 479,-572.5 479,-325 479,-291.25 248.98,-267.38 143.15,-258.19"/>
     <polygon fill="black" stroke="black" points="143.56,-254.71 133.3,-257.34 142.96,-261.68 143.56,-254.71"/>
@@ -269,7 +271,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;Sex -->
-    <g id="edge24" class="edge">
+    <g id="edge32" class="edge">
     <title>Person&#45;&gt;Sex</title>
     <path fill="none" stroke="black" d="M397.72,-1042.99C454.5,-1037.11 582,-1014.69 582,-932 582,-932 582,-932 582,-685.5 582,-584.1 574,-558.9 574,-457.5 574,-457.5 574,-457.5 574,-252 574,-208.46 254.53,-188.45 142.37,-182.77"/>
     <polygon fill="black" stroke="black" points="142.63,-179.28 132.47,-182.28 142.28,-186.27 142.63,-179.28"/>
@@ -288,7 +290,7 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;Skill -->
-    <g id="edge17" class="edge">
+    <g id="edge22" class="edge">
     <title>Person&#45;&gt;Skill</title>
     <path fill="none" stroke="black" d="M397.65,-1044.89C461.88,-1043.1 620,-1028.84 620,-932 620,-932 620,-932 620,-179 620,-130.75 261.37,-113.6 142.08,-109.23"/>
     <polygon fill="black" stroke="black" points="142.29,-105.74 132.17,-108.88 142.04,-112.74 142.29,-105.74"/>
@@ -306,22 +308,22 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
     </g>
     </g>
     <!-- Person&#45;&gt;time_Instant -->
-    <g id="edge20" class="edge">
+    <g id="edge27" class="edge">
     <title>Person&#45;&gt;time_Instant</title>
     <path fill="none" stroke="black" d="M397.67,-1045.83C442.62,-1046.19 535.4,-1042.5 605,-1010 652.36,-987.89 693,-984.26 693,-932 693,-932 693,-932 693,-106 693,-50.65 280.45,-38.24 143.55,-35.64"/>
     <polygon fill="black" stroke="black" points="143.88,-32.15 133.82,-35.47 143.75,-39.15 143.88,-32.15"/>
-    <polygon fill="white" stroke="none" points="693,-435 693,-478 751.25,-478 751.25,-435 693,-435"/>
-    <text xml:space="preserve" text-anchor="start" x="697" y="-463.5" font-family="Arial" font-size="11.00">deathDate</text>
-    <text xml:space="preserve" text-anchor="start" x="713.12" y="-442" font-family="Arial" font-size="11.00">0..1</text>
+    <polygon fill="white" stroke="none" points="693,-435 693,-478 745.25,-478 745.25,-435 693,-435"/>
+    <text xml:space="preserve" text-anchor="start" x="697" y="-463.5" font-family="Arial" font-size="11.00">birthDate</text>
+    <text xml:space="preserve" text-anchor="start" x="710.12" y="-442" font-family="Arial" font-size="11.00">0..1</text>
     </g>
     <!-- Person&#45;&gt;time_Instant -->
-    <g id="edge27" class="edge">
+    <g id="edge29" class="edge">
     <title>Person&#45;&gt;time_Instant</title>
-    <path fill="none" stroke="black" d="M397.69,-1045.82C449.59,-1046.55 566.98,-1043.91 658,-1010 716.22,-988.31 774,-994.13 774,-932 774,-932 774,-932 774,-106 774,-42.35 292.44,-35.57 143.41,-35"/>
-    <polygon fill="black" stroke="black" points="143.58,-31.5 133.57,-34.97 143.56,-38.5 143.58,-31.5"/>
-    <polygon fill="white" stroke="none" points="774,-435 774,-478 826.25,-478 826.25,-435 774,-435"/>
-    <text xml:space="preserve" text-anchor="start" x="778" y="-463.5" font-family="Arial" font-size="11.00">birthDate</text>
-    <text xml:space="preserve" text-anchor="start" x="791.12" y="-442" font-family="Arial" font-size="11.00">0..1</text>
+    <path fill="none" stroke="black" d="M397.61,-1043.43C459.36,-1039.51 610.72,-1028.29 658,-1010 713.9,-988.38 768,-991.93 768,-932 768,-932 768,-932 768,-106 768,-42.98 291.8,-35.76 143.53,-35.04"/>
+    <polygon fill="black" stroke="black" points="143.75,-31.55 133.73,-35.01 143.72,-38.55 143.75,-31.55"/>
+    <polygon fill="white" stroke="none" points="768,-435 768,-478 826.25,-478 826.25,-435 768,-435"/>
+    <text xml:space="preserve" text-anchor="start" x="772" y="-463.5" font-family="Arial" font-size="11.00">deathDate</text>
+    <text xml:space="preserve" text-anchor="start" x="788.12" y="-442" font-family="Arial" font-size="11.00">0..1</text>
     </g>
     <!-- Invis&#45;&gt;Address -->
     <!-- Address&#45;&gt;cdm1_MonetaryValue -->
@@ -354,31 +356,53 @@ NOTE: Some properties are not defined in the Person ontology, but in an extensio
 
 | Property | Constraint |
 |----------|------------|
+| [alias](../properties/alias.md) | only [PersonName](PersonName.md) |
 | [alias](../properties/alias.md) | only [PersonName](https://w3id.org/citydata/part2/v1/PersonName) |
 | [birthDate](../properties/birthDate.md) | max 1 |
 | [birthDate](../properties/birthDate.md) | max 1 [time:Instant](http://www.w3.org/2006/time#Instant) |
 | [birthplace](../properties/birthplace.md) | max 1 |
 | [birthplace](../properties/birthplace.md) | max 1 [Address](https://w3id.org/citydata/part2/v1/Address) |
+| [children](../properties/children.md) | only [Person](Person.md) |
 | [children](../properties/children.md) | only [Person](https://w3id.org/citydata/part2/v1/Person) |
+| [citizenOf](../properties/citizenOf.md) | only [Citizenship](Citizenship.md) |
 | [citizenOf](../properties/citizenOf.md) | only [Citizenship](https://w3id.org/citydata/part2/v1/Citizenship) |
 | [deathDate](../properties/deathDate.md) | max 1 |
 | [deathDate](../properties/deathDate.md) | max 1 [time:Instant](http://www.w3.org/2006/time#Instant) |
 | [deathPlace](../properties/deathPlace.md) | max 1 |
 | [deathPlace](../properties/deathPlace.md) | max 1 [Address](https://w3id.org/citydata/part2/v1/Address) |
+| [hasAddress](../properties/hasAddress.md) | only [Address](Address.md) |
 | [hasAddress](../properties/hasAddress.md) | only [Address](https://w3id.org/citydata/part2/v1/Address) |
+| [hasEducation](../properties/hasEducation.md) | only [Education](Education.md) |
 | [hasEducation](../properties/hasEducation.md) | only [Education](https://w3id.org/citydata/part2/v1/Education) |
+| [hasEmail](../properties/hasEmail.md) | only [EmailAddress](../datatypes/EmailAddress.md) |
 | [hasEmail](../properties/hasEmail.md) | only [EmailAddress](https://w3id.org/citydata/part2/v1/EmailAddress) |
+| [hasGenderIdentity](../properties/hasGenderIdentity.md) | only [Gender](Gender.md) |
 | [hasGenderIdentity](../properties/hasGenderIdentity.md) | only [Gender](https://w3id.org/citydata/part2/v1/Gender) |
+| [hasPersonID](../properties/hasPersonID.md) | only [PersonId](PersonId.md) |
 | [hasPersonID](../properties/hasPersonID.md) | only [PersonId](https://w3id.org/citydata/part2/v1/PersonId) |
+| [hasSkill](../properties/hasSkill.md) | only [Skill](Skill.md) |
 | [hasSkill](../properties/hasSkill.md) | only [Skill](https://w3id.org/citydata/part2/v1/Skill) |
+| [hasTelephone](../properties/hasTelephone.md) | only [PhoneNumber](PhoneNumber.md) |
 | [hasTelephone](../properties/hasTelephone.md) | only [PhoneNumber](https://w3id.org/citydata/part2/v1/PhoneNumber) |
+| [income](../properties/income.md) | only [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
 | [income](../properties/income.md) | only [cdm1:MonetaryValue](https://w3id.org/citydata/part1/v1/MonetaryValue) |
 | [name](../properties/name.md) | max 1 |
 | [name](../properties/name.md) | max 1 [PersonName](https://w3id.org/citydata/part2/v1/PersonName) |
+| [parent](../properties/parent.md) | only [Person](Person.md) |
 | [parent](../properties/parent.md) | only [Person](https://w3id.org/citydata/part2/v1/Person) |
 | [sex](../properties/sex.md) | max 1 |
 | [sex](../properties/sex.md) | max 1 [Sex](https://w3id.org/citydata/part2/v1/Sex) |
+| [spouse](../properties/spouse.md) | only [Person](Person.md) |
 | [spouse](../properties/spouse.md) | only [Person](https://w3id.org/citydata/part2/v1/Person) |
 | subClassOf | [cdm1:Agent](https://w3id.org/citydata/part1/v1/Agent) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Household (org)](Household.md) | [org:hasMember](https://w3id.org/citydata/imported/org/hasMember) |
+| [Person](Person.md) | [children](../properties/children.md) |
+| [Person](Person.md) | [parent](../properties/parent.md) |
+| [Person](Person.md) | [spouse](../properties/spouse.md) |
 

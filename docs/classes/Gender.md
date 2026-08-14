@@ -2,6 +2,8 @@
 
 Gender is a type of Code that describes the gender identity of a person.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Gender`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Gender is a type of Code that describes the gender identity of a person.
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person](Person.md) | [hasGenderIdentity](../properties/hasGenderIdentity.md) |
 

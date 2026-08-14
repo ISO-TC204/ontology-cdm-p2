@@ -2,6 +2,8 @@
 
 Importance is a type of Code that describes the level of importance of an event or action.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Importance`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ Importance is a type of Code that describes the level of importance of an event 
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityServiceThing](CityServiceThing.md) |
 

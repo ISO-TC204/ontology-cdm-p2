@@ -19,6 +19,7 @@ This pattern consists of the following classes:
 - [Person Thing](PersonThing.md)
 - [Sex](Sex.md)
 - [Skill](Skill.md)
+
 This module defines the following properties:
 
 - [additionalName](../properties/additionalName.md)

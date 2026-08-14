@@ -2,6 +2,8 @@
 
 A StreetDirection defines the directional component of a street name.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/StreetDirection`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ A StreetDirection defines the directional component of a street name.
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [ContactThing](ContactThing.md) |
 

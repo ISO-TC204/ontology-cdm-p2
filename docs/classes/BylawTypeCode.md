@@ -2,6 +2,8 @@
 
 A code identifying whether a bylaw is a main, amending, or revision bylaw.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/BylawTypeCode`
+
 
 ## Diagram
 
@@ -59,4 +61,10 @@ A code identifying whether a bylaw is a main, amending, or revision bylaw.
 | Property | Constraint |
 |----------|------------|
 | subClassOf | [BylawThing](BylawThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Bylaw](Bylaw.md) | [legislationType](../properties/legislationType.md) |
 

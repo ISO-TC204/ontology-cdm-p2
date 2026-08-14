@@ -4,6 +4,8 @@ Land Use Classification is a type of Code that describes the use of a Land Area.
 
 NOTE: Land Use Classifications provide a means of describing the use in a standard way. Various classification systems are used to identify types of land use, such as LBCS, CLUMP, and AAFC.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/LandUseClassification`
+
 
 ## Diagram
 
@@ -80,6 +82,13 @@ NOTE: Land Use Classifications provide a means of describing the use in a standa
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [LandUseThing](LandUseThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Land Area](LandArea.md) | [landUse](../properties/landUse.md) |
 

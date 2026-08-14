@@ -2,9 +2,25 @@
 
 Identifies the type of home.
 
-**Domain**: [Residence](../classes/Residence.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasHomeType`
 
-**Range**: [HomeType](../classes/HomeType.md)
+## Domain
+
+| Class |
+|-------|
+| [Residence](../classes/Residence.md) |
+
+## Range
+
+| Class |
+|-------|
+| [HomeType](../classes/HomeType.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityResidentObjectProperty](CityResidentObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the type of home.
 |-------|
 | [Residence](../classes/Residence.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasHomeType`

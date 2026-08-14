@@ -1,5 +1,7 @@
 # GovernmentOrganization
 
+**IRI**: `https://w3id.org/citydata/part2/v1/GovernmentOrganization`
+
 
 ## Diagram
 
@@ -95,7 +97,15 @@
 
 | Property | Constraint |
 |----------|------------|
+| [hasProgram](../properties/hasProgram.md) | only [Program](Program.md) |
 | [hasProgram](../properties/hasProgram.md) | only [Program](https://w3id.org/citydata/part2/v1/Program) |
+| [jurisdiction](../properties/jurisdiction.md) | only [JurisdictionalArea](JurisdictionalArea.md) |
 | [jurisdiction](../properties/jurisdiction.md) | only [JurisdictionalArea](https://w3id.org/citydata/part2/v1/JurisdictionalArea) |
 | subClassOf | [Organization](Organization.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Jurisdictional Area (FuzzyTime)](JurisdictionalArea.md) | [hasGovernment](../properties/hasGovernment.md) |
 

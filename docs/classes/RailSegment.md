@@ -2,6 +2,8 @@
 
 A Rail Segment is a type of Travelled Way Segment that represents part of a Rail Link.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/RailSegment`
+
 
 ## Diagram
 

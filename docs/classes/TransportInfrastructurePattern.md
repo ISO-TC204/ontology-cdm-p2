@@ -23,6 +23,7 @@ This pattern consists of the following classes:
 - [Travelled Way Segment](TravelledWaySegment.md)
 - [Tunnel](Tunnel.md)
 - [Tunnel Segment](TunnelSegment.md)
+
 This module defines the following properties:
 
 - [networkType](../properties/networkType.md)

@@ -2,6 +2,8 @@
 
 Education is a type of Code that describes the educational background of a person.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Education`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Education is a type of Code that describes the educational background of a perso
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [PersonThing](PersonThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Person](Person.md) | [hasEducation](../properties/hasEducation.md) |
 

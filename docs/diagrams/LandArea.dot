@@ -25,10 +25,10 @@ digraph {
 	Invis -> cdm1_Area [style=invis]
 	cdm1_Area -> i72_Population [style=invis]
 	i72_Population -> LandUseClassification [style=invis]
-	LandUseClassification [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LandUseClassification</TD></TR></TABLE>> URL="../LandUseClassification" margin=0]
-	LandArea -> LandUseClassification [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">landUse</TD></TR></TABLE>> arrowhead=normal style=solid]
 	cdm1_Area [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Area</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Area" margin=0]
 	LandArea -> cdm1_Area [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasArea</TD></TR></TABLE>> arrowhead=normal style=solid]
 	i72_Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72:Population</TD></TR></TABLE>> URL="https://w3id.org/citydata/21972/v1/Population" margin=0]
 	LandArea -> i72_Population [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasPopulation</TD></TR></TABLE>> arrowhead=normal style=solid]
+	LandUseClassification [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LandUseClassification</TD></TR></TABLE>> URL="../LandUseClassification" margin=0]
+	LandArea -> LandUseClassification [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">landUse</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

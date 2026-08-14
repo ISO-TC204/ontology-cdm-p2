@@ -2,9 +2,25 @@
 
 The Bylaw that is being amended.
 
-**Domain**: [Bylaw](../classes/Bylaw.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/legislationChanges`
 
-**Range**: [Bylaw](../classes/Bylaw.md)
+## Domain
+
+| Class |
+|-------|
+| [Bylaw](../classes/Bylaw.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Bylaw](../classes/Bylaw.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [BylawObjectProperty](BylawObjectProperty.md) |
 
 ## Used in classes
 
@@ -13,4 +29,3 @@ The Bylaw that is being amended.
 | [AmendingBylaw](../classes/AmendingBylaw.md) |
 | [RevisionBylaw](../classes/RevisionBylaw.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/legislationChanges`

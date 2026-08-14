@@ -18,6 +18,7 @@ This pattern consists of the following classes:
 - [Program](Program.md)
 - [Service](Service.md)
 - [Stakeholder](Stakeholder.md)
+
 This module defines the following properties:
 
 - [CityServiceObjectProperty](../properties/CityServiceObjectProperty.md)

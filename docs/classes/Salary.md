@@ -2,6 +2,8 @@
 
 A Salary is a form of compensation paid to an employee and is defined on an annual basis.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Salary`
+
 
 ## Diagram
 

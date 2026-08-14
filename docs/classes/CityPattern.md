@@ -12,6 +12,7 @@ This pattern consists of the following classes:
 - [City Administrative Area](CityAdministrativeArea.md)
 - [City Pattern Thing](CityPatternThing.md)
 - [Jurisdictional Area](JurisdictionalArea.md)
+
 This module defines the following properties:
 
 - [administrativeArea](../properties/administrativeArea.md)

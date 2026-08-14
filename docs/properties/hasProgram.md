@@ -2,9 +2,25 @@
 
 Specifies a Program defined for the Organization.
 
-**Domain**: [Organization](../classes/Organization.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/hasProgram`
 
-**Range**: [Program](../classes/Program.md)
+## Domain
+
+| Class |
+|-------|
+| [Organization](../classes/Organization.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Program](../classes/Program.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityOrgObjectProperty](CityOrgObjectProperty.md) |
 
 ## Used in classes
 
@@ -13,4 +29,3 @@ Specifies a Program defined for the Organization.
 | [GovernmentOrganization](../classes/GovernmentOrganization.md) |
 | [NonProfitOrganization](../classes/NonProfitOrganization.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/hasProgram`

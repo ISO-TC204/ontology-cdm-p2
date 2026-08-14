@@ -2,6 +2,8 @@
 
 Activity of operating an Organization by City Resident.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/EntityOperation`
+
 
 ## Diagram
 
@@ -83,4 +85,10 @@ Activity of operating an Organization by City Resident.
 | [entity](../properties/entity.md) | max 1 |
 | [entity](../properties/entity.md) | max 1 [Organization](https://w3id.org/citydata/part2/v1/Organization) |
 | subClassOf | [ControlledEntity](ControlledEntity.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [City Resident](CityResident.md) | [operates](../properties/operates.md) |
 

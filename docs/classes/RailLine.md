@@ -2,6 +2,8 @@
 
 A Rail Line is a type of Travelled Way that describes a part of the physical transportation infrastructure that has been fitted with tracks to allow travel by trains and other sorts of rail vehicles. No distinction is made between Rail Line types at this level.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/RailLine`
+
 
 ## Diagram
 
@@ -79,6 +81,13 @@ A Rail Line is a type of Travelled Way that describes a part of the physical tra
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) | only [RailLink](RailLink.md) |
 | [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) | only [RailLink](https://w3id.org/citydata/part2/v1/RailLink) |
 | subClassOf | [TravelledWay](TravelledWay.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Rail Link (cdm1)](RailLink.md) | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) |
 

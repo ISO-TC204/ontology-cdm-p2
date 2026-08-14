@@ -2,6 +2,8 @@
 
 A facility is a physical location or structure that provides services or amenities to the public or a specific group of people.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Facility`
+
 
 ## Diagram
 
@@ -100,4 +102,11 @@ A facility is a physical location or structure that provides services or ameniti
 | [cdm1:hasLocation](https://w3id.org/citydata/part1/v1/hasLocation) | exactly 1 [cdm1:Location](https://w3id.org/citydata/part1/v1/Location) |
 | subClassOf | [BuildingThing](BuildingThing.md) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Building](Building.md) | [buildingFacility](../properties/buildingFacility.md) |
+| [Building Unit](BuildingUnit.md) | [buildingFacility](../properties/buildingFacility.md) |
 

@@ -4,6 +4,8 @@ A Bridge is a Infrastructure Element that enables travel over some obstacle or a
 
 NOTE: A Bridge is identified as such by a governing body.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/Bridge`
+
 
 ## Diagram
 
@@ -58,7 +60,7 @@ NOTE: A Bridge is identified as such by a governing body.
     </g>
     </g>
     <!-- Bridge&#45;&gt;BridgeSegment -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>Bridge&#45;&gt;BridgeSegment</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M103.36,-262.74C98.72,-233.29 89.07,-171.94 83.4,-135.97"/>
     <polygon fill="black" stroke="black" points="86.9,-135.65 81.88,-126.32 79.98,-136.74 86.9,-135.65"/>
@@ -77,7 +79,7 @@ NOTE: A Bridge is identified as such by a governing body.
     </g>
     </g>
     <!-- Bridge&#45;&gt;TravelledWaySegment -->
-    <g id="edge5" class="edge">
+    <g id="edge6" class="edge">
     <title>Bridge&#45;&gt;TravelledWaySegment</title>
     <path fill="none" stroke="black" d="M132.64,-275.04C157.47,-269.31 193.13,-256.71 210,-230 221.27,-212.15 217.19,-202.35 210,-182.5 191.07,-130.26 143.52,-84.99 111.22,-58.84"/>
     <polygon fill="black" stroke="black" points="113.76,-56.38 103.74,-52.92 109.41,-61.87 113.76,-56.38"/>
@@ -100,7 +102,9 @@ NOTE: A Bridge is identified as such by a governing body.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [BridgeSegment](BridgeSegment.md) |
 | [cdm1:hasProperPart](https://w3id.org/citydata/part1/v1/hasProperPart) | only [BridgeSegment](https://w3id.org/citydata/part2/v1/BridgeSegment) |
+| [supports](../properties/supports.md) | only [TravelledWaySegment](TravelledWaySegment.md) |
 | [supports](../properties/supports.md) | only [TravelledWaySegment](https://w3id.org/citydata/part2/v1/TravelledWaySegment) |
 | subClassOf | [InfrastructureElement](InfrastructureElement.md) |
 

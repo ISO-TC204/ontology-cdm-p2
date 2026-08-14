@@ -2,6 +2,8 @@
 
 Home Type is a type of Code that describes the type of a Residence.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/HomeType`
+
 
 ## Diagram
 
@@ -78,6 +80,7 @@ Home Type is a type of Code that describes the type of a Residence.
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [CityResidentThing](CityResidentThing.md) |
 

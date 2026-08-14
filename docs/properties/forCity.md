@@ -2,9 +2,25 @@
 
 Identifies the City of the residence.
 
-**Domain**: [Residence](../classes/Residence.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/forCity`
 
-**Range**: [City](../classes/City.md)
+## Domain
+
+| Class |
+|-------|
+| [Residence](../classes/Residence.md) |
+
+## Range
+
+| Class |
+|-------|
+| [City](../classes/City.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [CityResidentObjectProperty](CityResidentObjectProperty.md) |
 
 ## Used in classes
 
@@ -12,4 +28,3 @@ Identifies the City of the residence.
 |-------|
 | [Residence](../classes/Residence.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/forCity`

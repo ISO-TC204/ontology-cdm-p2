@@ -2,6 +2,8 @@
 
 A Road Link is a type of Travelled Way Link that represents a length of Road.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/RoadLink`
+
 
 ## Diagram
 
@@ -79,6 +81,13 @@ A Road Link is a type of Travelled Way Link that represents a length of Road.
 
 | Property | Constraint |
 |----------|------------|
+| [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | only [Road](Road.md) |
 | [cdm1:aggregateOf](https://w3id.org/citydata/part1/v1/aggregateOf) | only [Road](https://w3id.org/citydata/part2/v1/Road) |
 | subClassOf | [TravelledWayLink](TravelledWayLink.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Road (cdm1)](Road.md) | [cdm1:aggregationOf](https://w3id.org/citydata/part1/v1/aggregationOf) |
 

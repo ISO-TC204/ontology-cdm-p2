@@ -50,7 +50,7 @@
 </g>
 </g>
 <!-- RoadSegment&#45;&gt;RoadLink -->
-<g id="edge5" class="edge">
+<g id="edge6" class="edge">
 <title>RoadSegment&#45;&gt;RoadLink</title>
 <path fill="none" stroke="black" d="M102.29,-262.74C95.76,-233.29 82.17,-171.94 74.2,-135.97"/>
 <polygon fill="black" stroke="black" points="77.64,-135.31 72.06,-126.3 70.8,-136.82 77.64,-135.31"/>
@@ -69,7 +69,7 @@
 </g>
 </g>
 <!-- RoadSegment&#45;&gt;RoadNetworkType -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>RoadSegment&#45;&gt;RoadNetworkType</title>
 <path fill="none" stroke="black" d="M146.32,-268.73C165.85,-261.27 187.51,-249.13 199,-230 209.87,-211.9 206.5,-202.23 199,-182.5 179.21,-130.41 131.66,-84.95 99.63,-58.74"/>
 <polygon fill="black" stroke="black" points="102.22,-56.33 92.22,-52.81 97.84,-61.79 102.22,-56.33"/>

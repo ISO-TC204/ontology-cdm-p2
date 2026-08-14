@@ -9,6 +9,7 @@ This pattern imports the following files:
 This pattern consists of the following classes:
 
 - [City Thing](CityThing.md)
+
 This module defines the following properties:
 
 - [CityDataProperty](../properties/CityDataProperty.md)

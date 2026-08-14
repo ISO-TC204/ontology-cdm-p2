@@ -12,6 +12,7 @@ This pattern consists of the following classes:
 
 - [Code](Code.md)
 - [Code Thing](CodeThing.md)
+
 This module defines the following properties:
 
 - [CodeDataProperty](../properties/CodeDataProperty.md)

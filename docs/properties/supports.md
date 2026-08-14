@@ -2,15 +2,26 @@
 
 Identifies the infrastructure element that is supported (carried in or carried through) the current (domain) object.
 
-**Range**: [InfrastructureElement](../classes/InfrastructureElement.md)
+**IRI**: `https://w3id.org/citydata/part2/v1/supports`
+
+## Range
+
+| Class |
+|-------|
+| [InfrastructureElement](../classes/InfrastructureElement.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [TransportInfrastructureObjectProperty](TransportInfrastructureObjectProperty.md) |
 
 ## Used in classes
 
 | Class |
 |-------|
-| [Bridge](../classes/Bridge.md) |
 | [BridgeSegment](../classes/BridgeSegment.md) |
-| [Tunnel](../classes/Tunnel.md) |
+| [Bridge](../classes/Bridge.md) |
 | [TunnelSegment](../classes/TunnelSegment.md) |
+| [Tunnel](../classes/Tunnel.md) |
 
-**IRI**: `https://w3id.org/citydata/part2/v1/supports`

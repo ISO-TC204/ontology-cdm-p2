@@ -2,6 +2,8 @@
 
 Address Type is a type of Code that describes the type of address, such as residential, business, or mailing.
 
+**IRI**: `https://w3id.org/citydata/part2/v1/AddressType`
+
 
 ## Diagram
 
@@ -78,6 +80,13 @@ Address Type is a type of Code that describes the type of address, such as resid
 
 | Property | Constraint |
 |----------|------------|
+| [hasCode](../properties/hasCode.md) | only [Code](Code.md) |
 | [hasCode](../properties/hasCode.md) | only [Code](https://w3id.org/citydata/part2/v1/Code) |
 | subClassOf | [ContactThing](ContactThing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Address](Address.md) | [hasAddressType](../properties/hasAddressType.md) |
 
