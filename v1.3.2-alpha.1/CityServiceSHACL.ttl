@@ -1,0 +1,190 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/CityServiceSHACL> rdf:type owl:Ontology ;
+                                                       owl:imports :CityServicePattern ,
+                                                                   :CoreSHACL ;
+                                                       dcterms:title "City Data Model Part 2 - City Service Pattern - SHACL constraints" ;
+                                                       vann:preferredNamespacePrefix "cdm2" ;
+                                                       vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                       skos:definition "SHACL validation shapes for the City Service Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/CatchmentAreaTypeShape
+:CatchmentAreaTypeShape rdf:type sh:NodeShape ;
+                        sh:property [ sh:class :Code ;
+                                      sh:path :hasCode
+                                    ] ;
+                        sh:targetClass :CatchmentAreaType .
+
+
+###  https://w3id.org/citydata/part2/v1/ImpactDirectionShape
+:ImpactDirectionShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:class :Code ;
+                                    sh:path :hasCode
+                                  ] ;
+                      sh:targetClass :ImpactDirection .
+
+
+###  https://w3id.org/citydata/part2/v1/ImportanceShape
+:ImportanceShape rdf:type sh:NodeShape ;
+                 sh:property [ sh:class :Code ;
+                               sh:path :hasCode
+                             ] ;
+                 sh:targetClass :Importance .
+
+
+###  https://w3id.org/citydata/part2/v1/InputShape
+:InputShape rdf:type sh:NodeShape ;
+            sh:property [ sh:datatype xsd:string ;
+                          sh:node :MaxOneShape ;
+                          sh:path cdm1:hasName
+                        ] ,
+                        [ sh:class time:DateTimeInterval ;
+                          sh:path i72:for_time_interval
+                        ] ,
+                        [ sh:datatype xsd:string ;
+                          sh:path cdm1:hasDescription
+                        ] ,
+                        [ sh:class :Stakeholder ;
+                          sh:path :hasContributingStakeholder
+                        ] ;
+            sh:targetClass :Input .
+
+
+###  https://w3id.org/citydata/part2/v1/OutcomeShape
+:OutcomeShape rdf:type sh:NodeShape ;
+              sh:property [ sh:class :Stakeholder ;
+                            sh:node :ExactlyOneShape ;
+                            sh:path :hasBeneficialStakeholder
+                          ] ,
+                          [ sh:class :Importance ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasImportance
+                          ] ,
+                          [ sh:class :Stakeholder ;
+                            sh:node :ExactlyOneShape ;
+                            sh:path :fromPerspectiveOf
+                          ] ,
+                          [ sh:class i72:Indicator ;
+                            sh:path :hasIndicator
+                          ] ,
+                          [ sh:class :ImpactDirection ;
+                            sh:node :MaxOneShape ;
+                            sh:path :intendedImpact
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path cdm1:hasDescription
+                          ] ;
+              sh:targetClass :Outcome .
+
+
+###  https://w3id.org/citydata/part2/v1/OutputShape
+:OutputShape rdf:type sh:NodeShape ;
+             sh:property [ sh:class i72:Indicator ;
+                           sh:path :usedByIndicator
+                         ] ,
+                         [ sh:datatype xsd:string ;
+                           sh:node :MaxOneShape ;
+                           sh:path cdm1:hasName
+                         ] ,
+                         [ sh:datatype xsd:string ;
+                           sh:path cdm1:hasDescription
+                         ] ;
+             sh:targetClass :Output .
+
+
+###  https://w3id.org/citydata/part2/v1/ProgramShape
+:ProgramShape rdf:type sh:NodeShape ;
+              sh:property [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path cdm1:hasName
+                          ] ,
+                          [ sh:class :Output ;
+                            sh:path :hasOutput
+                          ] ,
+                          [ sh:class :Stakeholder ;
+                            sh:path :hasBeneficialStakeholder
+                          ] ,
+                          [ sh:class :Stakeholder ;
+                            sh:path :hasContributingStakeholder
+                          ] ,
+                          [ sh:class :Service ;
+                            sh:path :hasService
+                          ] ,
+                          [ sh:class :Outcome ;
+                            sh:path :hasOutcome
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path cdm1:hasDescription
+                          ] ,
+                          [ sh:class :Input ;
+                            sh:path :hasInput
+                          ] ;
+              sh:targetClass :Program .
+
+
+###  https://w3id.org/citydata/part2/v1/ServiceShape
+:ServiceShape rdf:type sh:NodeShape ;
+              sh:property [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path cdm1:hasName
+                          ] ,
+                          [ sh:class :Output ;
+                            sh:path :hasOutput
+                          ] ,
+                          [ sh:class :Stakeholder ;
+                            sh:path :hasBeneficialStakeholder
+                          ] ,
+                          [ sh:class :Stakeholder ;
+                            sh:path :hasContributingStakeholder
+                          ] ,
+                          [ sh:class :Input ;
+                            sh:path :hasInput
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path cdm1:hasDescription
+                          ] ,
+                          [ sh:class :Outcome ;
+                            sh:path :hasOutcome
+                          ] ;
+              sh:targetClass :Service .
+
+
+###  https://w3id.org/citydata/part2/v1/StakeholderShape
+:StakeholderShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:class cdm1:Activity ;
+                                sh:node :MinOneShape ;
+                                sh:path :performs
+                              ] ,
+                              [ sh:datatype xsd:string ;
+                                sh:path cdm1:hasDescription
+                              ] ,
+                              [ sh:class cdm1:Location ;
+                                sh:path :hasCatchmentArea
+                              ] ,
+                              [ sh:class :CatchmentAreaType ;
+                                sh:path :hasCatchmentAreaType
+                              ] ,
+                              [ sh:datatype xsd:string ;
+                                sh:node :MaxOneShape ;
+                                sh:path cdm1:hasName
+                              ] ;
+                  sh:targetClass :Stakeholder .

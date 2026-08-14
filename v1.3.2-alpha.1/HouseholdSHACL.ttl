@@ -1,0 +1,37 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/HouseholdSHACL> rdf:type owl:Ontology ;
+                                                     owl:imports :CoreSHACL ,
+                                                                 :HouseholdPattern ;
+                                                     dcterms:title "City Data Model Part 2 - Household Pattern - SHACL constraints" ;
+                                                     vann:preferredNamespacePrefix "cdm2" ;
+                                                     vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                     skos:definition "SHACL validation shapes for the Household Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/HouseholdShape
+:HouseholdShape rdf:type sh:NodeShape ;
+                sh:property [ sh:class time:ProperInterval ;
+                              sh:path time:hasTime
+                            ] ,
+                            [ sh:class :Person ;
+                              sh:path org:hasMember
+                            ] ,
+                            [ sh:class :Residence ;
+                              sh:node :MaxOneShape ;
+                              sh:path :householdOccupies
+                            ] ;
+                sh:targetClass :Household .

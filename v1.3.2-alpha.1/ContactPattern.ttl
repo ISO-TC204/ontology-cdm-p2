@@ -1,0 +1,2269 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix contact: <https://w3id.org/citydata/part2/v1/Contact#> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/ContactPattern> rdf:type owl:Ontology ;
+                                                     owl:imports :CityPattern ;
+                                                     cc:license "http://creativecommons.org/licenses/by/4.0/" ;
+                                                     dcterms:creator "Kenneth Vaughn" ,
+                                                                     "Mark Fox" ,
+                                                                     "Megan Katsumi" ;
+                                                     dcterms:modified "2026-02-12"^^xsd:date ;
+                                                     dcterms:title "Information technology - City data model - Part 2: City level concepts - Contact pattern" ;
+                                                     dcterms:bibliographicCitation "ISO/IEC 5087-2:2024" ;
+                                                     vann:preferredNamespacePrefix "cdm2" ;
+                                                     vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                     rdfs:seeAlso <https://www.iso.org/standard/80742.html> ;
+                                                     rdfs:comment "The prior version of this ontology used a different ontology IRI. This update remains semantically consistent with the version adopted as ISO 5087-2:2024." ;
+                                                     owl:priorVersion <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact/> ;
+                                                     owl:versionIRI <https://w3id.org/citydata/part2/v1/ContactPattern/r3.0/> ;
+                                                     owl:versionInfo "1.3.0" ;
+                                                     skos:definition "This ontology specifies the city-level concepts for the contact pattern of the city data model." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/AddressProperty
+:AddressProperty rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :ContactObjectProperty ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Address ;
+                 skos:definition "Added for organizational purposes, to identify properties related to an address." .
+
+
+###  https://w3id.org/citydata/part2/v1/ContactObjectProperty
+:ContactObjectProperty rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :CityObjectProperty ;
+                       skos:definition "Added for organizational purposes, to identify object properties defined for the Contact Pattern in the City-level CDM ontology." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasAddress
+:hasAddress rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :ContactObjectProperty ;
+            rdfs:range :Address ;
+            rdfs:comment "hasAddress links any class to the Address class."@en ;
+            skos:definition "Specifies the address of the object." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasAddressType
+:hasAddressType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :AddressProperty ;
+                rdfs:range :AddressType ;
+                rdfs:label "has Address Type"@en ;
+                skos:definition "specifies the type of address." ;
+                skos:example "home, work" .
+
+
+###  https://w3id.org/citydata/part2/v1/hasCity
+:hasCity rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :AddressProperty ;
+         rdfs:range :City ;
+         skos:definition "Specifies the name of the city for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasCountry
+:hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :AddressProperty ;
+            rdfs:range :Country ;
+            rdfs:label "has Country"@en ;
+            skos:definition "Specifies the country for the address." ;
+            skos:note "Use of the ISO 3166-2 [4] alpha-2 2 letter country code is recommended." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasPhoneType
+:hasPhoneType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :ContactObjectProperty ;
+              rdfs:range :PhoneType ;
+              rdfs:label "has Phone Type"@en ;
+              skos:definition "Specifies the type of phone number." ;
+              skos:example "cell phone, home phone" .
+
+
+###  https://w3id.org/citydata/part2/v1/hasProvince
+:hasProvince rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :AddressProperty ;
+             rdfs:range :State ;
+             rdfs:label "has Province"@en-CA ,
+                        "has State"@en-US ;
+             skos:definition "Specifies the state or province for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasState
+:hasState rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :AddressProperty ;
+          owl:equivalentProperty :hasProvince .
+
+
+###  https://w3id.org/citydata/part2/v1/hasStreetDirection
+:hasStreetDirection rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :AddressProperty ;
+                    rdfs:domain :Address ;
+                    rdfs:range :StreetDirection ;
+                    rdfs:label "has Street Direction"@en ;
+                    skos:definition "Specifies the direction of the street for the address." ;
+                    skos:example "east, west" .
+
+
+###  https://w3id.org/citydata/part2/v1/hasStreetType
+:hasStreetType rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :AddressProperty ;
+               rdfs:domain :Address ;
+               rdfs:range :StreetType ;
+               rdfs:label "has Street Type"@en ;
+               skos:definition "specifies the type of the street for the address." ;
+               skos:example "road, drive" .
+
+
+###  https://w3id.org/citydata/part2/v1/hasTelephone
+:hasTelephone rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :ContactObjectProperty ;
+              rdfs:range :PhoneNumber ;
+              rdfs:label "has Telephone"@en ;
+              skos:definition "Identifies the PhoneNumber for the domain object." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/AddressDataProperty
+:AddressDataProperty rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :ContactDataProperty ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :Address ;
+                     skos:definition "Added for organizational purposes, to identify data properties defined for addresses in the contact pattern." .
+
+
+###  https://w3id.org/citydata/part2/v1/ContactDataProperty
+:ContactDataProperty rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :CityDataProperty ;
+                     rdfs:domain :Address ;
+                     skos:definition "Added for organizational purposes, to identify data properties defined in the contact pattern." .
+
+
+###  https://w3id.org/citydata/part2/v1/TelephoneDataProperty
+:TelephoneDataProperty rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :ContactDataProperty ;
+                       skos:definition "Added for organizational purposes, to identify data properties defined for telephone numbers in the Contact Pattern." .
+
+
+###  https://w3id.org/citydata/part2/v1/buildingName
+:buildingName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :AddressDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:range xsd:string ;
+              skos:definition "Specifies the name of the building for the Address." ;
+              skos:note "Often used in countries like England, India and Japan." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasAreaCode
+:hasAreaCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :TelephoneDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :PhoneNumber ;
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:label "has Area Code"@en ;
+             skos:definition "Specifies the area code for the PhoneNumber." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasCitySection
+:hasCitySection rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :AddressDataProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "has City Section"@en ;
+                skos:definition "Specifies the section of the city for the Address." ;
+                skos:note "Often used in countries like England, India and Japan." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasCountryCode
+:hasCountryCode rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :TelephoneDataProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :PhoneNumber ;
+                rdfs:range xsd:nonNegativeInteger ;
+                rdfs:label "has Country Code"@en ;
+                skos:definition "Identifies the country code for the telephone number." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasEmail
+:hasEmail rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :ContactDataProperty ;
+          rdfs:range :EmailAddress ;
+          skos:definition "Identifies an email address of the organization or individual." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasPhoneNumber
+:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :TelephoneDataProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :PhoneNumber ;
+                rdfs:range xsd:nonNegativeInteger ;
+                rdfs:label "has Phone Number"@en ;
+                skos:definition "Specifies the remaining digits of the number after the area code." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasPostalBox
+:hasPostalBox rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :AddressDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Address ;
+              rdfs:range xsd:string ;
+              rdfs:label "has Postal Box"@en ;
+              skos:definition "sSecifies the box number for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasPostalCode
+:hasPostalCode rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :AddressDataProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Address ;
+               rdfs:range xsd:string ;
+               rdfs:label "has Postal Code"@en ;
+               skos:definition "Specifies the zip or postalcode for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasStreet
+:hasStreet rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :AddressDataProperty ;
+           rdfs:domain :Address ;
+           rdfs:range xsd:string ;
+           rdfs:label "has Street"@en ;
+           skos:definition "Specifies the street name for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasStreetNumber
+:hasStreetNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :AddressDataProperty ;
+                 rdfs:domain :Address ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "has Street Number"@en ;
+                 skos:definition "Specifies the street number for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/hasUnitNumber
+:hasUnitNumber rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :AddressDataProperty ;
+               rdfs:domain :Address ;
+               rdfs:range xsd:string ;
+               rdfs:label "has Unit Number"@en ;
+               skos:definition "Specifies the unit or suite number for the address." .
+
+
+###  https://w3id.org/citydata/part2/v1/maxStreetNumber
+:maxStreetNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :AddressDataProperty ;
+                 rdfs:range xsd:string ;
+                 skos:definition "specifies the maximum street number of an street number range, in the case that it is defined with a street number range." .
+
+
+###  https://w3id.org/citydata/part2/v1/minStreetNumber
+:minStreetNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :AddressDataProperty ;
+                 rdfs:range xsd:string ;
+                 skos:definition "specifies the minimum street number of an street number range, in the case that it is defined with a street number range." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf :ContactThing ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAddressType ;
+                           owl:allValuesFrom :AddressType
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :buildingName ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCity ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :City
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCitySection ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCountry ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Country
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cdm1:hasLocation ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass cdm1:Location
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPostalBox ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPostalCode ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasProvince ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :State
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasStreet ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasStreetDirection ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :StreetDirection
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasStreetNumber ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasStreetType ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :StreetType
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasUnitNumber ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :maxStreetNumber ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :minStreetNumber ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:nonNegativeInteger
+                         ] ;
+         skos:definition "Address is the main concept for a contact.  It has been designed to represent any type of address in the world, including India and the UK.  For example, the property hasBuilding is important in many UK and Indian addresses to further identify the person or business location. Street information is divided into separate properties to fully identify direction (hasStreetDirection), Type (hasStreetType), etc."@en .
+
+
+###  https://w3id.org/citydata/part2/v1/AddressType
+:AddressType rdf:type owl:Class ;
+             rdfs:subClassOf :ContactThing ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCode ;
+                               owl:allValuesFrom :Code
+                             ] ;
+             rdfs:label "Address Type"@en ;
+             skos:definition "Address Type is a type of Code that describes the type of address, such as residential, business, or mailing."@en .
+
+
+###  https://w3id.org/citydata/part2/v1/ContactThing
+:ContactThing rdf:type owl:Class ;
+              rdfs:subClassOf :CityThing ;
+              skos:definition "Added for organizational purposes, to identify classes defined in the Contact ontology." .
+
+
+###  https://w3id.org/citydata/part2/v1/Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :ContactThing ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCode ;
+                           owl:allValuesFrom :Code
+                         ] ;
+         skos:definition "A Country is a specialization of a Jurisdictional Area that is formally identified as such." .
+
+
+###  https://w3id.org/citydata/part2/v1/PhoneNumber
+:PhoneNumber rdf:type owl:Class ;
+             rdfs:subClassOf :ContactThing ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAreaCode ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCountryCode ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasPhoneNumber ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasPhoneType ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :PhoneType
+                             ] ;
+             rdfs:label "Phone Number"@en ;
+             skos:definition "A PhoneNumber defines the complete international phone number and type of number." .
+
+
+###  https://w3id.org/citydata/part2/v1/PhoneType
+:PhoneType rdf:type owl:Class ;
+           rdfs:subClassOf :ContactThing ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasCode ;
+                             owl:allValuesFrom :Code
+                           ] ;
+           rdfs:label "Phone Type"@en ;
+           skos:definition "A PhoneType defines the type of phone number." ;
+           skos:example "home, cell, work, etc." .
+
+
+###  https://w3id.org/citydata/part2/v1/State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf :ContactThing ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCode ;
+                         owl:allValuesFrom :Code
+                       ] ;
+       skos:definition "A State is a political subdivision of a country." .
+
+
+###  https://w3id.org/citydata/part2/v1/StreetDirection
+:StreetDirection rdf:type owl:Class ;
+                 rdfs:subClassOf :ContactThing ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasCode ;
+                                   owl:allValuesFrom :Code
+                                 ] ;
+                 rdfs:label "Street Direction"@en ;
+                 skos:definition "A StreetDirection defines the directional component of a street name." .
+
+
+###  https://w3id.org/citydata/part2/v1/StreetType
+:StreetType rdf:type owl:Class ;
+            rdfs:subClassOf :ContactThing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCode ;
+                              owl:allValuesFrom :Code
+                            ] ;
+            rdfs:label "Street Type"@en ;
+            skos:definition "A StreetType defines the type of street." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/Contact#Abbey
+contact:Abbey rdf:type owl:NamedIndividual ;
+              rdfs:label "ABBEY"@en ,
+                         "Abbey"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Acres
+contact:Acres rdf:type owl:NamedIndividual ;
+              rdfs:label "AC"@en ,
+                         "ACRES"@en ,
+                         "Acres"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Alley
+contact:Alley rdf:type owl:NamedIndividual ;
+              rdfs:label "AL"@en ,
+                         "ALLEY"@en ,
+                         "ALLÉE"@fr ,
+                         "ALY"@en ,
+                         "Alley"@en ,
+                         "Allée"@fr ,
+                         "RLE"@fr ,
+                         "Ruelle"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Annex
+contact:Annex rdf:type owl:NamedIndividual ;
+              rdfs:label "ANX"@en ,
+                         "Anex"@fr ,
+                         "Annex"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Arcade
+contact:Arcade rdf:type owl:NamedIndividual ;
+               rdfs:label "ARC"@en ,
+                          "Arcade"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Autoroute
+contact:Autoroute rdf:type owl:NamedIndividual ;
+                  rdfs:label "AUT"@en ,
+                             "Autoroute"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Avenue
+contact:Avenue rdf:type owl:NamedIndividual ;
+               rdfs:label "AV"@en ,
+                          "AV"@fr ,
+                          "AVE"@en ,
+                          "Avenue"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Barrage
+contact:Barrage rdf:type owl:NamedIndividual ;
+                rdfs:label "BRGE"@fr ,
+                           "Barrage"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Bay
+contact:Bay rdf:type owl:NamedIndividual ;
+            rdfs:label "BA"@en ,
+                       "BAY"@en ,
+                       "Bay"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Bayou
+contact:Bayou rdf:type owl:NamedIndividual ;
+              rdfs:label "BYU"@en ,
+                         "Bayou"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Beach
+contact:Beach rdf:type owl:NamedIndividual ;
+              rdfs:label "BCH"@en ,
+                         "BE"@en ,
+                         "BEACH"@en ,
+                         "Beach"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Bend
+contact:Bend rdf:type owl:NamedIndividual ;
+             rdfs:label "BEND"@en ,
+                        "BN"@en ,
+                        "BND"@en ,
+                        "Bend"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Block
+contact:Block rdf:type owl:NamedIndividual ;
+              rdfs:label "BLOC"@fr ,
+                         "BLOCK"@en ,
+                         "Bloc"@fr ,
+                         "Block"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Bluff
+contact:Bluff rdf:type owl:NamedIndividual ;
+              rdfs:label "BLF"@en ,
+                         "BLFS"@en ,
+                         "Bluff"@en ,
+                         "Bluffs"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Bottom
+contact:Bottom rdf:type owl:NamedIndividual ;
+               rdfs:label "BTM"@en ,
+                          "Bottom"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Boulevard
+contact:Boulevard rdf:type owl:NamedIndividual ;
+                  rdfs:label "BLVD"@en ,
+                             "BOUL"@fr ,
+                             "BV"@en ,
+                             "Boulevard"@en ,
+                             "Boulevard"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Box
+contact:Box rdf:type owl:NamedIndividual ;
+            rdfs:label "Box"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Branch
+contact:Branch rdf:type owl:NamedIndividual ;
+               rdfs:label "BR"@en ,
+                          "Branch"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Bridge
+contact:Bridge rdf:type owl:NamedIndividual ;
+               rdfs:label "BRG"@en ,
+                          "Bridge"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Brook
+contact:Brook rdf:type owl:NamedIndividual ;
+              rdfs:label "BRK"@en ,
+                         "BRKS"@en ,
+                         "Brook"@en ,
+                         "Brooks"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Burg
+contact:Burg rdf:type owl:NamedIndividual ;
+             rdfs:label "BG"@en ,
+                        "BGS"@en ,
+                        "Burg"@en ,
+                        "Burgs"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Burrow
+contact:Burrow rdf:type owl:NamedIndividual ;
+               rdfs:label "Burrow"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#By-pass
+contact:By-pass rdf:type owl:NamedIndividual ;
+                rdfs:label "BYP"@en ,
+                           "BYPASS"@en ,
+                           "By-pass"@en ,
+                           "Bypass"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Byway
+contact:Byway rdf:type owl:NamedIndividual ;
+              rdfs:label "BYWAY"@en ,
+                         "Byway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Camp
+contact:Camp rdf:type owl:NamedIndividual ;
+             rdfs:label "CP"@en ,
+                        "Camp"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Campus
+contact:Campus rdf:type owl:NamedIndividual ;
+               rdfs:label "CAMPUS"@en ,
+                          "Campus"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Canyon
+contact:Canyon rdf:type owl:NamedIndividual ;
+               rdfs:label "CYN"@en ,
+                          "Canyon"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cape
+contact:Cape rdf:type owl:NamedIndividual ;
+             rdfs:label "CA"@en ,
+                        "CAPE"@en ,
+                        "CPE"@en ,
+                        "Cape"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Carrefour
+contact:Carrefour rdf:type owl:NamedIndividual ;
+                  rdfs:label "CARREF"@en ,
+                             "Carrefour"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Castle
+contact:Castle rdf:type owl:NamedIndividual ;
+               rdfs:label "CS"@en ,
+                          "Castle"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Causeway
+contact:Causeway rdf:type owl:NamedIndividual ;
+                 rdfs:label "CSWY"@en ,
+                            "Causeway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#CellPhone
+contact:CellPhone rdf:type owl:NamedIndividual ;
+                  rdfs:label "Cell Phone"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Centre
+contact:Centre rdf:type owl:NamedIndividual ;
+               rdfs:label "C"@fr ,
+                          "CE"@en ,
+                          "CTR"@en ,
+                          "CTRS"@en ,
+                          "Centre"@en ,
+                          "Centres"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cercle
+contact:Cercle rdf:type owl:NamedIndividual ;
+               rdfs:label "CERCLE"@en ,
+                          "Cercle"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Chare
+contact:Chare rdf:type owl:NamedIndividual ;
+              rdfs:label "CHARE"@en ,
+                         "Chare"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Chase
+contact:Chase rdf:type owl:NamedIndividual ;
+              rdfs:label "CHASE"@en ,
+                         "Chase"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Chemin
+contact:Chemin rdf:type owl:NamedIndividual ;
+               rdfs:label "CH"@en ,
+                          "Chemin"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Circle
+contact:Circle rdf:type owl:NamedIndividual ;
+               rdfs:label "CERCLE"@fr ,
+                          "CI"@en ,
+                          "CIR"@en ,
+                          "CIRS"@en ,
+                          "Cercle"@fr ,
+                          "Circle"@en ,
+                          "Circles"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Circuit
+contact:Circuit rdf:type owl:NamedIndividual ;
+                rdfs:label "CIRCT"@en ,
+                           "Circuit"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cliffs
+contact:Cliffs rdf:type owl:NamedIndividual ;
+               rdfs:label "CLF"@en ,
+                          "CLFS"@en ,
+                          "Cliff"@en ,
+                          "Cliffs"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Climb
+contact:Climb rdf:type owl:NamedIndividual ;
+              rdfs:label "Climb"@en ,
+                         "MONTÉE"@fr ,
+                         "Montée"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Close
+contact:Close rdf:type owl:NamedIndividual ;
+              rdfs:label "CL"@en ,
+                         "CLOSE"@en ,
+                         "Close"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Club
+contact:Club rdf:type owl:NamedIndividual ;
+             rdfs:label "CLB"@en ,
+                        "Club"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Coast
+contact:Coast rdf:type owl:NamedIndividual ;
+              rdfs:label "Coast"@en ,
+                         "CÔTE"@fr ,
+                         "Côte"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Common
+contact:Common rdf:type owl:NamedIndividual ;
+               rdfs:label "CM"@en ,
+                          "CMN"@en ,
+                          "CMNS"@en ,
+                          "COMMON"@en ,
+                          "Common"@en ,
+                          "Commons"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Concession
+contact:Concession rdf:type owl:NamedIndividual ;
+                   rdfs:label "CONC"@en ,
+                              "Concession"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Corners
+contact:Corners rdf:type owl:NamedIndividual ;
+                rdfs:label "COR"@en ,
+                           "CORS"@en ,
+                           "CRNRS"@en ,
+                           "Corner"@en ,
+                           "Corners"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cottage
+contact:Cottage rdf:type owl:NamedIndividual ;
+                rdfs:label "Cottage Address"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cour
+contact:Cour rdf:type owl:NamedIndividual ;
+             rdfs:label "COUR"@en ,
+                        "Cour"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cours
+contact:Cours rdf:type owl:NamedIndividual ;
+              rdfs:label "COURS"@en ,
+                         "Cours"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Course
+contact:Course rdf:type owl:NamedIndividual ;
+               rdfs:label "CRSE"@en ,
+                          "Course"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Court
+contact:Court rdf:type owl:NamedIndividual ;
+              rdfs:label "CO"@en ,
+                         "COUR"@fr ,
+                         "COURS"@fr ,
+                         "CRT"@en ,
+                         "CT"@en ,
+                         "CTS"@en ,
+                         "Court"@en ,
+                         "Courts"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cove
+contact:Cove rdf:type owl:NamedIndividual ;
+             rdfs:label "COVE"@en ,
+                        "CV"@en ,
+                        "CVS"@en ,
+                        "Cove"@en ,
+                        "Coves"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Creek
+contact:Creek rdf:type owl:NamedIndividual ;
+              rdfs:label "CRK"@en ,
+                         "Creek"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Crescent
+contact:Crescent rdf:type owl:NamedIndividual ;
+                 rdfs:label "CR"@en ,
+                            "CRES"@en ,
+                            "CROIS"@fr ,
+                            "Crescent"@en ,
+                            "Croissant"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Crest
+contact:Crest rdf:type owl:NamedIndividual ;
+              rdfs:label "CRST"@en ,
+                         "CT"@en ,
+                         "Crest"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Croissant
+contact:Croissant rdf:type owl:NamedIndividual ;
+                  rdfs:label "CROIS"@en ,
+                             "Croissant"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cross
+contact:Cross rdf:type owl:NamedIndividual ;
+              rdfs:label "CX"@en ,
+                         "Cross"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Crossing
+contact:Crossing rdf:type owl:NamedIndividual ;
+                 rdfs:label "CROSS"@en ,
+                            "Crossing"@en ,
+                            "XING"@en ,
+                            "XS"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Crossroads
+contact:Crossroads rdf:type owl:NamedIndividual ;
+                   rdfs:label "Crossroad"@en ,
+                              "Crossroads"@en ,
+                              "XRD"@en ,
+                              "XRDS"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Cul-de-sac
+contact:Cul-de-sac rdf:type owl:NamedIndividual ;
+                   rdfs:label "CDS"@en ,
+                              "Cul-de-sac"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Curve
+contact:Curve rdf:type owl:NamedIndividual ;
+              rdfs:label "CURV"@en ,
+                         "Curve"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Côte
+<https://w3id.org/citydata/part2/v1/Contact#Côte> rdf:type owl:NamedIndividual ;
+                                                   rdfs:label "CÔTE"@en ,
+                                                              "Côte"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Dale
+contact:Dale rdf:type owl:NamedIndividual ;
+             rdfs:label "DALE"@en ,
+                        "DL"@en ,
+                        "Dale"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Dam
+contact:Dam rdf:type owl:NamedIndividual ;
+            rdfs:label "DM"@en ,
+                       "Dam"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Dell
+contact:Dell rdf:type owl:NamedIndividual ;
+             rdfs:label "DELL"@en ,
+                        "Dell"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Desert
+contact:Desert rdf:type owl:NamedIndividual ;
+               rdfs:label "Desert"@en ,
+                          "Desserte"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Diagonal
+contact:Diagonal rdf:type owl:NamedIndividual ;
+                 rdfs:label "Diagonal"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Diversion
+contact:Diversion rdf:type owl:NamedIndividual ;
+                  rdfs:label "DI"@en ,
+                             "DIVERS"@en ,
+                             "Diversion"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Divide
+contact:Divide rdf:type owl:NamedIndividual ;
+               rdfs:label "DV"@en ,
+                          "Divide"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Downs
+contact:Downs rdf:type owl:NamedIndividual ;
+              rdfs:label "DO"@en ,
+                         "DOWNS"@en ,
+                         "Downs"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Drive
+contact:Drive rdf:type owl:NamedIndividual ;
+              rdfs:label "DR"@en ,
+                         "Drive"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#End
+contact:End rdf:type owl:NamedIndividual ;
+            rdfs:label "EN"@en ,
+                       "END"@en ,
+                       "End"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Esplanada
+contact:Esplanada rdf:type owl:NamedIndividual ;
+                  rdfs:label "ESPL"@en ,
+                             "Esplanada"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Esplanade
+contact:Esplanade rdf:type owl:NamedIndividual ;
+                  rdfs:label "ESPL"@en ,
+                             "Esplanada"@es ,
+                             "Esplanade"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Estates
+contact:Estates rdf:type owl:NamedIndividual ;
+                rdfs:label "ES"@en ,
+                           "EST"@en ,
+                           "ESTATE"@en ,
+                           "ESTS"@en ,
+                           "Estate"@en ,
+                           "Estates"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Expressway
+contact:Expressway rdf:type owl:NamedIndividual ;
+                   rdfs:label "EXPY"@en ,
+                              "Expressway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Extension
+contact:Extension rdf:type owl:NamedIndividual ;
+                  rdfs:label "EXT"@en ,
+                             "EXTEN"@en ,
+                             "EXTS"@en ,
+                             "Extension"@en ,
+                             "Extensions"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Fall
+contact:Fall rdf:type owl:NamedIndividual ;
+             rdfs:label "FALL"@en ,
+                        "Fall"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Falls
+contact:Falls rdf:type owl:NamedIndividual ;
+              rdfs:label "FLS"@en ,
+                         "Falls"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Farm
+contact:Farm rdf:type owl:NamedIndividual ;
+             rdfs:label "FARM"@en ,
+                        "Farm"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#FaxPhone
+contact:FaxPhone rdf:type owl:NamedIndividual ;
+                 rdfs:label "Fax Line"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ferry
+contact:Ferry rdf:type owl:NamedIndividual ;
+              rdfs:label "FRY"@en ,
+                         "Ferry"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Field
+contact:Field rdf:type owl:NamedIndividual ;
+              rdfs:label "FIELD"@en ,
+                         "FLD"@en ,
+                         "FLDS"@en ,
+                         "Field"@en ,
+                         "Fields"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Flat
+contact:Flat rdf:type owl:NamedIndividual ;
+             rdfs:label "FLT of FLTS"@en ,
+                        "Flat"@en ,
+                        "Flats"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ford
+contact:Ford rdf:type owl:NamedIndividual ;
+             rdfs:label "FRD"@en ,
+                        "FRDS"@en ,
+                        "Ford"@en ,
+                        "Fords"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Forest
+contact:Forest rdf:type owl:NamedIndividual ;
+               rdfs:label "FOREST"@en ,
+                          "FRST"@en ,
+                          "Forest"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Forge
+contact:Forge rdf:type owl:NamedIndividual ;
+              rdfs:label "FRG"@en ,
+                         "FRGS"@en ,
+                         "Forge"@en ,
+                         "Forges"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Fork
+contact:Fork rdf:type owl:NamedIndividual ;
+             rdfs:label "FRK"@en ,
+                        "FRKS"@en ,
+                        "Fork"@en ,
+                        "Forks"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Fort
+contact:Fort rdf:type owl:NamedIndividual ;
+             rdfs:label "FT"@en ,
+                        "Fort"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Freeway
+contact:Freeway rdf:type owl:NamedIndividual ;
+                rdfs:label "FR"@en ,
+                           "FWY"@en ,
+                           "Freeway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Front
+contact:Front rdf:type owl:NamedIndividual ;
+              rdfs:label "FRONT"@en ,
+                         "Front"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Gardens
+contact:Gardens rdf:type owl:NamedIndividual ;
+                rdfs:label "GD"@en ,
+                           "GDN"@en ,
+                           "GDNS"@en ,
+                           "Garden"@en ,
+                           "Gardens"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Gate
+contact:Gate rdf:type owl:NamedIndividual ;
+             rdfs:label "GA"@en ,
+                        "GATE"@en ,
+                        "Gate"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Gateway
+contact:Gateway rdf:type owl:NamedIndividual ;
+                rdfs:label "GTWY"@en ,
+                           "GW"@en ,
+                           "Gateway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Glade
+contact:Glade rdf:type owl:NamedIndividual ;
+              rdfs:label "GLADE"@en ,
+                         "Glade"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Glen
+contact:Glen rdf:type owl:NamedIndividual ;
+             rdfs:label "GL"@en ,
+                        "GLEN"@en ,
+                        "GLN"@en ,
+                        "GLNS"@en ,
+                        "Glen"@en ,
+                        "Glens"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Glenway
+contact:Glenway rdf:type owl:NamedIndividual ;
+                rdfs:label "Glenway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Golfway
+contact:Golfway rdf:type owl:NamedIndividual ;
+                rdfs:label "Golfway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Green
+contact:Green rdf:type owl:NamedIndividual ;
+              rdfs:label "GR"@en ,
+                         "GREEN"@en ,
+                         "GREENS"@en ,
+                         "GRN"@en ,
+                         "GRNS"@en ,
+                         "Green"@en ,
+                         "Greens"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Grounds
+contact:Grounds rdf:type owl:NamedIndividual ;
+                rdfs:label "GRNDS"@en ,
+                           "Grounds"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Grove
+contact:Grove rdf:type owl:NamedIndividual ;
+              rdfs:label "GROVE"@en ,
+                         "GRV"@en ,
+                         "GRVS"@en ,
+                         "GV"@en ,
+                         "Grove"@en ,
+                         "Groves"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Hall
+contact:Hall rdf:type owl:NamedIndividual ;
+             rdfs:label "HL"@en ,
+                        "Hall"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Harbour
+contact:Harbour rdf:type owl:NamedIndividual ;
+                rdfs:label "HARBR"@en ,
+                           "HB"@en ,
+                           "HBR"@en ,
+                           "HBRS"@en ,
+                           "Harbour"@en ,
+                           "Harbours"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Haven
+contact:Haven rdf:type owl:NamedIndividual ;
+              rdfs:label "HA"@en ,
+                         "HVN"@en ,
+                         "Haven"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Heath
+contact:Heath rdf:type owl:NamedIndividual ;
+              rdfs:label "HE"@en ,
+                         "HEATH"@en ,
+                         "Heath"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Heights
+contact:Heights rdf:type owl:NamedIndividual ;
+                rdfs:label "HT"@en ,
+                           "HTS"@en ,
+                           "Heights"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Highlands
+contact:Highlands rdf:type owl:NamedIndividual ;
+                  rdfs:label "HGHLDS"@en ,
+                             "Highlands"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Highway
+contact:Highway rdf:type owl:NamedIndividual ;
+                rdfs:label "HI"@en ,
+                           "HWY"@en ,
+                           "Highway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Hill
+contact:Hill rdf:type owl:NamedIndividual ;
+             rdfs:label "HILL"@en ,
+                        "HL"@en ,
+                        "HLS"@en ,
+                        "Hill"@en ,
+                        "Hills"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Hollow
+contact:Hollow rdf:type owl:NamedIndividual ;
+               rdfs:label "HO"@en ,
+                          "HOLLOW"@en ,
+                          "HOLW"@en ,
+                          "Hollow"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Home
+contact:Home rdf:type owl:NamedIndividual ;
+             rdfs:label "Home Address"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#HomePhone
+contact:HomePhone rdf:type owl:NamedIndividual ;
+                  rdfs:label "Home Phone"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Impasse
+contact:Impasse rdf:type owl:NamedIndividual ;
+                rdfs:label "IMP"@en ,
+                           "Impasse"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Inlet
+contact:Inlet rdf:type owl:NamedIndividual ;
+              rdfs:label "IN"@en ,
+                         "INLET"@en ,
+                         "INLT"@en ,
+                         "Inlet"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Island
+contact:Island rdf:type owl:NamedIndividual ;
+               rdfs:label "IS"@en ,
+                          "ISLAND"@en ,
+                          "ISLE"@en ,
+                          "ISS"@en ,
+                          "Island"@en ,
+                          "Islands"@en ,
+                          "Isle"@en ,
+                          "ÎLE"@fr ,
+                          "Île"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Junction
+contact:Junction rdf:type owl:NamedIndividual ;
+                 rdfs:label "JCT"@en ,
+                            "JCTS"@en ,
+                            "Junction"@en ,
+                            "Junctions"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Keep
+contact:Keep rdf:type owl:NamedIndividual ;
+             rdfs:label "KE"@en ,
+                        "Keep"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Key
+contact:Key rdf:type owl:NamedIndividual ;
+            rdfs:label "KEY"@en ,
+                       "KY"@en ,
+                       "KYS"@en ,
+                       "Key"@en ,
+                       "Keys"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Knoll
+contact:Knoll rdf:type owl:NamedIndividual ;
+              rdfs:label "KN"@en ,
+                         "KNL"@en ,
+                         "KNLS"@en ,
+                         "KNOLL"@en ,
+                         "Knoll"@en ,
+                         "Knolls"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Lake
+contact:Lake rdf:type owl:NamedIndividual ;
+             rdfs:label "LK"@en ,
+                        "LKS"@en ,
+                        "Lake"@en ,
+                        "Lakes"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Land
+contact:Land rdf:type owl:NamedIndividual ;
+             rdfs:label "LAND"@en ,
+                        "Land"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Landing
+contact:Landing rdf:type owl:NamedIndividual ;
+                rdfs:label "LANDNG"@en ,
+                           "LD"@en ,
+                           "LNDG"@en ,
+                           "Landing"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Lane
+contact:Lane rdf:type owl:NamedIndividual ;
+             rdfs:label "LANE"@en ,
+                        "LN"@en ,
+                        "Lane"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Light
+contact:Light rdf:type owl:NamedIndividual ;
+              rdfs:label "LGT"@en ,
+                         "LGTS"@en ,
+                         "Light"@en ,
+                         "Lights"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ligne
+contact:Ligne rdf:type owl:NamedIndividual ;
+              rdfs:label "Ligne"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Limits
+contact:Limits rdf:type owl:NamedIndividual ;
+               rdfs:label "LMTS"@en ,
+                          "Limits"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Line
+contact:Line rdf:type owl:NamedIndividual ;
+             rdfs:label "LINE"@en ,
+                        "Line"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Link
+contact:Link rdf:type owl:NamedIndividual ;
+             rdfs:label "LI"@en ,
+                        "LINK"@en ,
+                        "Link"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Loaf
+contact:Loaf rdf:type owl:NamedIndividual ;
+             rdfs:label "LF"@en ,
+                        "Loaf"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Lock
+contact:Lock rdf:type owl:NamedIndividual ;
+             rdfs:label "LCK"@en ,
+                        "LCKS"@en ,
+                        "Lock"@en ,
+                        "Locks"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Lodge
+contact:Lodge rdf:type owl:NamedIndividual ;
+              rdfs:label "LDG"@en ,
+                         "Lodge"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Lookout
+contact:Lookout rdf:type owl:NamedIndividual ;
+                rdfs:label "LKOUT"@en ,
+                           "Lookout"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Loop
+contact:Loop rdf:type owl:NamedIndividual ;
+             rdfs:label "LO"@en ,
+                        "LOOP"@en ,
+                        "Loop"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Mall
+contact:Mall rdf:type owl:NamedIndividual ;
+             rdfs:label "MA"@en ,
+                        "MALL"@en ,
+                        "Mall"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Manor
+contact:Manor rdf:type owl:NamedIndividual ;
+              rdfs:label "MANOR"@en ,
+                         "MNR"@en ,
+                         "MNRS"@en ,
+                         "MR"@en ,
+                         "Manor"@en ,
+                         "Manors"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Maze
+contact:Maze rdf:type owl:NamedIndividual ;
+             rdfs:label "MAZE"@en ,
+                        "MZ"@en ,
+                        "Maze"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Meadow
+contact:Meadow rdf:type owl:NamedIndividual ;
+               rdfs:label "MD"@en ,
+                          "MDW"@en ,
+                          "MDWS"@en ,
+                          "MEADOW"@en ,
+                          "Meadow"@en ,
+                          "Meadows"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Mews
+contact:Mews rdf:type owl:NamedIndividual ;
+             rdfs:label "ME"@en ,
+                        "MEWS"@en ,
+                        "Mews"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Mill
+contact:Mill rdf:type owl:NamedIndividual ;
+             rdfs:label "ML"@en ,
+                        "MLS"@en ,
+                        "Mill"@en ,
+                        "Mills"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Mission
+contact:Mission rdf:type owl:NamedIndividual ;
+                rdfs:label "MSN"@en ,
+                           "Mission"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Moor
+contact:Moor rdf:type owl:NamedIndividual ;
+             rdfs:label "MOOR"@en ,
+                        "Moor"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Motorway
+contact:Motorway rdf:type owl:NamedIndividual ;
+                 rdfs:label "MTWY"@en ,
+                            "Motorway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Mount
+contact:Mount rdf:type owl:NamedIndividual ;
+              rdfs:label "MOUNT"@en ,
+                         "MT"@en ,
+                         "Mount"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Mountain
+contact:Mountain rdf:type owl:NamedIndividual ;
+                 rdfs:label "MTN"@en ,
+                            "MTNS"@en ,
+                            "Mountain"@en ,
+                            "Mountains"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Neck
+contact:Neck rdf:type owl:NamedIndividual ;
+             rdfs:label "NCK"@en ,
+                        "Neck"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Nene
+contact:Nene rdf:type owl:NamedIndividual ;
+             rdfs:label "NENE"@en ,
+                        "Nene"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Oaks
+contact:Oaks rdf:type owl:NamedIndividual ;
+             rdfs:label "OA"@en ,
+                        "Oaks"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Orchard
+contact:Orchard rdf:type owl:NamedIndividual ;
+                rdfs:label "ORCH"@en ,
+                           "Orchard"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Oval
+contact:Oval rdf:type owl:NamedIndividual ;
+             rdfs:label "OVAL"@en ,
+                        "Oval"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Overpass
+contact:Overpass rdf:type owl:NamedIndividual ;
+                 rdfs:label "OPAS"@en ,
+                            "Overpass"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Parade
+contact:Parade rdf:type owl:NamedIndividual ;
+               rdfs:label "PARADE"@en ,
+                          "PR"@en ,
+                          "Parade"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Parc
+contact:Parc rdf:type owl:NamedIndividual ;
+             rdfs:label "PARC"@en ,
+                        "Parc"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Park
+contact:Park rdf:type owl:NamedIndividual ;
+             rdfs:label "PA"@en ,
+                        "PARC"@fr ,
+                        "PARK"@en ,
+                        "PK"@en ,
+                        "Parc"@fr ,
+                        "Park"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Parkway
+contact:Parkway rdf:type owl:NamedIndividual ;
+                rdfs:label "PK"@en ,
+                           "PKWY"@en ,
+                           "PKY"@en ,
+                           "Parkway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Pass
+contact:Pass rdf:type owl:NamedIndividual ;
+             rdfs:label "PASS"@en ,
+                        "PS"@en ,
+                        "PSGE"@en ,
+                        "Pass"@en ,
+                        "Passage"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Passage
+contact:Passage rdf:type owl:NamedIndividual ;
+                rdfs:label "PASS"@en ,
+                           "Passage"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Path
+contact:Path rdf:type owl:NamedIndividual ;
+             rdfs:label "CH"@fr ,
+                        "Chemin"@fr ,
+                        "PATH"@en ,
+                        "PH"@en ,
+                        "Path"@en ,
+                        "SENT"@en ,
+                        "Sentier"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Pathway
+contact:Pathway rdf:type owl:NamedIndividual ;
+                rdfs:label "PTWAY"@en ,
+                           "Pathway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Peak
+contact:Peak rdf:type owl:NamedIndividual ;
+             rdfs:label "Peak"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Pike
+contact:Pike rdf:type owl:NamedIndividual ;
+             rdfs:label "PIKE"@en ,
+                        "Pike"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Pine
+contact:Pine rdf:type owl:NamedIndividual ;
+             rdfs:label "PINE"@en ,
+                        "PINES"@en ,
+                        "PNES"@en ,
+                        "Pine"@en ,
+                        "Pines"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Pines
+contact:Pines rdf:type owl:NamedIndividual ;
+              rdfs:label "PINES"@en ,
+                         "Pines"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Place
+contact:Place rdf:type owl:NamedIndividual ;
+              rdfs:label "PL"@en ,
+                         "PLACE"@fr ,
+                         "Place"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Placeway
+contact:Placeway rdf:type owl:NamedIndividual ;
+                 rdfs:label "Placeway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Plain
+contact:Plain rdf:type owl:NamedIndividual ;
+              rdfs:label "PLN"@en ,
+                         "PLNS"@en ,
+                         "Plain"@en ,
+                         "Plains"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Plateau
+contact:Plateau rdf:type owl:NamedIndividual ;
+                rdfs:label "PLAT"@en ,
+                           "Plateau"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Plaza
+contact:Plaza rdf:type owl:NamedIndividual ;
+              rdfs:label "PLAZA"@en ,
+                         "PLZ"@en ,
+                         "PZ"@en ,
+                         "Plaza"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Point
+contact:Point rdf:type owl:NamedIndividual ;
+              rdfs:label "POINTE"@fr ,
+                         "PT"@en ,
+                         "Point"@en ,
+                         "Pointe"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Pond
+contact:Pond rdf:type owl:NamedIndividual ;
+             rdfs:label "PD"@en ,
+                        "Pond"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Port
+contact:Port rdf:type owl:NamedIndividual ;
+             rdfs:label "PORT"@en ,
+                        "PRT"@en ,
+                        "Port"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Prairie
+contact:Prairie rdf:type owl:NamedIndividual ;
+                rdfs:label "PR"@en ,
+                           "Prairie"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Private
+contact:Private rdf:type owl:NamedIndividual ;
+                rdfs:label "PVT"@en ,
+                           "Private"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Promenade
+contact:Promenade rdf:type owl:NamedIndividual ;
+                  rdfs:label "PM"@en ,
+                             "PROM"@en ,
+                             "Promenade"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Quai
+contact:Quai rdf:type owl:NamedIndividual ;
+             rdfs:label "QUAI"@en ,
+                        "Quai"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Quary
+contact:Quary rdf:type owl:NamedIndividual ;
+              rdfs:label "QU"@en ,
+                         "Quary"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Quay
+contact:Quay rdf:type owl:NamedIndividual ;
+             rdfs:label "QUAY"@en ,
+                        "QY"@en ,
+                        "Quay"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Radial
+contact:Radial rdf:type owl:NamedIndividual ;
+               rdfs:label "RADL"@en ,
+                          "Radial"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ramp
+contact:Ramp rdf:type owl:NamedIndividual ;
+             rdfs:label "RAMP"@en ,
+                        "Ramp"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ranch
+contact:Ranch rdf:type owl:NamedIndividual ;
+              rdfs:label "RA"@en ,
+                         "RNCH"@en ,
+                         "Ranch"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Rang
+contact:Rang rdf:type owl:NamedIndividual ;
+             rdfs:label "RANG"@en ,
+                        "Rang"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Range
+contact:Range rdf:type owl:NamedIndividual ;
+              rdfs:label "RG"@en ,
+                         "Range"@en ,
+                         "Rangée"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Rapid
+contact:Rapid rdf:type owl:NamedIndividual ;
+              rdfs:label "RPD"@en ,
+                         "RPDS"@en ,
+                         "Rapid"@en ,
+                         "Rapids"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Reach
+contact:Reach rdf:type owl:NamedIndividual ;
+              rdfs:label "Reach"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Rest
+contact:Rest rdf:type owl:NamedIndividual ;
+             rdfs:label "RST"@en ,
+                        "Rest"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ridge
+contact:Ridge rdf:type owl:NamedIndividual ;
+              rdfs:label "RDG"@en ,
+                         "RDGS"@en ,
+                         "RG"@en ,
+                         "RIDGE"@en ,
+                         "Ridge"@en ,
+                         "Ridges"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Right-of-Way
+contact:Right-of-Way rdf:type owl:NamedIndividual ;
+                     rdfs:label "Droit de passage"@fr ,
+                                "ROWY"@en ,
+                                "Right of Way"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Rise
+contact:Rise rdf:type owl:NamedIndividual ;
+             rdfs:label "RI"@en ,
+                        "RISE"@en ,
+                        "Rise"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#River
+contact:River rdf:type owl:NamedIndividual ;
+              rdfs:label "RIV"@en ,
+                         "River"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Road
+contact:Road rdf:type owl:NamedIndividual ;
+             rdfs:label "RD"@en ,
+                        "Road"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Rond-point
+contact:Rond-point rdf:type owl:NamedIndividual ;
+                   rdfs:label "RDPT"@en ,
+                              "Rond-point"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Round
+contact:Round rdf:type owl:NamedIndividual ;
+              rdfs:label "Ronde (French"@en ,
+                         "Round"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Round-about
+contact:Round-about rdf:type owl:NamedIndividual ;
+                    rdfs:label "RDPT"@en ,
+                               "Rond-point"@fr ,
+                               "Round about"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Route
+contact:Route rdf:type owl:NamedIndividual ;
+              rdfs:label "RTE"@en ,
+                         "Route"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Row
+contact:Row rdf:type owl:NamedIndividual ;
+            rdfs:label "RO"@en ,
+                       "ROW"@en ,
+                       "Row"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Run
+contact:Run rdf:type owl:NamedIndividual ;
+            rdfs:label "RU"@en ,
+                       "RUN"@en ,
+                       "Run"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Sentier
+contact:Sentier rdf:type owl:NamedIndividual ;
+                rdfs:label "SENT"@en ,
+                           "Sentier"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Shoal
+contact:Shoal rdf:type owl:NamedIndividual ;
+              rdfs:label "SHL"@en ,
+                         "SHLS"@en ,
+                         "Shoal"@en ,
+                         "Shoals"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Shores
+contact:Shores rdf:type owl:NamedIndividual ;
+               rdfs:label "SH"@en ,
+                          "SHR"@en ,
+                          "SHRS"@en ,
+                          "Shore"@en ,
+                          "Shores"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Sideroad
+contact:Sideroad rdf:type owl:NamedIndividual ;
+                 rdfs:label "Sideroad"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Skyway
+contact:Skyway rdf:type owl:NamedIndividual ;
+               rdfs:label "SKWY"@en ,
+                          "Skyway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Springs
+contact:Springs rdf:type owl:NamedIndividual ;
+                rdfs:label "SP"@en ,
+                           "SPG"@en ,
+                           "SPGS"@en ,
+                           "Spring"@en ,
+                           "Springs"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Spur
+contact:Spur rdf:type owl:NamedIndividual ;
+             rdfs:label "SPUR"@en ,
+                        "Spur"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Square
+contact:Square rdf:type owl:NamedIndividual ;
+               rdfs:label "CAR"@fr ,
+                          "Carré"@fr ,
+                          "SQ"@en ,
+                          "SQS"@en ,
+                          "Square"@en ,
+                          "Squares"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Standard
+contact:Standard rdf:type owl:NamedIndividual ;
+                 rdfs:label "Standard"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Station
+contact:Station rdf:type owl:NamedIndividual ;
+                rdfs:label "STA"@en ,
+                           "Station"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Stravenue
+contact:Stravenue rdf:type owl:NamedIndividual ;
+                  rdfs:label "STRA"@en ,
+                             "Stravenue"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Stream
+contact:Stream rdf:type owl:NamedIndividual ;
+               rdfs:label "RUIS"@fr ,
+                          "Ruisseau"@fr ,
+                          "STRM"@en ,
+                          "Stream"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Street
+contact:Street rdf:type owl:NamedIndividual ;
+               rdfs:label "RUE"@fr ,
+                          "Rue"@fr ,
+                          "ST"@en ,
+                          "STS"@en ,
+                          "Street"@en ,
+                          "Streets"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Stroll
+contact:Stroll rdf:type owl:NamedIndividual ;
+               rdfs:label "Stroll"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Subdivision
+contact:Subdivision rdf:type owl:NamedIndividual ;
+                    rdfs:label "SUBDIV"@en ,
+                               "Subdivision"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Summit
+contact:Summit rdf:type owl:NamedIndividual ;
+               rdfs:label "SMT"@en ,
+                          "SU"@en ,
+                          "Summit"@en ,
+                          "Summits"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Tailer
+contact:Tailer rdf:type owl:NamedIndividual ;
+               rdfs:label "TRLR"@en ,
+                          "Tailer"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Terrace
+contact:Terrace rdf:type owl:NamedIndividual ;
+                rdfs:label "TC"@en ,
+                           "TER"@en ,
+                           "TERR"@en ,
+                           "TSSE"@fr ,
+                           "Terrace"@en ,
+                           "Terrasse"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Thicket
+contact:Thicket rdf:type owl:NamedIndividual ;
+                rdfs:label "THICK"@en ,
+                           "Thicket"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Throughway
+contact:Throughway rdf:type owl:NamedIndividual ;
+                   rdfs:label "TRWY"@en ,
+                              "Throughway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#TollFreePhone
+contact:TollFreePhone rdf:type owl:NamedIndividual ;
+                      rdfs:label "Toll Free Number"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Tour
+contact:Tour rdf:type owl:NamedIndividual ;
+             rdfs:label "Tour"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Towers
+contact:Towers rdf:type owl:NamedIndividual ;
+               rdfs:label "TOWERS"@en ,
+                          "Towers"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Townline
+contact:Townline rdf:type owl:NamedIndividual ;
+                 rdfs:label "TLINE"@en ,
+                            "Townline"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Trace
+contact:Trace rdf:type owl:NamedIndividual ;
+              rdfs:label "TRCE"@en ,
+                         "Trace"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Track
+contact:Track rdf:type owl:NamedIndividual ;
+              rdfs:label "TRAK"@en ,
+                         "Track"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Trafficway
+contact:Trafficway rdf:type owl:NamedIndividual ;
+                   rdfs:label "TRFY"@en ,
+                              "Trafficway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Trail
+contact:Trail rdf:type owl:NamedIndividual ;
+              rdfs:label "TR"@en ,
+                         "TRAIL"@en ,
+                         "TRL"@en ,
+                         "Trail"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Tunnel
+contact:Tunnel rdf:type owl:NamedIndividual ;
+               rdfs:label "TUNL"@en ,
+                          "Tunnel"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Turnabout
+contact:Turnabout rdf:type owl:NamedIndividual ;
+                  rdfs:label "TRNABT"@en ,
+                             "Turnabout"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Turnpike
+contact:Turnpike rdf:type owl:NamedIndividual ;
+                 rdfs:label "TPKE"@en ,
+                            "Turnpike"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Union
+contact:Union rdf:type owl:NamedIndividual ;
+              rdfs:label "UN"@en ,
+                         "UNS"@en ,
+                         "Union"@en ,
+                         "Unions"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Vale
+contact:Vale rdf:type owl:NamedIndividual ;
+             rdfs:label "VA"@en ,
+                        "VALE"@en ,
+                        "Vale"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Valley
+contact:Valley rdf:type owl:NamedIndividual ;
+               rdfs:label "VLY"@en ,
+                          "VLYS"@en ,
+                          "Valley"@en ,
+                          "Valleys"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Via
+contact:Via rdf:type owl:NamedIndividual ;
+            rdfs:label "VIA"@en ,
+                       "Via"@en ,
+                       "Viaduct"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#View
+contact:View rdf:type owl:NamedIndividual ;
+             rdfs:label "VIEW"@en ,
+                        "VW"@en ,
+                        "VWS"@en ,
+                        "View"@en ,
+                        "Views"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Villa
+contact:Villa rdf:type owl:NamedIndividual ;
+              rdfs:label "VI"@en ,
+                         "VILLA"@en ,
+                         "VILLAS"@en ,
+                         "VLG"@en ,
+                         "VLGS"@en ,
+                         "Villa"@en ,
+                         "Villas"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Village
+contact:Village rdf:type owl:NamedIndividual ;
+                rdfs:label "VG"@en ,
+                           "VILLGE"@en ,
+                           "Village"@en ,
+                           "Villages"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Ville
+contact:Ville rdf:type owl:NamedIndividual ;
+              rdfs:label "VL"@en ,
+                         "Ville"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Vista
+contact:Vista rdf:type owl:NamedIndividual ;
+              rdfs:label "VIS"@en ,
+                         "VISTA"@en ,
+                         "VS"@en ,
+                         "Vista"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Voie
+contact:Voie rdf:type owl:NamedIndividual ;
+             rdfs:label "VOIE"@en ,
+                        "Voie"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Walk
+contact:Walk rdf:type owl:NamedIndividual ;
+             rdfs:label "WALK"@en ,
+                        "WK"@en ,
+                        "Walk"@en ,
+                        "Walkway"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Wall
+contact:Wall rdf:type owl:NamedIndividual ;
+             rdfs:label "WALL"@en ,
+                        "Wall"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Way
+contact:Way rdf:type owl:NamedIndividual ;
+            rdfs:label "VOIE"@fr ,
+                       "Voie"@fr ,
+                       "WAY"@en ,
+                       "WAYS"@en ,
+                       "WY"@en ,
+                       "Way"@en ,
+                       "Ways"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Well
+contact:Well rdf:type owl:NamedIndividual ;
+             rdfs:label "WL"@en ,
+                        "Well"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Wells
+contact:Wells rdf:type owl:NamedIndividual ;
+              rdfs:label "WLS"@en ,
+                         "Wells"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Wharf
+contact:Wharf rdf:type owl:NamedIndividual ;
+              rdfs:label "WHARF"@en ,
+                         "Wharf"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Wold
+contact:Wold rdf:type owl:NamedIndividual ;
+             rdfs:label "Wold"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Wood
+contact:Wood rdf:type owl:NamedIndividual ;
+             rdfs:label "WO"@en ,
+                        "WOOD"@en ,
+                        "WOODS"@en ,
+                        "Wood"@en ,
+                        "Woods"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Work
+contact:Work rdf:type owl:NamedIndividual ;
+             rdfs:label "WorkAddress"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#WorkPhone
+contact:WorkPhone rdf:type owl:NamedIndividual ;
+                  rdfs:label "Work Phone"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Wynd
+contact:Wynd rdf:type owl:NamedIndividual ;
+             rdfs:label "WD"@en ,
+                        "WYND"@en ,
+                        "Wynd"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#east
+contact:east rdf:type owl:NamedIndividual ;
+             rdfs:label "E"@en ,
+                        "East"@en ,
+                        "Est"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#north
+contact:north rdf:type owl:NamedIndividual ;
+              rdfs:label "N"@en ,
+                         "Nord"@fr ,
+                         "North"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#north-east
+contact:north-east rdf:type owl:NamedIndividual ;
+                   rdfs:label "NE"@en ,
+                              "Nord-est"@fr ,
+                              "North East"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#north-west
+contact:north-west rdf:type owl:NamedIndividual ;
+                   rdfs:label "NO"@en ,
+                              "NW"@en ,
+                              "Nord-ouest"@fr ,
+                              "North West"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#south
+contact:south rdf:type owl:NamedIndividual ;
+              rdfs:label "S"@en ,
+                         "South"@en ,
+                         "Sud"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#south-east
+contact:south-east rdf:type owl:NamedIndividual ;
+                   rdfs:label "SE"@en ,
+                              "South East"@en ,
+                              "Sud-est"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#south-west
+contact:south-west rdf:type owl:NamedIndividual ;
+                   rdfs:label "SO"@en ,
+                              "SW"@en ,
+                              "South West"@en ,
+                              "Sud-ouest"@fr .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#west
+contact:west rdf:type owl:NamedIndividual ;
+             rdfs:label "O"@en ,
+                        "Ouest"@en ,
+                        "W"@en ,
+                        "West"@en .
+
+
+###  https://w3id.org/citydata/part2/v1/Contact#Échangeur
+<https://w3id.org/citydata/part2/v1/Contact#Échangeur> rdf:type owl:NamedIndividual ;
+                                                        rdfs:label "Échangeur"@fr .
+
+
+#################################################################
+#    General Axioms
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/EmailAddress
+:EmailAddress rdf:type rdfs:Datatype ;
+              owl:onDatatype xsd:string .

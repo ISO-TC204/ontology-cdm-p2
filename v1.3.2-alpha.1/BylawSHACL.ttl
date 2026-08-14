@@ -1,0 +1,198 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/BylawSHACL> rdf:type owl:Ontology ;
+                                                 owl:imports :BylawPattern ,
+                                                             :CoreSHACL ;
+                                                 dcterms:title "City Data Model Part 2 - Bylaw Pattern - SHACL constraints" ;
+                                                 vann:preferredNamespacePrefix "cdm2" ;
+                                                 vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                 skos:definition "SHACL validation shapes for the Bylaw Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/AmendingBylawShape
+:AmendingBylawShape rdf:type sh:NodeShape ;
+                    sh:property [ sh:class :BylawTypeCode ;
+                                  sh:path :legislationType
+                                ] ,
+                                [ sh:class :Bylaw ;
+                                  sh:node :ExactlyOneShape ;
+                                  sh:path :legislationChanges
+                                ] ;
+                    sh:targetClass :AmendingBylaw .
+
+
+###  https://w3id.org/citydata/part2/v1/BylawShape
+:BylawShape rdf:type sh:NodeShape ;
+            sh:property [ sh:class :BylawTypeCode ;
+                          sh:path :legislationType
+                        ] ,
+                        [ sh:class :City ;
+                          sh:node :MaxOneShape ;
+                          sh:path :legislationJurisdiction
+                        ] ;
+            sh:targetClass :Bylaw .
+
+
+###  https://w3id.org/citydata/part2/v1/ClauseShape
+:ClauseShape rdf:type sh:NodeShape ;
+             sh:property [ sh:datatype xsd:string ;
+                           sh:node :MaxOneShape ;
+                           sh:path cdm1:hasDescription
+                         ] ,
+                         [ sh:datatype xsd:string ;
+                           sh:node :MaxOneShape ;
+                           sh:path cdm1:hasIdentifier
+                         ] ,
+                         [ sh:datatype xsd:string ;
+                           sh:node :MaxOneShape ;
+                           sh:path cdm1:hasName
+                         ] ,
+                         [ sh:class :Clause ;
+                           sh:path :hasClause
+                         ] ;
+             sh:targetClass :Clause .
+
+
+###  https://w3id.org/citydata/part2/v1/DefinitionShape
+:DefinitionShape rdf:type sh:NodeShape ;
+                 sh:property [ sh:datatype xsd:string ;
+                               sh:node :MaxOneShape ;
+                               sh:path cdm1:hasName
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:node :MaxOneShape ;
+                               sh:path cdm1:hasDescription
+                             ] ,
+                             [ sh:class :Law ;
+                               sh:node :ExactlyOneShape ;
+                               sh:path cdm1:properPartOf
+                             ] ;
+                 sh:targetClass :Definition .
+
+
+###  https://w3id.org/citydata/part2/v1/JurisdictionalAreaShape
+:JurisdictionalAreaShape rdf:type sh:NodeShape ;
+                         sh:property [ sh:class :Bylaw ;
+                                       sh:path :hasBylaw
+                                     ] ;
+                         sh:targetClass :JurisdictionalArea .
+
+
+###  https://w3id.org/citydata/part2/v1/LawShape
+:LawShape rdf:type sh:NodeShape ;
+          sh:property [ sh:datatype xsd:dateTime ;
+                        sh:node :MaxOneShape ;
+                        sh:path :dateInEffect
+                      ] ,
+                      [ sh:datatype xsd:string ;
+                        sh:path :keywords
+                      ] ,
+                      [ sh:class :Schedule ;
+                        sh:path :hasSchedule
+                      ] ,
+                      [ sh:datatype xsd:string ;
+                        sh:node :MaxOneShape ;
+                        sh:path :abstract
+                      ] ,
+                      [ sh:class :Clause ;
+                        sh:path :hasClause
+                      ] ,
+                      [ sh:class :JurisdictionalArea ;
+                        sh:node :MaxOneShape ;
+                        sh:path :legislationJurisdiction
+                      ] ,
+                      [ sh:datatype xsd:string ;
+                        sh:node :MaxOneShape ;
+                        sh:path :legislationIdentifier
+                      ] ,
+                      [ sh:class :LegislationLegalForceCode ;
+                        sh:path :legislationLegalForce
+                      ] ,
+                      [ sh:datatype xsd:string ;
+                        sh:path cdm1:hasName
+                      ] ,
+                      [ sh:datatype xsd:dateTime ;
+                        sh:node :MaxOneShape ;
+                        sh:path :datePublished
+                      ] ,
+                      [ sh:class :Clause ;
+                        sh:path :hasTransitionClause
+                      ] ,
+                      [ sh:datatype xsd:dateTime ;
+                        sh:node :MaxOneShape ;
+                        sh:path :expires
+                      ] ,
+                      [ sh:class :Definition ;
+                        sh:path :hasDefinition
+                      ] ,
+                      [ sh:class :Clause ;
+                        sh:path :hasRepealClause
+                      ] ,
+                      [ sh:class :Clause ;
+                        sh:path :hasPenaltyClause
+                      ] ,
+                      [ sh:datatype xsd:dateTime ;
+                        sh:node :MaxOneShape ;
+                        sh:path :legislationDate
+                      ] ,
+                      [ sh:class :Clause ;
+                        sh:path :hasSeveranceClause
+                      ] ;
+          sh:targetClass :Law .
+
+
+###  https://w3id.org/citydata/part2/v1/MainBylawShape
+:MainBylawShape rdf:type sh:NodeShape ;
+                sh:property [ sh:class :BylawTypeCode ;
+                              sh:path :legislationType
+                            ] ;
+                sh:targetClass :MainBylaw .
+
+
+###  https://w3id.org/citydata/part2/v1/RevisionBylawShape
+:RevisionBylawShape rdf:type sh:NodeShape ;
+                    sh:property [ sh:class :Bylaw ;
+                                  sh:node :ExactlyOneShape ;
+                                  sh:path :legislationChanges
+                                ] ,
+                                [ sh:class :BylawTypeCode ;
+                                  sh:path :legislationType
+                                ] ;
+                    sh:targetClass :RevisionBylaw .
+
+
+###  https://w3id.org/citydata/part2/v1/ScheduleShape
+:ScheduleShape rdf:type sh:NodeShape ;
+               sh:property [ sh:datatype xsd:string ;
+                             sh:node :MaxOneShape ;
+                             sh:path cdm1:hasDescription
+                           ] ,
+                           [ sh:class :Law ;
+                             sh:node :ExactlyOneShape ;
+                             sh:path cdm1:properPartOf
+                           ] ,
+                           [ sh:datatype xsd:string ;
+                             sh:node :MaxOneShape ;
+                             sh:path cdm1:hasName
+                           ] ,
+                           [ sh:datatype xsd:string ;
+                             sh:node :MaxOneShape ;
+                             sh:path cdm1:hasIdentifier
+                           ] ,
+                           [ sh:class :Clause ;
+                             sh:path :hasClause
+                           ] ;
+               sh:targetClass :Schedule .

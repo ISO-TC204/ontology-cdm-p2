@@ -1,0 +1,159 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/ContactSHACL> rdf:type owl:Ontology ;
+                                                   owl:imports :ContactPattern ,
+                                                               :CoreSHACL ;
+                                                   dcterms:title "City Data Model Part 2 - Contact Pattern - SHACL constraints" ;
+                                                   vann:preferredNamespacePrefix "cdm2" ;
+                                                   vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                   skos:definition "SHACL validation shapes for the Contact Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/AddressShape
+:AddressShape rdf:type sh:NodeShape ;
+              sh:property [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :buildingName
+                          ] ,
+                          [ sh:class :City ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasCity
+                          ] ,
+                          [ sh:class :State ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasProvince
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasPostalBox
+                          ] ,
+                          [ sh:class :Country ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasCountry
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :maxStreetNumber
+                          ] ,
+                          [ sh:class :AddressType ;
+                            sh:path :hasAddressType
+                          ] ,
+                          [ sh:class :StreetDirection ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasStreetDirection
+                          ] ,
+                          [ sh:class cdm1:Location ;
+                            sh:node :MaxOneShape ;
+                            sh:path cdm1:hasLocation
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasStreet
+                          ] ,
+                          [ sh:class :StreetType ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasStreetType
+                          ] ,
+                          [ sh:datatype xsd:nonNegativeInteger ;
+                            sh:node :MaxOneShape ;
+                            sh:path :minStreetNumber
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasUnitNumber
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasStreetNumber
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasCitySection
+                          ] ,
+                          [ sh:datatype xsd:string ;
+                            sh:node :MaxOneShape ;
+                            sh:path :hasPostalCode
+                          ] ;
+              sh:targetClass :Address .
+
+
+###  https://w3id.org/citydata/part2/v1/AddressTypeShape
+:AddressTypeShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:class :Code ;
+                                sh:path :hasCode
+                              ] ;
+                  sh:targetClass :AddressType .
+
+
+###  https://w3id.org/citydata/part2/v1/CountryShape
+:CountryShape rdf:type sh:NodeShape ;
+              sh:property [ sh:class :Code ;
+                            sh:path :hasCode
+                          ] ;
+              sh:targetClass :Country .
+
+
+###  https://w3id.org/citydata/part2/v1/PhoneNumberShape
+:PhoneNumberShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:datatype xsd:nonNegativeInteger ;
+                                sh:node :ExactlyOneShape ;
+                                sh:path :hasPhoneNumber
+                              ] ,
+                              [ sh:datatype xsd:nonNegativeInteger ;
+                                sh:node :ExactlyOneShape ;
+                                sh:path :hasCountryCode
+                              ] ,
+                              [ sh:class :PhoneType ;
+                                sh:node :ExactlyOneShape ;
+                                sh:path :hasPhoneType
+                              ] ,
+                              [ sh:datatype xsd:nonNegativeInteger ;
+                                sh:node :ExactlyOneShape ;
+                                sh:path :hasAreaCode
+                              ] ;
+                  sh:targetClass :PhoneNumber .
+
+
+###  https://w3id.org/citydata/part2/v1/PhoneTypeShape
+:PhoneTypeShape rdf:type sh:NodeShape ;
+                sh:property [ sh:class :Code ;
+                              sh:path :hasCode
+                            ] ;
+                sh:targetClass :PhoneType .
+
+
+###  https://w3id.org/citydata/part2/v1/StateShape
+:StateShape rdf:type sh:NodeShape ;
+            sh:property [ sh:class :Code ;
+                          sh:path :hasCode
+                        ] ;
+            sh:targetClass :State .
+
+
+###  https://w3id.org/citydata/part2/v1/StreetDirectionShape
+:StreetDirectionShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:class :Code ;
+                                    sh:path :hasCode
+                                  ] ;
+                      sh:targetClass :StreetDirection .
+
+
+###  https://w3id.org/citydata/part2/v1/StreetTypeShape
+:StreetTypeShape rdf:type sh:NodeShape ;
+                 sh:property [ sh:class :Code ;
+                               sh:path :hasCode
+                             ] ;
+                 sh:targetClass :StreetType .

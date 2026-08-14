@@ -1,0 +1,49 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/InfrastructureSHACL> rdf:type owl:Ontology ;
+                                                          owl:imports :CoreSHACL ,
+                                                                      :InfrastructurePattern ;
+                                                          dcterms:title "City Data Model Part 2 - Infrastructure Pattern - SHACL constraints" ;
+                                                          vann:preferredNamespacePrefix "cdm2" ;
+                                                          vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                          skos:definition "SHACL validation shapes for the Infrastructure Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/InfrastructureElementShape
+:InfrastructureElementShape rdf:type sh:NodeShape ;
+                            sh:property [ sh:class cdm1:Location ;
+                                          sh:path cdm1:hasLocation
+                                        ] ,
+                                        [ sh:class cdm1:MonetaryValue ;
+                                          sh:path i72:hasValue
+                                        ] ,
+                                        [ sh:class :InfrastructureElement ;
+                                          sh:path cdm1:hasProperPart
+                                        ] ,
+                                        [ sh:datatype xsd:string ;
+                                          sh:path cdm1:hasName
+                                        ] ,
+                                        [ sh:class :Address ;
+                                          sh:path :hasAddress
+                                        ] ,
+                                        [ sh:datatype xsd:string ;
+                                          sh:path cdm1:hasDescription
+                                        ] ,
+                                        [ sh:datatype xsd:string ;
+                                          sh:path cdm1:hasIdentifier
+                                        ] ;
+                            sh:targetClass :InfrastructureElement .

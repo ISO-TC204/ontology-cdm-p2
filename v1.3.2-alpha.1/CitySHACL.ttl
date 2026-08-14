@@ -1,0 +1,63 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/CitySHACL> rdf:type owl:Ontology ;
+                                                owl:imports :CityPattern ,
+                                                            :CoreSHACL ;
+                                                dcterms:title "City Data Model Part 2 - City Pattern - SHACL constraints" ;
+                                                vann:preferredNamespacePrefix "cdm2" ;
+                                                vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                skos:definition "SHACL validation shapes for the City Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/CityAdministrativeAreaShape
+:CityAdministrativeAreaShape rdf:type sh:NodeShape ;
+                             sh:property [ sh:class :City ;
+                                           sh:node :MinOneShape ;
+                                           sh:path :administrativeAreaOf
+                                         ] ;
+                             sh:targetClass :CityAdministrativeArea .
+
+
+###  https://w3id.org/citydata/part2/v1/CityShape
+:CityShape rdf:type sh:NodeShape ;
+           sh:property [ sh:datatype xsd:string ;
+                         sh:node :ExactlyOneShape ;
+                         sh:path :legalName
+                       ] ;
+           sh:targetClass :City .
+
+
+###  https://w3id.org/citydata/part2/v1/JurisdictionalAreaShape
+:JurisdictionalAreaShape rdf:type sh:NodeShape ;
+                         sh:property [ sh:class :JurisdictionalArea ;
+                                       sh:path :administrativeArea
+                                     ] ,
+                                     [ sh:class :LandArea ;
+                                       sh:path :hasLandArea
+                                     ] ,
+                                     [ sh:class i72:Population ;
+                                       sh:node :MaxOneShape ;
+                                       sh:path :residentPopulation
+                                     ] ,
+                                     [ sh:datatype xsd:string ;
+                                       sh:node :MaxOneShape ;
+                                       sh:path cdm1:hasName
+                                     ] ,
+                                     [ sh:class :JurisdictionalArea ;
+                                       sh:path :administrativeAreaOf
+                                     ] ;
+                         sh:targetClass :JurisdictionalArea .

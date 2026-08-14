@@ -1,0 +1,111 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/CityResidentSHACL> rdf:type owl:Ontology ;
+                                                        owl:imports :CityResidentPattern ,
+                                                                    :CoreSHACL ;
+                                                        dcterms:title "City Data Model Part 2 - City Resident Pattern - SHACL constraints" ;
+                                                        vann:preferredNamespacePrefix "cdm2" ;
+                                                        vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                        skos:definition "SHACL validation shapes for the City Resident Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/CityResidentShape
+:CityResidentShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :Residence ;
+                                 sh:path :hasResidence
+                               ] ,
+                               [ sh:class :EntityOwnership ;
+                                 sh:path :owns
+                               ] ,
+                               [ sh:class :JurisdictionalArea ;
+                                 sh:path :residentOf
+                               ] ,
+                               [ sh:class :EntityOperation ;
+                                 sh:path :operates
+                               ] ;
+                   sh:targetClass :CityResident .
+
+
+###  https://w3id.org/citydata/part2/v1/ControlledEntityShape
+:ControlledEntityShape rdf:type sh:NodeShape ;
+                       sh:property [ sh:class time:ProperInterval ;
+                                     sh:node :MaxOneShape ;
+                                     sh:path time:hasTime
+                                   ] ,
+                                   [ sh:class owl:Thing ;
+                                     sh:node :MinOneShape ;
+                                     sh:path :entity
+                                   ] ;
+                       sh:targetClass :ControlledEntity .
+
+
+###  https://w3id.org/citydata/part2/v1/EntityOperationShape
+:EntityOperationShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:class :Organization ;
+                                    sh:node :MaxOneShape ;
+                                    sh:path :entity
+                                  ] ;
+                      sh:targetClass :EntityOperation .
+
+
+###  https://w3id.org/citydata/part2/v1/EntityOwnershipShape
+:EntityOwnershipShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:datatype xsd:decimal ;
+                                    sh:node :MaxOneShape ;
+                                    sh:path :percentOwnership
+                                  ] ;
+                      sh:targetClass :EntityOwnership .
+
+
+###  https://w3id.org/citydata/part2/v1/HomeTypeShape
+:HomeTypeShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :Code ;
+                             sh:path :hasCode
+                           ] ;
+               sh:targetClass :HomeType .
+
+
+###  https://w3id.org/citydata/part2/v1/ResidenceShape
+:ResidenceShape rdf:type sh:NodeShape ;
+                sh:property [ sh:class :ResidentialRelationship ;
+                              sh:node :ExactlyOneShape ;
+                              sh:path :hasResidentialRelationship
+                            ] ,
+                            [ sh:class :HomeType ;
+                              sh:node :MaxOneShape ;
+                              sh:path :hasHomeType
+                            ] ,
+                            [ sh:class :City ;
+                              sh:node :MaxOneShape ;
+                              sh:path :forCity
+                            ] ,
+                            [ sh:class :Address ;
+                              sh:node :MaxOneShape ;
+                              sh:path :hasAddress
+                            ] ,
+                            [ sh:class time:ProperInterval ;
+                              sh:node :MaxOneShape ;
+                              sh:path time:hasTime
+                            ] ;
+                sh:targetClass :Residence .
+
+
+###  https://w3id.org/citydata/part2/v1/ResidentialRelationshipShape
+:ResidentialRelationshipShape rdf:type sh:NodeShape ;
+                              sh:property [ sh:class :Code ;
+                                            sh:path :hasCode
+                                          ] ;
+                              sh:targetClass :ResidentialRelationship .

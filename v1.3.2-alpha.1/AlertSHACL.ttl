@@ -1,0 +1,105 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/AlertSHACL> rdf:type owl:Ontology ;
+                                                 owl:imports :AlertPattern ,
+                                                             :CoreSHACL ;
+                                                 dcterms:title "City Data Model Part 2 - Alert Pattern - SHACL constraints" ;
+                                                 vann:preferredNamespacePrefix "cdm2" ;
+                                                 vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                 skos:definition "SHACL validation shapes for the Alert Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/AlertShape
+:AlertShape rdf:type sh:NodeShape ;
+            sh:property [ sh:datatype time:Instant ;
+                          sh:node :MaxOneShape ;
+                          sh:path :beginInstant
+                        ] ,
+                        [ sh:datatype time:Instant ;
+                          sh:node :ExactlyOneShape ;
+                          sh:path :lastUpdateInstant
+                        ] ,
+                        [ sh:class :Code ;
+                          sh:path :recommendation
+                        ] ,
+                        [ sh:datatype time:Instant ;
+                          sh:node :ExactlyOneShape ;
+                          sh:path :creationInstant
+                        ] ,
+                        [ sh:class :Alert ;
+                          sh:path :referencedAlert
+                        ] ,
+                        [ sh:class :Code ;
+                          sh:path :category
+                        ] ,
+                        [ sh:class geo:Geometry ;
+                          sh:path :location
+                        ] ,
+                        [ sh:class time:Instant ;
+                          sh:path :expiryInstant
+                        ] ,
+                        [ sh:class :Code ;
+                          sh:path :certainty
+                        ] ,
+                        [ sh:datatype cdm1:Agent ;
+                          sh:node :ExactlyOneShape ;
+                          sh:path :issuer
+                        ] ,
+                        [ sh:class :Code ;
+                          sh:path :distribution
+                        ] ,
+                        [ sh:datatype xsd:anyURI ;
+                          sh:path :website
+                        ] ,
+                        [ sh:datatype xsd:string ;
+                          sh:node :ExactlyOneShape ;
+                          sh:path :headline
+                        ] ,
+                        [ sh:class :Code ;
+                          sh:path :cause
+                        ] ,
+                        [ sh:datatype :Code ;
+                          sh:node :MaxOneShape ;
+                          sh:path :urgency
+                        ] ,
+                        [ sh:datatype :Code ;
+                          sh:node :ExactlyOneShape ;
+                          sh:path :status
+                        ] ,
+                        [ sh:class :Code ;
+                          sh:path :effect
+                        ] ,
+                        [ sh:datatype :Code ;
+                          sh:node :MaxOneShape ;
+                          sh:path :severity
+                        ] ,
+                        [ sh:class cdm1:Activity ;
+                          sh:path :activities
+                        ] ,
+                        [ sh:datatype xsd:string ;
+                          sh:node :ExactlyOneShape ;
+                          sh:path cdm1:hasDescription
+                        ] ,
+                        [ sh:class cdm1:Resource ;
+                          sh:path :resources
+                        ] ,
+                        [ sh:datatype time:Instant ;
+                          sh:node :MaxOneShape ;
+                          sh:path :endInstant
+                        ] ;
+            sh:targetClass :Alert .

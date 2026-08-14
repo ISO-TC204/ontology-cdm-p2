@@ -1,0 +1,145 @@
+@prefix : <https://w3id.org/citydata/part2/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@base <https://w3id.org/citydata/part2/v1/> .
+
+<https://w3id.org/citydata/part2/v1/TransportInfrastructureSHACL> rdf:type owl:Ontology ;
+                                                                   owl:imports :CoreSHACL ,
+                                                                               :TransportInfrastructurePattern ;
+                                                                   dcterms:title "City Data Model Part 2 - Transport Infrastructure Pattern - SHACL constraints" ;
+                                                                   vann:preferredNamespacePrefix "cdm2" ;
+                                                                   vann:preferredNamespaceUri "https://w3id.org/citydata/part2/v1/" ;
+                                                                   skos:definition "SHACL validation shapes for the Transport Infrastructure Pattern pattern module." .
+
+#################################################################
+#    Shapes
+#################################################################
+
+###  https://w3id.org/citydata/part2/v1/BridgeSegmentShape
+:BridgeSegmentShape rdf:type sh:NodeShape ;
+                    sh:property [ sh:class :TravelledWaySegment ;
+                                  sh:path :supports
+                                ] ;
+                    sh:targetClass :BridgeSegment .
+
+
+###  https://w3id.org/citydata/part2/v1/BridgeShape
+:BridgeShape rdf:type sh:NodeShape ;
+             sh:property [ sh:class :TravelledWaySegment ;
+                           sh:path :supports
+                         ] ,
+                         [ sh:class :BridgeSegment ;
+                           sh:path cdm1:hasProperPart
+                         ] ;
+             sh:targetClass :Bridge .
+
+
+###  https://w3id.org/citydata/part2/v1/RailLineShape
+:RailLineShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :RailLink ;
+                             sh:path cdm1:aggregationOf
+                           ] ;
+               sh:targetClass :RailLine .
+
+
+###  https://w3id.org/citydata/part2/v1/RailLinkShape
+:RailLinkShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :RailLine ;
+                             sh:path cdm1:aggregateOf
+                           ] ;
+               sh:targetClass :RailLink .
+
+
+###  https://w3id.org/citydata/part2/v1/RailSegmentShape
+:RailSegmentShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:class :RailLink ;
+                                sh:node :MinOneShape ;
+                                sh:path cdm1:properPartOf
+                              ] ;
+                  sh:targetClass :RailSegment .
+
+
+###  https://w3id.org/citydata/part2/v1/RoadLinkShape
+:RoadLinkShape rdf:type sh:NodeShape ;
+               sh:property [ sh:class :Road ;
+                             sh:path cdm1:aggregateOf
+                           ] ;
+               sh:targetClass :RoadLink .
+
+
+###  https://w3id.org/citydata/part2/v1/RoadNetworkTypeShape
+:RoadNetworkTypeShape rdf:type sh:NodeShape ;
+                      sh:property [ sh:class :Code ;
+                                    sh:path :hasCode
+                                  ] ;
+                      sh:targetClass :RoadNetworkType .
+
+
+###  https://w3id.org/citydata/part2/v1/RoadSegmentShape
+:RoadSegmentShape rdf:type sh:NodeShape ;
+                  sh:property [ sh:class :RoadLink ;
+                                sh:node :MinOneShape ;
+                                sh:path cdm1:properPartOf
+                              ] ,
+                              [ sh:class :RoadNetworkType ;
+                                sh:path :networkType
+                              ] ;
+                  sh:targetClass :RoadSegment .
+
+
+###  https://w3id.org/citydata/part2/v1/RoadShape
+:RoadShape rdf:type sh:NodeShape ;
+           sh:property [ sh:class :RoadLink ;
+                         sh:path cdm1:aggregationOf
+                       ] ;
+           sh:targetClass :Road .
+
+
+###  https://w3id.org/citydata/part2/v1/TravelledWayLinkShape
+:TravelledWayLinkShape rdf:type sh:NodeShape ;
+                       sh:property [ sh:class :TravelledWay ;
+                                     sh:path cdm1:aggregateOf
+                                   ] ;
+                       sh:targetClass :TravelledWayLink .
+
+
+###  https://w3id.org/citydata/part2/v1/TravelledWaySegmentShape
+:TravelledWaySegmentShape rdf:type sh:NodeShape ;
+                          sh:property [ sh:class :TravelledWayLink ;
+                                        sh:node :MinOneShape ;
+                                        sh:path cdm1:aggregateOf
+                                      ] ;
+                          sh:targetClass :TravelledWaySegment .
+
+
+###  https://w3id.org/citydata/part2/v1/TravelledWayShape
+:TravelledWayShape rdf:type sh:NodeShape ;
+                   sh:property [ sh:class :TravelledWayLink ;
+                                 sh:path cdm1:aggregationOf
+                               ] ;
+                   sh:targetClass :TravelledWay .
+
+
+###  https://w3id.org/citydata/part2/v1/TunnelSegmentShape
+:TunnelSegmentShape rdf:type sh:NodeShape ;
+                    sh:property [ sh:class :TravelledWaySegment ;
+                                  sh:path :supports
+                                ] ;
+                    sh:targetClass :TunnelSegment .
+
+
+###  https://w3id.org/citydata/part2/v1/TunnelShape
+:TunnelShape rdf:type sh:NodeShape ;
+             sh:property [ sh:class :TunnelSegment ;
+                           sh:path cdm1:hasProperPart
+                         ] ,
+                         [ sh:class :TravelledWaySegment ;
+                           sh:path :supports
+                         ] ;
+             sh:targetClass :Tunnel .
